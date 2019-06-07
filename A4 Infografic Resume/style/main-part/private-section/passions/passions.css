@@ -1,0 +1,121 @@
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+.passions {
+  grid-area: passions;
+}
+
+.passions__title {
+  padding-bottom: 45px;
+}
+
+.passions__list {
+  list-style-type: none;
+}
+
+.passions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 45px 17px 40px;
+  text-transform: capitalize;
+  line-height: 1.11;
+  letter-spacing: 2.1px;
+}
+
+.passions__item:not(:last-of-type) {
+  border-bottom: 1px solid #4f5052;
+}
+
+@media (max-width: 767px) {
+  .passions__item {
+    padding: 25px 17px 20px;
+  }
+}
+
+.passions__img {
+  margin-right: 45px;
+  min-width: 82px;
+}
+
+@media (max-width: 767px) {
+  .passions__img {
+    min-width: 50px;
+  }
+}
+
+.passions__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .passions__icon {
+    max-height: 40px;
+    max-width: 50px;
+  }
+}
+
+.passions__icon:hover {
+  -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+/*# sourceMappingURL=passions.css.map */

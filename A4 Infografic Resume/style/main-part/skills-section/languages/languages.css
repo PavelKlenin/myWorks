@@ -1,0 +1,75 @@
+.languages {
+  grid-area: languages;
+}
+
+.languages__title {
+  padding-bottom: 40px;
+}
+
+.languages__item {
+  padding: 45px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.languages__item:not(:last-of-type) {
+  border-bottom: 5px dotted #7f7d7c;
+}
+
+.languages__name {
+  font-weight: 400;
+}
+
+.languages__level {
+  font-weight: 300;
+}
+
+.languages__graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.languages__graph-circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(98, 183, 171, 0.15);
+  border-radius: 50%;
+}
+
+.languages__graph-circle:not(:last-of-type) {
+  margin-right: 19px;
+}
+
+@media (max-width: 767px) {
+  .languages__graph-circle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 424px) {
+  .languages__graph-circle {
+    width: 15px;
+    height: 15px;
+  }
+  .languages__graph-circle:not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
+
+.languages__graph-circle_full {
+  border: 1px solid #62b7ab;
+  background-color: #62b7ab;
+}
+/*# sourceMappingURL=languages.css.map */

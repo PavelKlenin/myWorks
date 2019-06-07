@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,SAAS,EAAE,UAAU;EACrB,cAAc,EAAE,IAAI;CAKrB;;AAHC,MAAM,EAAE,SAAS,EAAE,MAAM;EAJ3B,AAAA,WAAW,CAAC;IAKR,cAAc,EAAE,CAAC;GAEpB",
+    "sources": [
+        "philosophy.scss"
+    ],
+    "names": [],
+    "file": "philosophy.css"
+}
