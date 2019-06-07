@@ -1,0 +1,17 @@
+@import '../../style/variables.scss';
+
+.cityList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+
+  @media (max-width:767px) {
+    grid-template-columns: 1fr;
+  }
+}
+.loading {
+  padding-top: 50px;
+  text-align: center;
+  color: $main-color;
+  font-size: $title-size;
+}
