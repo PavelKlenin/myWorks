@@ -1,0 +1,121 @@
+.header {
+  padding: 177px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background: #f4f4f4;
+}
+
+@media (max-width: 1439px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 424px) {
+  .header {
+    padding: 15px;
+  }
+}
+
+.person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 1439px) {
+  .person-info {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .person-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.person-info__photo {
+  margin-right: 50px;
+  height: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .person-info__photo {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.person-info__name {
+  margin-bottom: 30px;
+}
+
+.person-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 40px;
+}
+
+.person-contact:not(:last-of-type) {
+  border-bottom: 1px solid #b9b9bb;
+}
+
+@media (max-width: 767px) {
+  .person-contact {
+    padding: 30px 0;
+  }
+}
+
+.person-contact__icon {
+  margin-right: 65px;
+  color: #000;
+}
+
+.person-contact__icon:hover {
+  color: #48443e;
+}
+
+@media (max-width: 767px) {
+  .person-contact__icon {
+    margin-right: 20px;
+  }
+}
+
+.person-contact__phone {
+  font-size: 46px;
+}
+
+@media (max-width: 1440px) {
+  .person-contact__phone {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=header.css.map */
