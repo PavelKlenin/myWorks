@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./style/style.css">
   <title>Blog List</title>
 </head>
@@ -43,7 +46,10 @@
       <div class="blog-list">
         <!-- Standart Blog -->
         <div class="standart-blog blog">
-          <img src="./img/st-blog-img.png" alt="0" class="standart-blog-img blog-content">
+          <img
+            class="standart-blog-img blog-content"
+            src="./img/st-blog-img.png"
+            alt="0">
           <div class="blog-block">
             <div class="date" data-year='2019' data-month='2' data-date='31'>
               <i class="far fa-file-alt date-icon"></i>
@@ -82,26 +88,11 @@
         <div class="img-gallery-blog blog">
           <div class="img-gallery blog-content">
             <div class="gallery-wrapper">
-              <img 
-                src="./img/st-blog-img.png"
-                alt="0"
-                class="gallery-item">
-              <img 
-                src="./img/st-blog-img.png"
-                alt="0"
-                class="gallery-item">
-              <img 
-                src="./img/st-blog-img.png"
-                alt="0"
-                class="gallery-item">
-              <img 
-                src="./img/st-blog-img.png"
-                alt="0"
-                class="gallery-item">
-              <img 
-                src="./img/st-blog-img.png"
-                alt="0"
-                class="gallery-item">
+              <img class="gallery-item" src="./img/st-blog-img.png" alt="0">
+              <img class="gallery-item" src="./img/st-blog-img.png" alt="0">
+              <img class="gallery-item" src="./img/st-blog-img.png" alt="0">
+              <img class="gallery-item" src="./img/st-blog-img.png" alt="0">
+              <img class="gallery-item" src="./img/st-blog-img.png" alt="0">
             </div>
             <div class="dots">
               <div class="gallery-dot"></div>
@@ -156,10 +147,10 @@
         <!-- Audio Blog -->
         <div class="audio-blog blog">
           <div class="audio-player blog-content">
-            <audio 
+            <audio
+              class="audio-data"
               src="./audio/Cassandra_Wilson-Death_Letter.mp3"
-              preload="metadata"
-              class="audio-data"></audio>
+              preload="metadata"></audio>
             <div class="audio-play">
               <i class="fas fa-play audio-play-btn"></i>
               <i class="fas fa-pause audio-pause-btn hidden"></i>
@@ -184,7 +175,7 @@
               <p class="month">apr</p>
             </div>
             <div class="blog-body">
-              <h2>Blog Post With Image Gallery</h2>
+              <h2>Audio Blog Post</h2>
               <div class="blog-info">
                 <div class="name">
                   <i class="fas fa-user"></i>
@@ -214,28 +205,28 @@
         <!-- Video Blog -->
         <div class="video-blog blog">
           <div class="video-player blog-content">
-            <video 
-            src="./video/Coffee_Beans_Fast_Fall.mp4"
-            preload="metadata"
-            poster="./img/poster_for_video.jpg"
-            class="video-data"></video>
-          <div class="video-play">
-            <i class="fas fa-play video-play-btn"></i>
-          </div>
-          <div class="video-controls hidden">
-            <p class="time video-time video-current-time">00:00</p>
-            <div class="progress-bar video-progress">
-              <div class="current-progress video-current-progress"></div>
+            <video
+              class="video-data"
+              src="./video/Coffee_Beans_Fast_Fall.mp4"
+              poster="./img/poster_for_video.jpg"
+              preload="metadata"></video>
+            <div class="video-play">
+              <i class="fas fa-play video-play-btn"></i>
             </div>
-            <p class="time video-time video-full-time">00:00</p>
-            <div class="volume video-volume">
-              <i class="fas fa-volume-up video-vol"></i>
-              <i class="fas fa-volume-mute video-mute hidden"></i>
+            <div class="video-controls hidden">
+              <p class="time video-time video-current-time">00:00</p>
+              <div class="progress-bar video-progress">
+                <div class="current-progress video-current-progress"></div>
+              </div>
+              <p class="time video-time video-full-time">00:00</p>
+              <div class="volume video-volume">
+                <i class="fas fa-volume-up video-vol"></i>
+                <i class="fas fa-volume-mute video-mute hidden"></i>
+              </div>
+              <div class="progress-bar volume-level video-volume-level">
+                <div class="current-progress video-current-volume"></div>
+              </div>
             </div>
-            <div class="progress-bar volume-level video-volume-level">
-              <div class="current-progress video-current-volume"></div>
-            </div>
-          </div>
           </div>
           <div class="blog-block">
             <div class="date" data-year='2019' data-month='4' data-date='15'>
@@ -294,39 +285,39 @@
         </div>
         <!-- Blog with NO IMG -->
         <div class="no-img-blog blog">
-            <div class="blog-block">
-                <div class="date" data-year='2019' data-month='4' data-date='16'>
-                  <i class="far fa-file-alt date-icon"></i>
-                  <p class="day">16</p>
-                  <p class="month">may</p>
+          <div class="blog-block">
+            <div class="date" data-year='2019' data-month='4' data-date='16'>
+              <i class="far fa-file-alt date-icon"></i>
+              <p class="day">16</p>
+              <p class="month">may</p>
+            </div>
+            <div class="blog-body">
+              <h2>Standart Blog Post With No Featured Image</h2>
+              <div class="blog-info">
+                <div class="name">
+                  <i class="fas fa-user"></i>
+                  name
                 </div>
-                <div class="blog-body">
-                  <h2>Standart Blog Post With No Featured Image</h2>
-                  <div class="blog-info">
-                    <div class="name">
-                      <i class="fas fa-user"></i>
-                      name
-                    </div>
-                    <div class="trend">
-                      <i class="fas fa-folder-open"></i>
-                      Web design
-                    </div>
-                    <div class="comments">
-                      <i class="fas fa-comment"></i>
-                      <span>0</span> comments
-                    </div>
-                  </div>
-                  <div class="hr"></div>
-                  <p class="blog-text">
-                    Donec quis vestibulum nisl, a bibendum velit. Proin cursus mauris
-                    non malesuada euismod. In vitae accumsan neque. Phasellus blandit
-                    arcu id ante feugiat
-                  </p>
-                  <div class="read-more">
-                    Read more
-                  </div>
+                <div class="trend">
+                  <i class="fas fa-folder-open"></i>
+                  Web design
+                </div>
+                <div class="comments">
+                  <i class="fas fa-comment"></i>
+                  <span>0</span> comments
                 </div>
               </div>
+              <div class="hr"></div>
+              <p class="blog-text">
+                Donec quis vestibulum nisl, a bibendum velit. Proin cursus mauris
+                non malesuada euismod. In vitae accumsan neque. Phasellus blandit
+                arcu id ante feugiat
+              </p>
+              <div class="read-more">
+                Read more
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Main Content -->
@@ -437,30 +428,26 @@
           <h2 class="section-title">Popular tags</h2>
           <div class="hr"></div>
           <div class="tag-list">
-            <a href="#" class="pop-tag">Design</a>
-            <a href="#" class="pop-tag">Branding</a>
-            <a href="#" class="pop-tag">Art</a>
-            <a href="#" class="pop-tag">Developing</a>
-            <a href="#" class="pop-tag">CSS</a>
-            <a href="#" class="pop-tag">HTML</a>
-            <a href="#" class="pop-tag">Wordpress</a>
-            <a href="#" class="pop-tag">Photography</a>
+            <a class="pop-tag" href="#">Design</a>
+            <a class="pop-tag" href="#">Branding</a>
+            <a class="pop-tag" href="#">Art</a>
+            <a class="pop-tag" href="#">Developing</a>
+            <a class="pop-tag" href="#">CSS</a>
+            <a class="pop-tag" href="#">HTML</a>
+            <a class="pop-tag" href="#">Wordpress</a>
+            <a class="pop-tag" href="#">Photography</a>
           </div>
         </div>
         <div class="subscribe">
           <h2 class="section-title">Subscribe for newsletter</h2>
           <div class="hr"></div>
-          <form action="#" class="subscribe-form">
+          <form class="subscribe-form" action="#">
             <p class="form-name">
               Donec quis vestibulum nisl, a bibendum velit.
             </p>
-            <input 
-              class="input-mail"
-              type="email"
-              placeholder="Your email address"
-              pattern="^([A-Za-z0-9\._-]+)(@)([A-Za-z0-9\._-]+)(\.)([a-z]{2,})$"
-              required>
-            <button type="submit" class="submit-btn">
+            <input class="input-mail" type="email" placeholder="Your email address"
+              pattern="^([A-Za-z0-9\._-]+)(@)([A-Za-z0-9\._-]+)(\.)([a-z]{2,})$" required>
+            <button class="submit-btn" type="submit">
               <i class="fas fa-envelope subscribe-icon"></i>Subscribe
             </button>
           </form>
@@ -475,10 +462,10 @@
             </div>
             <div class="calendar-nav">
               <div class="cal-nav-item prev-month">
-                  <i class="fas fa-angle-left calendar-icon"></i>
+                <i class="fas fa-angle-left calendar-icon"></i>
               </div>
               <div class="cal-nav-item next-month">
-                  <i class="fas fa-angle-right calendar-icon"></i>
+                <i class="fas fa-angle-right calendar-icon"></i>
               </div>
             </div>
             <div class="week-days">
@@ -499,13 +486,13 @@
     <!-- Page Counter -->
     <div class="page-counter">
       <div class="nav-pages prev-page">
-          <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left"></i>
       </div>
       <div class="page-number">
         <span>1</span> of <span>95</span>
       </div>
       <div class="nav-pages next-page">
-          <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-right"></i>
       </div>
     </div>
     <!-- Contacts -->
@@ -518,28 +505,28 @@
       </p>
       <div class="contacts-info">
         <div class="contacts-info-block">
-            <i class="fas fa-phone contact-icon phone-icon"></i>
-            <div class="contacts-info-text">
-              <h2>Phones</h2>
-              <p>+359 2 88 55 999</p>
-              <p>+359 89 88 55 999</p>
-            </div>
+          <i class="fas fa-phone contact-icon phone-icon"></i>
+          <div class="contacts-info-text">
+            <h2>Phones</h2>
+            <p>+359 2 88 55 999</p>
+            <p>+359 89 88 55 999</p>
+          </div>
         </div>
         <div class="contacts-info-block">
-            <i class="fas fa-map-marker-alt contact-icon adress-icon"></i>
-            <div class="contacts-info-text">
-              <h2>Office address</h2>
-              <p>4 Byala Cherkva Str. 3rd </p>
-              <p>Floor Sofia, 1000, Bulgaria</p>
-            </div>
+          <i class="fas fa-map-marker-alt contact-icon adress-icon"></i>
+          <div class="contacts-info-text">
+            <h2>Office address</h2>
+            <p>4 Byala Cherkva Str. 3rd </p>
+            <p>Floor Sofia, 1000, Bulgaria</p>
+          </div>
         </div>
         <div class="contacts-info-block">
-            <i class="fas fa-envelope contact-icon mail-icon"></i>
-            <div class="contacts-info-text">
-              <h2>Emails</h2>
-              <p>office@trendy.com</p>
-              <p>sales@trendy.com</p>
-            </div>
+          <i class="fas fa-envelope contact-icon mail-icon"></i>
+          <div class="contacts-info-text">
+            <h2>Emails</h2>
+            <p>office@trendy.com</p>
+            <p>sales@trendy.com</p>
+          </div>
         </div>
       </div>
     </div>
@@ -547,15 +534,15 @@
   <footer class="footer">
     <p class="copyright">Copyright © 2014 Trendy</p>
     <div class="socials">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-google-plus-g"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-linkedin-in"></i>
-        <i class="fab fa-pinterest"></i>
-        <i class="fab fa-vk"></i>
-        <i class="fab fa-dribbble"></i>
-        <i class="fab fa-flickr"></i>
-        <i class="fas fa-rss"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-google-plus-g"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin-in"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-vk"></i>
+      <i class="fab fa-dribbble"></i>
+      <i class="fab fa-flickr"></i>
+      <i class="fas fa-rss"></i>
     </div>
   </footer>
   <script src="./js/calendar.js"></script>
