@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/fontawesome/all.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Pavel Klenin</title>
+</head>
+<body>
+  
+  <!-- CONTAINER -->
+  <div class="container">
+    <!-- CAROUSEL -->
+    <!-- Modal -->
+    <div class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      <!-- aria-labelledby="exampleModalCenterTitle" -->
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="carousel slide"
+            id="carouselPortolio"
+            data-ride="carousel"
+            data-interval="false">
+            <div class="carousel-inner"></div>
+            <a class="carousel-control-prev"
+              href="#carouselPortolio"
+              role="button"
+              data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next"
+              href="#carouselPortolio"
+              role="button"
+              data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MENU -->
+    <div class="menu">
+      <a class="logo" href="#">ПК</a>
+      <div class="menu-content">
+        <ul>
+          <li><a class="menu-item menu-active" href="#about" data-value="about">Обо мне</a></li>
+          <li><a class="menu-item" href="#education" data-value="education">Образование</a></li>
+          <li><a class="menu-item" href="#job" data-value="job">Опыт</a></li>
+          <li><a class="menu-item" href="#portfolio" data-value="portfolio">Портфолио</a></li>
+          <li><a class="menu-item" href="#habbits" data-value="habbits">Интересы</a></li>
+        </ul>
+      </div>
+      <div class="menu-open">
+        <i class="fas fa-bars menu-open-icon"></i>
+      </div>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+    <!-- PROFILE -->
+    <section id="about" class="section profile fade-in-up hidden">
+        <div class="profile-block">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="profile-photo">
+                <img
+                  class="profile-img"
+                  src="./img/photo_profile.jpg"
+                  alt="photo">
+              </div>
+              <a href="#" class="profile-download">
+                  <i class="fas fa-cloud-download-alt"></i>
+                  Скачать PDF
+              </a>
+            </div>
+            <div class="col-sm-8">
+              <h1 class="profile-title">Павел Кленин</h1>
+              <h5 class="profile-job">HTML-верстальщик, Front-end</h5>
+              <p class="profile-about">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Alias, repudiandae accusantium inventore excepturi dolorum
+                blanditiis possimus ad unde quaerat delectus exercitationem
+                adipisci ut quam! Esse ullam recusandae libero culpa beatae.
+              </p>
+              <div class="row">
+                <div class="col-sm-6 profile-contacts">
+                  <div class="profile-age"><span>Возраст:</span> 29</div>
+                  <div class="profile-adress">
+                    <span>Адрес:</span> Санкт-Петербург
+                  </div>
+                  <div class="profile-email">
+                    <span>Email:</span> pashka_89@mail.ru
+                  </div>
+                </div>
+                <div class="col-sm-6 profile-contacts">
+                  <div class="profile-phone">
+                    <span>Тел:</span> +7 (981) 888-74-37
+                  </div>
+                  <div class="profile-whatsapp"><span>WhatsApp</span></div>
+                  <div class="profile-telegram"><span>Telegram</span></div>
+                </div>
+                <div class="col-sm-12 profile-contacts">
+                  <h6 class="profile-social">Социальные сети</h6>
+                  <a href="https://vk.com" class="social-link vk">
+                    <i class="fab fa-vk"></i>
+                  </a>
+                  <a href="facebook.com" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="instagram.com" class="social-link insta">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EDUCATION -->
+      <section id="education"
+        class="section education fade-in-up hidden">
+        <h2 class="section-title education-title">Образование</h2>
+        <div class="col-md-10 offset-md-1">
+          <div class="education-progress">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-item">
+              <p class="education-period">2006-2012</p>
+              <h4 class="education-speciality">Инженер</h4>
+              <h4 class="education-university">БГТУ "Военмех"</h4>
+              <p class="education-skills">
+                Системы управления летательными аппаратами
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- JOB -->
+      <section id="job" class="section job fade-in-up hidden row">
+        <h2 class="section-title col-sm-12">Опыт работы</h2>
+        <div class="col-sm-4">
+          <div class="job-item">
+            <h3 class="job-period">2006-2012</h3>
+            <div class="job-info">
+              <i class="fas fa-suitcase job-icon"></i>
+              <p class="job-name">ЗАО "НПЦ "Аквамарин"</p>
+            </div>
+            <p class="job-duties">Лаборант, Техник-электроник</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="job-item">
+            <h3 class="job-period">2012-н.вр.</h3>
+            <div class="job-info">
+              <i class="fas fa-suitcase job-icon"></i>
+              <p class="job-name">АО "Концерн "Гранит-Электрон"</p>
+            </div>
+            <p class="job-duties">Инженер 1 кат</p>
+          </div>
+        </div>
+      </section>
+      <!-- PORTFOLIO -->
+      <section id="portfolio"
+        class="section portfolio fade-in-up hidden row">
+        <h2 class="section-title col-sm-12">Портфолио</h2>
+        <!-- Portfolio Items -->
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal" data-target="#exampleModalCenter">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>First slide label</h5>
+                <p>описание</p>
+                <a class="invisible portfolio-link" href="#" target="_blank">ссылка</a>
+              </div>
+            </div>
+            <img class="portfolio-img" src="./img/example-800x480.jpg" alt="my work">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal" data-target="#exampleModalCenter">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Second slide label</h5>
+                <p>описание</p>
+                <a class="invisible portfolio-link" href="#" target="_blank">ссылка</a>
+              </div>
+            </div>
+            <img class="portfolio-img" src="./img/example-800x480.jpg" alt="my work">
+          </div>
+        </div>
+  
+      </section>
+      <!-- INTERESTS -->
+      <section id="habbits" class="section habbits fade-in-up hidden">
+        <h2 class="section-title">Интересы</h2> 
+        <p class="habbits-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+          doloribus sit, quas cumque fugit asperiores assumenda aut repudiandae?
+          Hic quae, ducimus alias molestias provident deleniti ipsam unde earum
+          doloremque. Dolore.
+        </p>
+        <div class="row justify-content-around">
+          <div class="col-auto">
+            <div class="habbits-item">
+              <i class="fas fa-futbol habbits-icon"></i>
+              <p class="habbits-name">Футбол</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="habbits-item">
+              <i class="fas fa-film habbits-icon"></i>
+              <p class="habbits-name">Кино</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="habbits-item">
+              <i class="fas fa-dumbbell habbits-icon"></i>
+              <p class="habbits-name">Фитнес</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="habbits-item">
+              <i class="fas fa-plane habbits-icon"></i>
+              <p class="habbits-name">Путешествия</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="habbits-item">
+              <i class="fas fa-walking habbits-icon"></i>
+              <p class="habbits-name">Прогулки</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer row">
+      <a href="https://vk.com" class="social-link vk">
+        <i class="fab fa-vk"></i>
+      </a>
+      <a href="facebook.com" class="social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="instagram.com" class="social-link insta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./js/jquery.viewportchecker.js"></script>
+  <script src="./js/fadeInUp.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/portfolio.js"></script>
+</body>
+</html>
