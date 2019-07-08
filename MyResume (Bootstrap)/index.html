@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +20,9 @@
     <!-- CAROUSEL -->
     <!-- Modal -->
     <div class="modal fade"
-      id="exampleModalCenter"
+      id="carouselFade"
       tabindex="-1"
       role="dialog"
-      <!-- aria-labelledby="exampleModalCenterTitle" -->
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -55,11 +54,31 @@
       <a class="logo" href="#">ПК</a>
       <div class="menu-content">
         <ul>
-          <li><a class="menu-item menu-active" href="#about" data-value="about">Обо мне</a></li>
-          <li><a class="menu-item" href="#education" data-value="education">Образование</a></li>
-          <li><a class="menu-item" href="#job" data-value="job">Опыт</a></li>
-          <li><a class="menu-item" href="#portfolio" data-value="portfolio">Портфолио</a></li>
-          <li><a class="menu-item" href="#habbits" data-value="habbits">Интересы</a></li>
+          <li>
+            <a class="menu-item menu-active" href="#about" data-value="about">
+              Обо мне
+            </a>
+          </li>
+          <li>
+            <a class="menu-item" href="#education" data-value="education">
+              Образование
+            </a>
+          </li>
+          <li>
+            <a class="menu-item" href="#job" data-value="job">
+              Опыт
+            </a>
+          </li>
+          <li>
+            <a class="menu-item" href="#portfolio" data-value="portfolio">
+              Портфолио
+            </a>
+          </li>
+          <li>
+            <a class="menu-item" href="#habbits" data-value="habbits">
+              Интересы
+            </a>
+          </li>
         </ul>
       </div>
       <div class="menu-open">
@@ -69,7 +88,7 @@
     <!-- MAIN CONTENT -->
     <div class="main-content">
     <!-- PROFILE -->
-    <section id="about" class="section profile fade-in-up hidden">
+      <section id="about" class="section profile fade-in-up hidden">
         <div class="profile-block">
           <div class="row">
             <div class="col-sm-4">
@@ -79,19 +98,16 @@
                   src="./img/photo_profile.jpg"
                   alt="photo">
               </div>
-              <a href="#" class="profile-download">
-                  <i class="fas fa-cloud-download-alt"></i>
-                  Скачать PDF
+              <a class="profile-download" href="#">
+                <i class="fas fa-cloud-download-alt"></i>
+                Скачать PDF
               </a>
             </div>
             <div class="col-sm-8">
               <h1 class="profile-title">Павел Кленин</h1>
-              <h5 class="profile-job">HTML-верстальщик, Front-end</h5>
+              <h5 class="profile-job">HTML-верстальщик, Frontend-разработчик</h5>
               <p class="profile-about">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Alias, repudiandae accusantium inventore excepturi dolorum
-                blanditiis possimus ad unde quaerat delectus exercitationem
-                adipisci ut quam! Esse ullam recusandae libero culpa beatae.
+                Люблю порядочность и пунктуальность. Не люблю опаздывать и ждать.
               </p>
               <div class="row">
                 <div class="col-sm-6 profile-contacts">
@@ -107,18 +123,26 @@
                   <div class="profile-phone">
                     <span>Тел:</span> +7 (981) 888-74-37
                   </div>
-                  <div class="profile-whatsapp"><span>WhatsApp</span></div>
-                  <div class="profile-telegram"><span>Telegram</span></div>
+                  <div class="profile-whatsapp">
+                    <span>WhatsApp</span> +7 (981) 888-74-37</div>
+                  <div class="profile-telegram">
+                    <span>Telegram</span> @pklenin</div>
                 </div>
                 <div class="col-sm-12 profile-contacts">
                   <h6 class="profile-social">Социальные сети</h6>
-                  <a href="https://vk.com" class="social-link vk">
+                  <a class="social-link vk"
+                    href="https://vk.com/pklenin"
+                    target="_blank">
                     <i class="fab fa-vk"></i>
                   </a>
-                  <a href="facebook.com" class="social-link facebook">
+                  <a class="social-link facebook"
+                    href="https://www.facebook.com/profile.php?id=100009311593134"
+                    target="_blank">
                     <i class="fab fa-facebook-f"></i>
                   </a>
-                  <a href="instagram.com" class="social-link insta">
+                  <a class="social-link insta"
+                    href="https://www.instagram.com/klenin_pavel/"
+                    target="_blank">
                     <i class="fab fa-instagram"></i>
                   </a>
                 </div>
@@ -139,9 +163,19 @@
             <div class="education-item">
               <p class="education-period">2006-2012</p>
               <h4 class="education-speciality">Инженер</h4>
-              <h4 class="education-university">БГТУ "Военмех"</h4>
+              <h4 class="education-university">
+                БГТУ «Военмех» им Д.Ф. Устинова
+              </h4>
               <p class="education-skills">
                 Системы управления летательными аппаратами
+              </p>
+            </div>
+            <div class="education-item">
+              <p class="education-period">2018-2019</p>
+              <h4 class="education-speciality">Frontend-разработчик</h4>
+              <h4 class="education-university">GeekBrains</h4>
+              <p class="education-skills">
+                HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Git
               </p>
             </div>
           </div>
@@ -157,7 +191,16 @@
               <i class="fas fa-suitcase job-icon"></i>
               <p class="job-name">ЗАО "НПЦ "Аквамарин"</p>
             </div>
-            <p class="job-duties">Лаборант, Техник-электроник</p>
+            <div class="job-info">
+              <i class="fas fa-file-alt job-icon"></i>
+              <p class="job-name">Сборщик РЭА и П,<br>Техник-электроник</p>
+            </div>
+            <p class="job-duties">
+              Сборка радиоэлектронной аппаратуры, сборка отдельных блоков и
+              модулей, подготовка корпусов и плат;
+              Осуществление координации работ при выполнении заказов, контроль
+              за ходом выполнения работ;
+            </p>
           </div>
         </div>
         <div class="col-sm-4">
@@ -167,9 +210,35 @@
               <i class="fas fa-suitcase job-icon"></i>
               <p class="job-name">АО "Концерн "Гранит-Электрон"</p>
             </div>
-            <p class="job-duties">Инженер 1 кат</p>
+            <div class="job-info">
+              <i class="fas fa-file-alt job-icon"></i>
+              <p class="job-name">Инженер 1 кат</p>
+            </div>
+            <p class="job-duties">
+                Входной контроль приборов, ремонтно-восстановительные работы,
+                сопровождение контрольно-проверочной аппаратуры в местах
+                эксплуатации, в том числе у инозаказчика (Вьетнам, Индия);
+                Разработка и корректировка КД;
+            </p>
           </div>
         </div>
+        <div class="col-sm-4">
+            <div class="job-item">
+              <h3 class="job-period">2019-н.вр.</h3>
+              <div class="job-info">
+                <i class="fas fa-suitcase job-icon"></i>
+                <p class="job-name"></p>
+              </div>
+              <div class="job-info">
+                <i class="fas fa-file-alt job-icon"></i>
+                <p class="job-name">HTML-верстальщик,<br>Frontend-разработчик</p>
+              </div>
+              <p class="job-duties">
+                  Профильного опыта не имею, поэтому в портфолио представлены
+                  самостоятельные или учебные работы.
+              </p>
+            </div>
+          </div>
       </section>
       <!-- PORTFOLIO -->
       <section id="portfolio"
@@ -178,28 +247,149 @@
         <!-- Portfolio Items -->
         <div class="col-sm-4">
           <div class="portfolio-item"
-            data-toggle="modal" data-target="#exampleModalCenter">
+            data-toggle="modal"
+            data-target="#carouselFade">
             <div class="portfolio-overlay">
               <div class="portfolio-details">
-                <h5>First slide label</h5>
-                <p>описание</p>
-                <a class="invisible portfolio-link" href="#" target="_blank">ссылка</a>
+                <h5>A4 Infographic Resume</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, JS, BEM</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/A4%20Infografic%20Resume"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
               </div>
             </div>
-            <img class="portfolio-img" src="./img/example-800x480.jpg" alt="my work">
+            <img class="portfolio-img"
+              src="./img/avatars/a4_resume_avatar.png"
+              alt="a4_resume">
           </div>
         </div>
         <div class="col-sm-4">
           <div class="portfolio-item"
-            data-toggle="modal" data-target="#exampleModalCenter">
+            data-toggle="modal"
+            data-target="#carouselFade">
             <div class="portfolio-overlay">
               <div class="portfolio-details">
-                <h5>Second slide label</h5>
-                <p>описание</p>
-                <a class="invisible portfolio-link" href="#" target="_blank">ссылка</a>
+                <h5>Arrow Design</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, jQuery</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/ArrowDesign%20(HTML%2C%20SCSS%2C%20grid%2C%20flex%2C%20jQuery)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
               </div>
             </div>
-            <img class="portfolio-img" src="./img/example-800x480.jpg" alt="my work">
+            <img class="portfolio-img"
+              src="./img/avatars/arrow_design_avatar.png"
+              alt="arrow_design">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Bloglist</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/BlogList(HTML_SCSS%2C%20grid%2C%20flex%2C%20js)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/blog_list_avatar.png"
+              alt="bloglist">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Creative Agency</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/CreativeAgency%20(HTML_SCSS_flex_js)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/creative_agency_avatar.png"
+              alt="creative_agency">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Snake</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, CSS, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/snake%20(js%2C%20HTML%2C%20CSS)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/snake_avatar.jpg"
+              alt="snake">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Weather App</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, JS, React</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/WeatherApp%20(HTML%2C%20SCSS%2C%20flex%2C%20js%2C%20React)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/weather_app_avatar.jpg"
+              alt="weather_app">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>React Redux</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, CSS, Flexbox, JS, React, Redux</p>
+                <a class="invisible portfolio-link"
+                  href="#"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/redux_avatar.jpg"
+              alt="weather_app">
           </div>
         </div>
   
@@ -208,10 +398,8 @@
       <section id="habbits" class="section habbits fade-in-up hidden">
         <h2 class="section-title">Интересы</h2> 
         <p class="habbits-text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-          doloribus sit, quas cumque fugit asperiores assumenda aut repudiandae?
-          Hic quae, ducimus alias molestias provident deleniti ipsam unde earum
-          doloremque. Dolore.
+          В свободное время играю в футбол, занимаюсь спортом. Люблю пешие
+          прогулки и хорошее кино.
         </p>
         <div class="row justify-content-around">
           <div class="col-auto">
@@ -249,13 +437,19 @@
     </div>
     <!-- FOOTER -->
     <div class="footer row">
-      <a href="https://vk.com" class="social-link vk">
+      <a class="social-link vk"
+        href="https://vk.com/pklenin"
+        target="_blank">
         <i class="fab fa-vk"></i>
       </a>
-      <a href="facebook.com" class="social-link facebook">
+      <a class="social-link facebook"
+        href="https://www.facebook.com/profile.php?id=100009311593134"
+        target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="instagram.com" class="social-link insta">
+      <a class="social-link insta"
+        href="https://www.instagram.com/klenin_pavel/"
+        target="_blank">
         <i class="fab fa-instagram"></i>
       </a>
     </div>

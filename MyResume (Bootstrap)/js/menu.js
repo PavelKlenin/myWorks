@@ -37,14 +37,10 @@ $(document).ready(function() {
       
         $(menuItems).each((i, item) => {
           // Удаление класса 'menu-active', если он есть
-          if ($(item).hasClass('menu-active')) {
-            $(item).removeClass('menu-active');
-          }
+          ($(item).hasClass('menu-active')) ? $(item).removeClass('menu-active') : null;
           // Добавление класса 'menu-active', если id секции совпадает 
           // с атрибутом пункта меню
-          if ($(item).attr('data-value') == id) {
-            $(item).addClass('menu-active');
-          }
+          ($(item).attr('data-value') == id) ? $(item).addClass('menu-active') : null;
         });
       }
     })

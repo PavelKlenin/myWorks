@@ -18,7 +18,7 @@ $font: 16px;
 //Z-Index
 $index-menu: 20;
 
-// TODO: Слайдер
+
 // TODO: Ссылка на скачивание
 
 
@@ -85,6 +85,16 @@ body {
           flex-direction: column;
   padding-bottom: $indent-default*2;
 }
+
+//* CAROUSEL *//
+.carousel-item {
+  .portfolio-img {
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%)
+  }
+}
+// CAROUSEL //
+
 
 //* MENU *//
 .menu {

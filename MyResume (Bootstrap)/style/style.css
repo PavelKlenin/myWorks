@@ -63,6 +63,11 @@ body {
   padding-bottom: 50px;
 }
 
+.carousel-item .portfolio-img {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
 .menu {
   position: fixed;
   top: 0;

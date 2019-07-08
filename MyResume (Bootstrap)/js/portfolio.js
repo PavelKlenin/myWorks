@@ -24,11 +24,9 @@ $(document).ready(() => {
     $(work).click(() => {
       // Удаление "active" для предотвращения наложения
       // при повторных кликах
-      $(sliderItems).each((i, item) => {
-        $(item).removeClass('active');
-      });
+      $(sliderItems[i]).siblings('.carousel-item').removeClass('active');
       // Включение "нужного" слайда
-      $(sliderItems[i]).addClass('active');
+      $(sliderItems[i]).hasClass('active') ? null : $(sliderItems[i]).addClass('active');
     })
   })
 
