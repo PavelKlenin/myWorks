@@ -1,0 +1,11 @@
+.item {
+    font-weight: bolder;
+}
+
+.active {
+    color: #05213a;
+}
+
+.item:not(:last-of-type) {
+    margin-right: 10px;
+}
