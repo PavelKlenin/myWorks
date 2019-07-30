@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Photo from '../components/Photo';
+import Button from '../components/Button';
 
 export class Page extends React.Component {
   onBtnClick = e => {
@@ -14,16 +15,26 @@ export class Page extends React.Component {
     const newPhotos = photos.map(photo => {
       return(
         <Photo url={photo.sizes[0].url} likes={photo.likes.count} key={photo.id}/>
-      )
-    })
+        )
+      }
+    )
+
+    const renderButtons = () => {
+      const years =[2018, 2017, 2016, 2015, 2014];
+      return years.map((year, index) => {
+        return (
+          <Button
+            onClick={this.onBtnClick}
+            year={year}
+            key={index}/>
+        )
+      })
+    }
+
     return(
       <div className="ib page">
         <p>
-          <button className="btn" onClick={this.onBtnClick}>2018</button>
-          <button className="btn" onClick={this.onBtnClick}>2017</button>
-          <button className="btn" onClick={this.onBtnClick}>2016</button>
-          <button className="btn" onClick={this.onBtnClick}>2015</button>
-          <button className="btn" onClick={this.onBtnClick}>2014</button>
+          {renderButtons()}
         </p>
         {
           loading ? 
