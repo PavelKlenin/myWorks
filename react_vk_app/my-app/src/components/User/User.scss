@@ -1,0 +1,11 @@
+@import '../../style/variables.scss';
+
+.User {
+  margin-right: 20px;
+}
+
+.User_text {
+  font-size: $size-text;
+  text-transform: capitalize;
+  color: $color-main;
+}

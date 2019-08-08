@@ -1,3 +1,5 @@
+import {push} from 'connected-react-router';
+
 export const GET_PHOTO_REQUEST = 'GET_PHOTO_REQUEST';
 export const GET_PHOTO_SUCCESS = 'GET_PHOTO_SUCCESS';
 export const GET_PHOTO_FAIL = 'GET_PHOTO_FAIL';
@@ -21,7 +23,7 @@ const makeYearPhotos = (photos, year) => {
   return yearPhotos;
 }
 
-const getMorePhotos = (offset, count, year, dispatch) => {
+const getMorePhotos = (offset, count, domain, year, dispatch) => {
   // eslint-disable-next-line no-undef
   VK.Api.call('photos.getAll',
     {extended: 1, offset: offset, count: count, v:"5.101"},
@@ -31,14 +33,15 @@ const getMorePhotos = (offset, count, year, dispatch) => {
           photosUnsort = response.response.items;
           if (offset <= response.count) {
             offset +=200;
-            getMorePhotos(offset, count, year, dispatch);
+            getMorePhotos(offset, count, domain, year, dispatch);
           } else {
             let photos = makeYearPhotos(photosUnsort, year);
             cashed = true;
             dispatch({
               type: GET_PHOTO_SUCCESS,
               payload: photos,
-            })
+            });
+            dispatch(push(`/${domain}/${year}`));
           }
         }
       } catch (e) {
@@ -51,7 +54,7 @@ const getMorePhotos = (offset, count, year, dispatch) => {
   })
 }
 
-export function getPhotos(year) {
+export function getPhotos(domain, year) {
   return (dispatch) => {
     dispatch({
       type: GET_PHOTO_REQUEST,
@@ -64,8 +67,9 @@ export function getPhotos(year) {
         type: GET_PHOTO_SUCCESS,
         payload: photos,
       })
+      dispatch(push(`/${domain}/${year}`));
     } else {
-      getMorePhotos(0, 200, year, dispatch);
+      getMorePhotos(0, 200, domain, year, dispatch);
     }
   }
 

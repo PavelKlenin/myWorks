@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+
+.Page {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Page_buttons {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.Page_text {
+  color: $color-main;
+  text-transform: capitalize;
+}
+
+.Page_title {
+  margin-bottom: 30px;
+  font-size: $size-title;
+  color: $color-dark;
+}
+
+.Page_photolist {
+  display: flex;
+  flex-wrap: wrap;
+}
