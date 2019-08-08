@@ -443,18 +443,27 @@ body {
 }
 
 .portfolio-link {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #fff;
   text-decoration: none;
-  color: #fff;
+  color: #757575;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
 .portfolio-link:hover {
-  color: #0487cc;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.2);
+  color: #757575;
   text-decoration: none;
 }
 
 .portfolio-link:active {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   color: #757575;
   text-decoration: none;
 }

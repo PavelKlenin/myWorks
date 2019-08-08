@@ -514,18 +514,23 @@ $point-size: 15px;
 }
 
 .portfolio-link {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: $color-light;
   text-decoration: none;
-  color: $color-light;
+  color: $color-dark;
+  box-shadow: $shadow-item;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 
   &:hover {
-    color: $color-mark;
+    box-shadow: 0 0 8px rgba(0,0,0,.30), 0 0 12px rgba(0,0,0,.20);
+    color: $color-dark;
     text-decoration: none;
-
   }
 
   &:active {
+    box-shadow: $shadow-item;
     color: $color-dark;
     text-decoration: none;
   }
