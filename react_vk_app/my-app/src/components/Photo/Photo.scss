@@ -1,0 +1,23 @@
+@import '../../style/variables.scss';
+
+.Photo {
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+  
+  &:hover .Photo_img {
+    transform: scale(1.03);
+  }
+}
+
+.Photo_img {
+  height: 130px;
+  transition: all 0.4s;
+}
+
+.Photo_like {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: $color-like;
+}
