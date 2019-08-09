@@ -5,9 +5,9 @@ import './Photo.scss';
 
 export default class Photo extends React.Component {
   render() {
-    const {url, likes} = this.props;
+    const {url, likes, onClick} = this.props;
     return (
-      <div className="Photo">
+      <div className="Photo" onClick={onClick}>
         <img className="Photo_img" src={url} alt=""/>
         <p className="Photo_like">{likes} &#10084;</p>
       </div>

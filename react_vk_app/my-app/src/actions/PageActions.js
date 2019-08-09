@@ -4,6 +4,9 @@ export const GET_PHOTO_REQUEST = 'GET_PHOTO_REQUEST';
 export const GET_PHOTO_SUCCESS = 'GET_PHOTO_SUCCESS';
 export const GET_PHOTO_FAIL = 'GET_PHOTO_FAIL';
 
+export const OPEN_SLIDER = 'OPEN_SLIDER';
+export const CLOSE_SLIDER ='CLOSE_SLIDER';
+
 let photosUnsort =[];
 let cashed = false;
 
@@ -73,4 +76,21 @@ export function getPhotos(domain, year) {
     }
   }
 
+}
+
+export function openSlider(bigPhotos, i) {
+  return (dispatch) => {
+    dispatch({
+      type: OPEN_SLIDER,
+      payload: {bigPhotos, i}
+    })
+  }
+}
+
+export function closeSlider() {
+  return (dispatch) => {
+    dispatch({
+      type: CLOSE_SLIDER,
+    })
+  }
 }
