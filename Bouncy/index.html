@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./img/bouncy_favicon.png" type="image/png">
   <link rel="stylesheet" href="./fonts/fontawesome/all.min.css">
   <link rel="stylesheet" href="./fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
   <link rel="stylesheet" href="./style/style.css">
@@ -18,13 +19,13 @@
           <i class="fas fa-bars"></i>
         </div>
         <ul class="navbar_menu">
-          <li><a href="#">Hello</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="header_content">
@@ -39,8 +40,8 @@
         <div class="header_btn-info">Empty button</div>
       </div>
     </header>
-    <section class="about">
-      <article class="bouncy">
+    <div class="about">
+      <article class="bouncy" id="hello">
         <img class="bouncy_img" src="./img/about_img.png" alt="This is bouncy">
         <div class="bouncy_article">
           <h2 class="bouncy_article-title">This is bouncy</h2>
@@ -55,7 +56,7 @@
           <a class="bouncy_article-btn" href="#" >Read more</a>
         </div>
       </article>
-      <article class="details">
+      <article class="details" id="about">
         <h2 class="details_title">Details about bouncy</h2>
         <p class="details_text">
           At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -165,8 +166,8 @@
         </h2>
         <a class="submit_btn" href="#">Submit now</a>
       </div>
-    </section>
-    <section class="services">
+    </div>
+    <section id="services" class="services">
       <h2 class="service_title">Our Services</h2>
       <p class="service_text">
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -298,7 +299,7 @@
         <div class="impressed_image-text">b<span>o</span>uncy</div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="portfolio_title">The portfolio</h2>
       <p class="portfolio_info">
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -616,7 +617,7 @@
         <a class="startProject_btn" href="#">Start project</a>
       </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
       <h2 class="team_title">The team</h2>
       <p class="team_info">
         At vero eos et accusamus et iusto odio dignissimos ducimus qui<br>
@@ -821,7 +822,7 @@
         </div>
       </div>
     </section>
-    <section class="news">
+    <section class="news" id="news">
       <div class="news_content">
         <h2 class="news_title">Latest News</h2>
         <p class="news_info">
@@ -945,7 +946,7 @@
         <button class="subsribe_submit" type="submit">Submit</button>
       </div>
     </section>
-    <section class="contact">
+    <div class="contact" id="contact">
       <article class="address">
         <h2 class="address_title">Contact us</h2>
         <p class="address_info">
@@ -997,11 +998,45 @@
         <textarea cols="30" rows="10"></textarea>
         <button class="message_submit" type="submit">Submit now</button>
       </form>
-    </section>
+      <div class="map">
+        <iframe
+          class="map_address"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1476.0915481948136!2d0.030510530366880707!3d51.52275201865728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7dba68a73db%3A0x4c853629756e12cc!2zODcgUHJpbmNlIFJlZ2VudCBMbiwgUGxhaXN0b3csIExvbmRvbiBFMTMgOFJQLCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sru!4v1567414439420!5m2!1sru!2sru"
+          allowfullscreen="">
+        </iframe>
+        <div class="map_shadow">
+          <p class="map_shadow-text">Find us on the map</p>
+          <div class="map_shadow-icon">
+            <i class="pe-7s-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="footer_name">Bouncy</div>
+    <p class="footer_info">Copyright 2015. All rights Reserved</p>
+    <div class="footer_social">
+      <div class="footer_social-link facebook">
+        <i class="fab fa-facebook-f"></i>
+      </div>
+      <div class="footer_social-link twitter">
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="footer_social-link linkedin">
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+      <div class="footer_social-link instagram">
+        <i class="fab fa-instagram"></i>
+      </div>
+      <div class="footer_social-link vimeo">
+        <i class="fab fa-vimeo-v"></i>
+      </div>
+    </div>
+  </footer>
   <script src="./js/menu.js"></script>
-  <script src="./js/switchTab.js"></script>
+  <script src="./js/switchTabFunc.js"></script>
+  <script src="./js/emailVerificFunc.js"></script>
   <script src="./js/details.js"></script>
   <script src="./js/design.js"></script>
   <script src="./js/projects.js"></script>
@@ -1010,5 +1045,7 @@
   <script src="./js/testimonial.js"></script>
   <script src="./js/news.js"></script>
   <script src="./js/subscribe.js"></script>
+  <script src="./js/contacts.js"></script>
+  <script src="./js/map.js"></script>
 </body>
 </html>
