@@ -4,12 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="./fonts/fontawesome/all.css">
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome/all.css">
   <link rel="stylesheet" href="./style/style.css">
   <title>Pavel Klenin</title>
 </head>
@@ -91,7 +87,7 @@
       <section id="about" class="section profile fade-in-up hidden">
         <div class="profile-block">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <div class="profile-photo">
                 <img
                   class="profile-img"
@@ -103,7 +99,7 @@
                 Скачать PDF
               </a>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-8">
               <h1 class="profile-title">Павел Кленин</h1>
               <h5 class="profile-job">HTML-верстальщик, Frontend-разработчик</h5>
               <p class="profile-about">
@@ -381,7 +377,7 @@
                 <p>Стек технологий:</p>
                 <p>HTML5, CSS, Flexbox, JS, React, Redux</p>
                 <a class="invisible portfolio-link"
-                  href="#"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/Redux"
                   target="_blank">
                   Cсылка на Git
                 </a>
@@ -389,6 +385,27 @@
             </div>
             <img class="portfolio-img"
               src="./img/avatars/redux_avatar.jpg"
+              alt="weather_app">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Bouncy</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/Bouncy"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/bouncy_avatar.png"
               alt="weather_app">
           </div>
         </div>
@@ -455,18 +472,10 @@
 
   </div>
 
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="./jQuery/jquery-3.4.1.min.js"></script>
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./bootstrap/bootstrap.min.js"></script>
+
   <script src="./js/jquery.viewportchecker.js"></script>
   <script src="./js/fadeInUp.js"></script>
   <script src="./js/menu.js"></script>
