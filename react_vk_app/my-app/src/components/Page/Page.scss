@@ -6,8 +6,18 @@
 }
 
 .Page_buttons {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  @media (max-width: 1023px) {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .Page_text {
@@ -22,6 +32,26 @@
 }
 
 .Page_photolist {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 750px;
+
+  @media (max-width: 1023px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 450px;
+  }
+
+  @media (max-width: 424px) {
+    max-width: 300px;
+  }
 }

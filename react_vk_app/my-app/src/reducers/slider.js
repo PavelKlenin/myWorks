@@ -1,7 +1,7 @@
-import {OPEN_SLIDER, CLOSE_SLIDER} from '../actions/PageActions';
+import {OPEN_SLIDER, PREV_SLIDE, NEXT_SLIDE, CLOSE_SLIDER} from '../actions/SliderActions';
 
 const initialState = {
-  index: '',
+  index: null,
   photos: [],
   isOpen: false,
 }
@@ -14,6 +14,16 @@ export function sliderReducer(state = initialState, action) {
         index: action.payload.i,
         photos: action.payload.bigPhotos,
         isOpen: true,
+      };
+    case PREV_SLIDE:
+      return {
+        ...state,
+        index: action.payload.i,
+      };
+    case NEXT_SLIDE:
+      return {
+        ...state,
+        index: action.payload.i,
       };
     case CLOSE_SLIDER:
       return initialState;

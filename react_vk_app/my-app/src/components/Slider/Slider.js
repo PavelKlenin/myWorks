@@ -1,34 +1,46 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
-import {closeSlider} from '../../actions/PageActions';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 import './Slider.scss';
 
-class Slider extends React.Component {
+export default class Slider extends React.Component {
+  
+  moveRight = (photos, photoID) => {
+    this.props.nextSlide(photos, photoID);
+  }
+
+  moveLeft = (photos, photoID) => {
+    this.props.prevSlide(photos, photoID);
+  }
+  
   render() {
-    console.log("TCL: Slider -> render -> this.props", this.props);
-    const {slider} = this.props;
+    const {photoID, photos} = this.props;
+
     return (
-      !slider.isOpen ?
-      null :
-      <div>
-        {this.props.slider.index}
+      <div className="Slider">
+        <img
+          className="Slider_item"
+          src={photos[photoID]}
+          alt="#" />
+        <div className="Slider_nav-arrows">
+          <div className="Slider_arrow" onClick={() => {this.moveLeft(photos, photoID)}}>
+            <FontAwesomeIcon className="Slider_arrow-icon" icon={faChevronLeft} />
+          </div>
+          <div className="Slider_arrow" onClick={() => {this.moveRight(photos, photoID)}}>
+            <FontAwesomeIcon className="Slider_arrow-icon" icon={faChevronRight} />
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (store) => {
-  return {
-    slider: store.slider,
-  }
+Slider.propTypes = {
+  photoID: PropTypes.number.isRequired,
+  photos: PropTypes.array.isRequired,
+  nextSlide: PropTypes.func.isRequired,
+  prevSlide: PropTypes.func.isRequired,
 }
-
-const mapDispatchToProps = dispatch => {
-  return {
-    closeSlider: () => dispatch(closeSlider()),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Slider);

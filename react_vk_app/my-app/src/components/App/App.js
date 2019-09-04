@@ -1,7 +1,7 @@
 import React from 'react';
 import UserContainer from '../../containers/UserContainer';
 import PageContainer from '../../containers/PageContainer';
-import Slider from '../Slider';
+import SliderContainer from '../../containers/SliderContainer/SliderContainer';
 import Footer from '../Footer';
 import {Route} from 'react-router';
 import './App.scss';
@@ -11,7 +11,7 @@ export default class App extends React.Component {
     
     return (
       <div className="App">
-        <Slider />
+        <SliderContainer />
         <div className="App_content">
           <header className="App_header">
             <UserContainer />

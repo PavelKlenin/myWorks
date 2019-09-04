@@ -2,7 +2,8 @@ import React from 'react';
 
 import Page from '../../components/Page';
 import {connect} from 'react-redux';
-import {getPhotos, openSlider} from '../../actions/PageActions';
+import {getPhotos} from '../../actions/PageActions';
+import {openSlider} from '../../actions/SliderActions';
 
 import './PageContainer.scss';
 

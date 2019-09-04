@@ -2,16 +2,46 @@
 
 .Photo {
   margin: 5px;
+  height: 130px;
+  min-width: 141px;
+  max-width: 40%;
   position: relative;
   cursor: pointer;
+
+  &:nth-child(3n+1) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  @media (max-width: 1023px) {
+    &:nth-child(2n) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    max-width: 60%;
+    min-width: 120px;
+  }
+
+  @media (max-width: 424px) {
+    min-width: 120px;
+    max-width: 100%;
+  }
   
   &:hover .Photo_img {
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
+
 }
 
 .Photo_img {
-  height: 130px;
+  width: 100%;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 

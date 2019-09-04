@@ -25,16 +25,15 @@ export default class Page extends React.Component {
   
   render() {
     const {year, photos, loading} = this.props;
-    const bigPhotos =[];
+    let bigPhotos =[];
+
     const newPhotos = photos.map((photo, i) => {
-
-    // большие фото
-    photo.sizes.forEach(size => {
-      if (size.type === 'y') {
-        bigPhotos.push(size.url)
-      };
-    })
-
+      // большие фото
+      photo.sizes.forEach(size => {
+        if (size.type === 'y') {
+          bigPhotos = [...bigPhotos, size.url];
+        };
+      })
       return(
         <Photo
           url={photo.sizes[0].url}
@@ -45,7 +44,7 @@ export default class Page extends React.Component {
     })
 
     const renderButtons = () => {
-      const years =[2018, 2017, 2016, 2015, 2014];
+      const years = [2018, 2017, 2016, 2015, 2014, 2013, 2012];
       return years.map((year, index) => {
         return (
           <Button
