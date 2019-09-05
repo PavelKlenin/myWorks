@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./img/resume_favicon.png" type="image/png">
   <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./fonts/fontawesome/all.css">
   <link rel="stylesheet" href="./style/style.css">
@@ -101,23 +102,34 @@
             </div>
             <div class="col-md-8">
               <h1 class="profile-title">Павел Кленин</h1>
-              <h5 class="profile-job">HTML-верстальщик, Frontend-разработчик</h5>
+              <h5 class="profile-job">HTML-верстальщик, React-разработчик</h5>
               <p class="profile-about">
-                Люблю порядочность и пунктуальность. Не люблю опаздывать и ждать.
+                <span>Желаемый уровень дохода:</span> от 50 000 руб.
               </p>
               <div class="row">
                 <div class="col-sm-6 profile-contacts">
-                  <div class="profile-age"><span>Возраст:</span> 29</div>
-                  <div class="profile-adress">
-                    <span>Адрес:</span> Санкт-Петербург
+                  <div class="profile-age"><span>Возраст:</span> 29 лет</div>
+                  <div class="profile-language">
+                    <span>Ключевые навыки:</span>
+                    <br> HTML5/CSS3, React, JavaScript
                   </div>
-                  <div class="profile-email">
-                    <span>Email:</span> pashka_89@mail.ru
+                  <div class="profile-language">
+                    <span>Дополнительные навыки:</span>
+                    <br> Flexbox, Grid, Redux, jQuery, Bootstrap
+                  </div>
+                  <div class="profile-language">
+                    <span>Иностранные языки:</span> Английский
                   </div>
                 </div>
                 <div class="col-sm-6 profile-contacts">
+                  <div class="profile-adress">
+                    <span>Адрес:</span> Санкт-Петербург
+                  </div>
                   <div class="profile-phone">
                     <span>Тел:</span> +7 (981) 888-74-37
+                  </div>
+                  <div class="profile-email">
+                    <span>Email:</span> pashka_89@mail.ru
                   </div>
                   <div class="profile-whatsapp">
                     <span>WhatsApp</span> +7 (981) 888-74-37</div>
@@ -171,7 +183,7 @@
               <h4 class="education-speciality">Frontend-разработчик</h4>
               <h4 class="education-university">GeekBrains</h4>
               <p class="education-skills">
-                HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Git
+                HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Redux, Git
               </p>
             </div>
           </div>
@@ -210,6 +222,10 @@
               <i class="fas fa-file-alt job-icon"></i>
               <p class="job-name">Инженер 1 кат</p>
             </div>
+            <div class="job-info">
+                <i class="fas fa-file-alt job-icon"></i>
+                <p class="job-name">Уровень дохода: от 60 000 руб.</p>
+              </div>
             <p class="job-duties">
                 Входной контроль приборов, ремонтно-восстановительные работы,
                 сопровождение контрольно-проверочной аппаратуры в местах
@@ -227,7 +243,10 @@
               </div>
               <div class="job-info">
                 <i class="fas fa-file-alt job-icon"></i>
-                <p class="job-name">HTML-верстальщик,<br>Frontend-разработчик</p>
+                <p class="job-name">
+                  HTML-верстальщик,<br>Frontend-разработчик,
+                  <br>React-разработчик
+                </p>
               </div>
               <p class="job-duties">
                   Профильного опыта не имею, поэтому в портфолио представлены
@@ -385,7 +404,7 @@
             </div>
             <img class="portfolio-img"
               src="./img/avatars/redux_avatar.jpg"
-              alt="weather_app">
+              alt="redux_app">
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
@@ -406,7 +425,49 @@
             </div>
             <img class="portfolio-img"
               src="./img/avatars/bouncy_avatar.png"
-              alt="weather_app">
+              alt="bouncy">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>React VK App</h5>
+                <p>Стек технологий:</p>
+                <p>React, Redux, SCSS, Flexbox, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/react_vk_app/my-app"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/react_vk_app_avatar.png"
+              alt="vk_app">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>My Resume</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, jQuery, Bootstrap</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/MyResume%20(Bootstrap)"
+                  target="_blank">
+                  Cсылка на Git
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="#"
+              alt="resume">
           </div>
         </div>
       </section>
