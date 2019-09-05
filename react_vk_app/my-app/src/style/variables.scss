@@ -29,14 +29,17 @@ $size-title: 20px;
 %button {
   padding: 10px 15px;
   border-radius: 10px;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 10px $color-main;
+    -webkit-box-shadow: 0 0 10px $color-main;
+            box-shadow: 0 0 10px $color-main;
   }
 
   &:active {
-    box-shadow: 0 0 4px $color-main;
+    -webkit-box-shadow: 0 0 4px $color-main;
+            box-shadow: 0 0 4px $color-main;
   }
 }

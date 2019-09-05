@@ -3,12 +3,13 @@ import React from 'react';
 import Page from '../../components/Page';
 import {connect} from 'react-redux';
 import {getPhotos} from '../../actions/PageActions';
+import {openSlider} from '../../actions/SliderActions';
 
 import './PageContainer.scss';
 
 class PageContainer extends React.Component {
   render() {
-    const {page, getPhotos} = this.props;
+    const {page, getPhotos, openSlider} = this.props;
     const {domain, year} = this.props.match.params;
     return (
       <div className="PageContainer">
@@ -17,7 +18,8 @@ class PageContainer extends React.Component {
           photos={page.photos}
           year = {+year}
           loading={page.loading}
-          getPhotos={getPhotos} />
+          getPhotos={getPhotos}
+          openSlider={openSlider} />
       </div>
     );
   }
@@ -32,6 +34,7 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = dispatch => {
   return {
     getPhotos: (domain, year) => dispatch(getPhotos(domain, year)),
+    openSlider: (bigPhotos, i) => dispatch(openSlider(bigPhotos, i)),
   }
 }
 

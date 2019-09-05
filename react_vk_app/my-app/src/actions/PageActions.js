@@ -4,6 +4,7 @@ export const GET_PHOTO_REQUEST = 'GET_PHOTO_REQUEST';
 export const GET_PHOTO_SUCCESS = 'GET_PHOTO_SUCCESS';
 export const GET_PHOTO_FAIL = 'GET_PHOTO_FAIL';
 
+
 let photosUnsort =[];
 let cashed = false;
 
@@ -12,7 +13,7 @@ const makeYearPhotos = (photos, year) => {
   photos.forEach(photo => {
     givenYear = new Date(photo.date*1000).getFullYear();
     if (givenYear === year) {
-      yearPhotos.push(photo);
+      yearPhotos = [...yearPhotos, photo];
     }
   });
 
@@ -74,3 +75,4 @@ export function getPhotos(domain, year) {
   }
 
 }
+

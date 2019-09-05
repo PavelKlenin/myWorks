@@ -18,17 +18,33 @@ export default class Page extends React.Component {
     const year = +e.currentTarget.innerText;
     this.props.getPhotos(domain, year);
   }
+
+  onPhotoClick = (bigPhotos, i, e) => {
+    this.props.openSlider(bigPhotos, i);
+  }
   
   render() {
     const {year, photos, loading} = this.props;
-    const newPhotos = photos.map(photo => {
+    let bigPhotos =[];
+
+    const newPhotos = photos.map((photo, i) => {
+      // большие фото
+      photo.sizes.forEach(size => {
+        if (size.type === 'y') {
+          bigPhotos = [...bigPhotos, size.url];
+        };
+      })
       return(
-        <Photo url={photo.sizes[0].url} likes={photo.likes.count} key={photo.id}/>
+        <Photo
+          url={photo.sizes[0].url}
+          likes={photo.likes.count}
+          onClick={e => this.onPhotoClick(bigPhotos, i, e)}
+          key={photo.id}/>
       )
     })
 
     const renderButtons = () => {
-      const years =[2018, 2017, 2016, 2015, 2014];
+      const years = [2018, 2017, 2016, 2015, 2014, 2013, 2012];
       return years.map((year, index) => {
         return (
           <Button

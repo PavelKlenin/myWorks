@@ -1,12 +1,32 @@
 @import '../../style/variables.scss';
 
 .Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  @media (max-width: 767px) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
 }
 
 .Footer_text {
   font-size: 14px;
   color: $color-dark;
+
+  @media (max-width: 767px) {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
 }

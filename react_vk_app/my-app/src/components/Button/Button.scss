@@ -3,6 +3,7 @@
 .Button {
   @extend %button;
   margin-right: 15px;
+  margin-bottom: 15px;
   background-color: $color-dark;
   color: $color-light;
 }
