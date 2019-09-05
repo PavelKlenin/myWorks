@@ -6,6 +6,8 @@
   min-width: 141px;
   max-width: 40%;
   position: relative;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
   cursor: pointer;
 
   &:nth-child(3n+1) {
@@ -32,17 +34,11 @@
     max-width: 100%;
   }
   
-  &:hover .Photo_img {
+  &:hover {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
   }
 
-}
-
-.Photo_img {
-  width: 100%;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
 .Photo_like {

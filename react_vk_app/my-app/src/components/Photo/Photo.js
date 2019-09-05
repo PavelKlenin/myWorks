@@ -6,7 +6,6 @@ import './Photo.scss';
 export default class Photo extends React.Component {
   render() {
     const {url, likes, onClick} = this.props;
-    console.log("TCL: Photo -> render -> url", url)
     const photoStyle = {
       background: `url(${url}) no-repeat 50% 30%/cover`,
     };
