@@ -610,12 +610,10 @@ $point-size: 15px;
     &:hover {
       text-decoration: none;
       transform: scale(1.1);
-      // color: $color-dark
     }
 
     &:active {
       transform: scale(0.9);
-      // color: $color-medium;
     }
   }
 }
