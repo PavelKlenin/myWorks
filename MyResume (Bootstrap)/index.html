@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="./fonts/fontawesome/all.css">
+  <link rel="shortcut icon" href="./img/resume_favicon.png" type="image/png">
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome/all.css">
   <link rel="stylesheet" href="./style/style.css">
   <title>Pavel Klenin</title>
 </head>
@@ -91,37 +88,52 @@
       <section id="about" class="section profile fade-in-up hidden">
         <div class="profile-block">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
               <div class="profile-photo">
                 <img
                   class="profile-img"
                   src="./img/photo_profile.jpg"
                   alt="photo">
               </div>
-              <a class="profile-download" href="#">
+              <a
+                class="profile-download"
+                href="./data/Pavel Klenin.pdf"
+                target="_blank"
+                download>
                 <i class="fas fa-cloud-download-alt"></i>
                 Скачать PDF
               </a>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-8">
               <h1 class="profile-title">Павел Кленин</h1>
-              <h5 class="profile-job">HTML-верстальщик, Frontend-разработчик</h5>
+              <h5 class="profile-job">HTML-верстальщик, React-разработчик</h5>
               <p class="profile-about">
-                Люблю порядочность и пунктуальность. Не люблю опаздывать и ждать.
+                <span>Желаемый уровень дохода:</span> от 50 000 руб.
               </p>
               <div class="row">
                 <div class="col-sm-6 profile-contacts">
-                  <div class="profile-age"><span>Возраст:</span> 29</div>
-                  <div class="profile-adress">
-                    <span>Адрес:</span> Санкт-Петербург
+                  <div class="profile-age"><span>Возраст:</span> 29 лет</div>
+                  <div class="profile-language">
+                    <span>Ключевые навыки:</span>
+                    <br> HTML5/CSS3, React, JavaScript
                   </div>
-                  <div class="profile-email">
-                    <span>Email:</span> pashka_89@mail.ru
+                  <div class="profile-language">
+                    <span>Дополнительные навыки:</span>
+                    <br> Flexbox, Grid, Redux, jQuery, Bootstrap
+                  </div>
+                  <div class="profile-language">
+                    <span>Иностранные языки:</span> Английский
                   </div>
                 </div>
                 <div class="col-sm-6 profile-contacts">
+                  <div class="profile-adress">
+                    <span>Адрес:</span> Санкт-Петербург
+                  </div>
                   <div class="profile-phone">
                     <span>Тел:</span> +7 (981) 888-74-37
+                  </div>
+                  <div class="profile-email">
+                    <span>Email:</span> kleninpv@gmail.com
                   </div>
                   <div class="profile-whatsapp">
                     <span>WhatsApp</span> +7 (981) 888-74-37</div>
@@ -175,7 +187,7 @@
               <h4 class="education-speciality">Frontend-разработчик</h4>
               <h4 class="education-university">GeekBrains</h4>
               <p class="education-skills">
-                HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Git
+                HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Redux, Git
               </p>
             </div>
           </div>
@@ -184,7 +196,7 @@
       <!-- JOB -->
       <section id="job" class="section job fade-in-up hidden row">
         <h2 class="section-title col-sm-12">Опыт работы</h2>
-        <div class="col-sm-4">
+        <div class="col-lg-4 col-sm-12">
           <div class="job-item">
             <h3 class="job-period">2006-2012</h3>
             <div class="job-info">
@@ -203,7 +215,7 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4 col-sm-12">
           <div class="job-item">
             <h3 class="job-period">2012-н.вр.</h3>
             <div class="job-info">
@@ -214,6 +226,10 @@
               <i class="fas fa-file-alt job-icon"></i>
               <p class="job-name">Инженер 1 кат</p>
             </div>
+            <div class="job-info">
+                <i class="fas fa-file-alt job-icon"></i>
+                <p class="job-name">Уровень дохода: от 60 000 руб.</p>
+              </div>
             <p class="job-duties">
                 Входной контроль приборов, ремонтно-восстановительные работы,
                 сопровождение контрольно-проверочной аппаратуры в местах
@@ -222,7 +238,7 @@
             </p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4 col-sm-12">
             <div class="job-item">
               <h3 class="job-period">2019-н.вр.</h3>
               <div class="job-info">
@@ -231,7 +247,10 @@
               </div>
               <div class="job-info">
                 <i class="fas fa-file-alt job-icon"></i>
-                <p class="job-name">HTML-верстальщик,<br>Frontend-разработчик</p>
+                <p class="job-name">
+                  HTML-верстальщик,<br>Frontend-разработчик,
+                  <br>React-разработчик
+                </p>
               </div>
               <p class="job-duties">
                   Профильного опыта не имею, поэтому в портфолио представлены
@@ -245,7 +264,7 @@
         class="section portfolio fade-in-up hidden row">
         <h2 class="section-title col-sm-12">Портфолио</h2>
         <!-- Portfolio Items -->
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -257,7 +276,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/A4%20Infografic%20Resume"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -266,7 +285,7 @@
               alt="a4_resume">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -278,7 +297,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/ArrowDesign%20(HTML%2C%20SCSS%2C%20grid%2C%20flex%2C%20jQuery)"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -287,7 +306,7 @@
               alt="arrow_design">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -299,7 +318,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/BlogList(HTML_SCSS%2C%20grid%2C%20flex%2C%20js)"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -308,7 +327,7 @@
               alt="bloglist">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -320,7 +339,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/CreativeAgency%20(HTML_SCSS_flex_js)"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -329,7 +348,7 @@
               alt="creative_agency">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -341,7 +360,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/snake%20(js%2C%20HTML%2C%20CSS)"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -350,7 +369,7 @@
               alt="snake">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -362,7 +381,7 @@
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/WeatherApp%20(HTML%2C%20SCSS%2C%20flex%2C%20js%2C%20React)"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
@@ -371,7 +390,7 @@
               alt="weather_app">
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
             data-toggle="modal"
             data-target="#carouselFade">
@@ -381,18 +400,80 @@
                 <p>Стек технологий:</p>
                 <p>HTML5, CSS, Flexbox, JS, React, Redux</p>
                 <a class="invisible portfolio-link"
-                  href="#"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/Redux"
                   target="_blank">
-                  Cсылка на Git
+                  <i class="fab fa-github"></i>
                 </a>
               </div>
             </div>
             <img class="portfolio-img"
               src="./img/avatars/redux_avatar.jpg"
-              alt="weather_app">
+              alt="redux_app">
           </div>
         </div>
-  
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>Bouncy</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, Grid, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/Bouncy"
+                  target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/bouncy_avatar.png"
+              alt="bouncy">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>React VK App</h5>
+                <p>Стек технологий:</p>
+                <p>React, Redux, SCSS, Flexbox, JS</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/react_vk_app/my-app"
+                  target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/react_vk_app_avatar.png"
+              alt="vk_app">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item"
+            data-toggle="modal"
+            data-target="#carouselFade">
+            <div class="portfolio-overlay">
+              <div class="portfolio-details">
+                <h5>My Resume</h5>
+                <p>Стек технологий:</p>
+                <p>HTML5, SCSS, Flexbox, jQuery, Bootstrap</p>
+                <a class="invisible portfolio-link"
+                  href="https://github.com/PavelKlenin/myWorks/tree/master/MyResume%20(Bootstrap)"
+                  target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <img class="portfolio-img"
+              src="./img/avatars/my_resume_avatar.png"
+              alt="resume">
+          </div>
+        </div>
       </section>
       <!-- INTERESTS -->
       <section id="habbits" class="section habbits fade-in-up hidden">
@@ -456,18 +537,10 @@
 
   </div>
 
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <script src="./jQuery/jquery-3.4.1.min.js"></script>
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./bootstrap/bootstrap.min.js"></script>
+
   <script src="./js/jquery.viewportchecker.js"></script>
   <script src="./js/fadeInUp.js"></script>
   <script src="./js/menu.js"></script>
