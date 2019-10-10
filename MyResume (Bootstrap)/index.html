@@ -14,7 +14,8 @@
   
   <!-- CONTAINER -->
   <div class="container">
-    <!-- CAROUSEL -->
+    <!-- Switch lang -->
+    <div class="lang_switch toEng">Ru</div>
     <!-- Modal -->
     <div class="modal fade"
       id="carouselFade"
@@ -48,32 +49,48 @@
     </div>
     <!-- MENU -->
     <div class="menu">
-      <a class="logo" href="#">ПК</a>
+      <a class="logo ru" href="#">ПК</a>
+      <a class="logo en" href="#">PK</a>
       <div class="menu-content">
         <ul>
           <li>
-            <a class="menu-item menu-active" href="#about" data-value="about">
+            <a class="menu-item menu-active ru" href="#about" data-value="about">
               Обо мне
             </a>
+            <a class="menu-item menu-active en" href="#about" data-value="about">
+              About
+            </a>
           </li>
           <li>
-            <a class="menu-item" href="#education" data-value="education">
+            <a class="menu-item ru" href="#education" data-value="education">
               Образование
             </a>
+            <a class="menu-item en" href="#education" data-value="education">
+              Education
+            </a>
           </li>
           <li>
-            <a class="menu-item" href="#job" data-value="job">
+            <a class="menu-item ru" href="#job" data-value="job">
               Опыт
             </a>
-          </li>
-          <li>
-            <a class="menu-item" href="#portfolio" data-value="portfolio">
-              Портфолио
+            <a class="menu-item en" href="#job" data-value="job">
+              Experience
             </a>
           </li>
           <li>
-            <a class="menu-item" href="#habbits" data-value="habbits">
+            <a class="menu-item ru" href="#portfolio" data-value="portfolio">
+              Портфолио
+            </a>
+            <a class="menu-item en" href="#portfolio" data-value="portfolio">
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a class="menu-item ru" href="#habbits" data-value="habbits">
               Интересы
+            </a>
+            <a class="menu-item en" href="#habbits" data-value="habbits">
+              Habbits
             </a>
           </li>
         </ul>
@@ -96,41 +113,64 @@
                   alt="photo">
               </div>
               <a
-                class="profile-download"
+                class="profile-download ru"
                 href="./data/pavel_klenin.pdf"
                 target="_blank"
                 download>
                 <i class="fas fa-cloud-download-alt"></i>
                 Скачать PDF
               </a>
+              <a
+                class="profile-download en"
+                href="./data/pavel_klenin.pdf"
+                target="_blank"
+                download>
+                <i class="fas fa-cloud-download-alt"></i>
+                Download PDF
+              </a>
             </div>
             <div class="col-md-8">
-              <h1 class="profile-title">Павел Кленин</h1>
-              <h5 class="profile-job">HTML-верстальщик, React-разработчик</h5>
-              <p class="profile-about">
+              <h1 class="profile-title ru">Павел Кленин</h1>
+              <h1 class="profile-title en">Pavel Klenin</h1>
+              <h5 class="profile-job ru">HTML-верстальщик, Frontend-разработчик</h5>
+              <h5 class="profile-job en">HTML/CSS-coder, Frontend-developer</h5>
+              <p class="profile-about ru">
                 <span>Желаемый уровень дохода:</span> от 50 000 руб.
+              </p>
+              <p class="profile-about en">
+                <span>Expected salary:</span> above 50 000 rub.
               </p>
               <div class="row">
                 <div class="col-sm-6 profile-contacts">
-                  <div class="profile-age"><span>Возраст:</span> 29 лет</div>
+                  <div class="profile-age ru"><span>Возраст:</span> 29 лет</div>
+                  <div class="profile-age en"><span>Age:</span> 29 </div>
                   <div class="profile-language">
-                    <span>Ключевые навыки:</span>
+                    <span class="ru">Ключевые навыки:</span>
+                    <span class="en">Main skills:</span>
                     <br> HTML5/CSS3, React, JavaScript
                   </div>
                   <div class="profile-language">
-                    <span>Дополнительные навыки:</span>
+                    <span class="ru">Дополнительные навыки:</span>
+                    <span class="en">Additional skills:</span>
                     <br> Flexbox, Grid, Redux, jQuery, Bootstrap
                   </div>
-                  <div class="profile-language">
+                  <div class="profile-language ru">
                     <span>Иностранные языки:</span> Английский
+                  </div>
+                  <div class="profile-language en">
+                    <span>Foreign languages:</span> English
                   </div>
                 </div>
                 <div class="col-sm-6 profile-contacts">
-                  <div class="profile-adress">
+                  <div class="profile-adress ru">
                     <span>Адрес:</span> Санкт-Петербург
                   </div>
+                  <div class="profile-adress en">
+                    <span>Address:</span> Saint-Petersburg
+                  </div>
                   <div class="profile-phone">
-                    <span>Тел:</span> +7 (981) 888-74-37
+                    <span class="ru">Тел:</span>
+                    <span class="en">Phone:</span> +7 (981) 888-74-37
                   </div>
                   <div class="profile-email">
                     <span>Email:</span> kleninpv@gmail.com
@@ -141,7 +181,8 @@
                     <span>Telegram</span> @pklenin</div>
                 </div>
                 <div class="col-sm-12 profile-contacts">
-                  <h6 class="profile-social">Социальные сети</h6>
+                  <h6 class="profile-social ru">Социальные сети</h6>
+                  <h6 class="profile-social en">Social networks</h6>
                   <a class="social-link vk"
                     href="https://vk.com/pklenin"
                     target="_blank">
@@ -166,7 +207,8 @@
       <!-- EDUCATION -->
       <section id="education"
         class="section education fade-in-up hidden">
-        <h2 class="section-title education-title">Образование</h2>
+        <h2 class="section-title education-title ru">Образование</h2>
+        <h2 class="section-title education-title en">Education</h2>
         <div class="col-md-10 offset-md-1">
           <div class="education-progress">
             <div class="education-icon">
@@ -174,17 +216,25 @@
             </div>
             <div class="education-item">
               <p class="education-period">2006-2012</p>
-              <h4 class="education-speciality">Инженер</h4>
-              <h4 class="education-university">
+              <h4 class="education-speciality ru">Инженер</h4>
+              <h4 class="education-speciality en">Engineer</h4>
+              <h4 class="education-university ru">
                 БГТУ «Военмех» им Д.Ф. Устинова
               </h4>
-              <p class="education-skills">
+              <h4 class="education-university en">
+                BSTU «VOENMEH» named after D.F. Ustinov
+              </h4>
+              <p class="education-skills ru">
                 Системы управления летательными аппаратами
+              </p>
+              <p class="education-skills en">
+                Aircraft control systems
               </p>
             </div>
             <div class="education-item">
               <p class="education-period">2018-2019</p>
-              <h4 class="education-speciality">Frontend-разработчик</h4>
+              <h4 class="education-speciality ru">Frontend-разработчик</h4>
+              <h4 class="education-speciality en">Frontend-developer</h4>
               <h4 class="education-university">GeekBrains</h4>
               <p class="education-skills">
                 HTML5/CSS3, Bootstrap, Javascript, jQuery, ReactJS, Redux, Git
@@ -195,66 +245,94 @@
       </section>
       <!-- JOB -->
       <section id="job" class="section job fade-in-up hidden row">
-        <h2 class="section-title col-sm-12">Опыт работы</h2>
+        <h2 class="section-title col-sm-12 ru">Опыт работы</h2>
+        <h2 class="section-title col-sm-12 en">Experience</h2>
         <div class="col-lg-4 col-sm-12">
           <div class="job-item">
             <h3 class="job-period">2006-2012</h3>
             <div class="job-info">
               <i class="fas fa-suitcase job-icon"></i>
-              <p class="job-name">ЗАО "НПЦ "Аквамарин"</p>
+              <p class="job-name ru">ЗАО "НПЦ "Аквамарин"</p>
+              <p class="job-name en">"RPC "Akvamarin"</p>
             </div>
             <div class="job-info">
               <i class="fas fa-file-alt job-icon"></i>
-              <p class="job-name">Сборщик РЭА и П,<br>Техник-электроник</p>
+              <p class="job-name ru">Сборщик РЭА и П,<br>Техник-электроник</p>
+              <p class="job-name en">
+                Electronic equipment mechanic,<br>Technician
+              </p>
             </div>
-            <p class="job-duties">
+            <p class="job-duties ru">
               Сборка радиоэлектронной аппаратуры, сборка отдельных блоков и
               модулей, подготовка корпусов и плат;
               Осуществление координации работ при выполнении заказов, контроль
               за ходом выполнения работ;
             </p>
+            <p class="job-duties en">
+              Assembling of electronic equipment, blocks and modules, preparation
+              of cases and boards;
+              Work coordination, monitoring the progress of work;
+            </p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="job-item">
-            <h3 class="job-period">2012-н.вр.</h3>
+            <h3 class="job-period ru">2012-н.вр.</h3>
+            <h3 class="job-period en">2012-present</h3>
             <div class="job-info">
               <i class="fas fa-suitcase job-icon"></i>
-              <p class="job-name">АО "Концерн "Гранит-Электрон"</p>
+              <p class="job-name ru">АО "Концерн "Гранит-Электрон"</p>
+              <p class="job-name en">АО "Concern "Granit-Electron"</p>
             </div>
             <div class="job-info">
               <i class="fas fa-file-alt job-icon"></i>
-              <p class="job-name">Инженер 1 кат</p>
+              <p class="job-name ru">Инженер 1 кат</p>
+              <p class="job-name en">Engineer 1 cat</p>
             </div>
             <div class="job-info">
                 <i class="fas fa-file-alt job-icon"></i>
-                <p class="job-name">Уровень дохода: от 60 000 руб.</p>
+                <p class="job-name ru">Уровень дохода: от 60 000 руб.</p>
+                <p class="job-name en">Salary: above 60 000 rub.</p>
               </div>
-            <p class="job-duties">
+            <p class="job-duties ru">
                 Входной контроль приборов, ремонтно-восстановительные работы,
                 сопровождение контрольно-проверочной аппаратуры в местах
                 эксплуатации, в том числе у инозаказчика (Вьетнам, Индия);
                 Разработка и корректировка КД;
             </p>
+            <p class="job-duties en">
+                Incoming expection of devices, repair and recovery works,
+                support of checkout equipment on-site, such as Vietnam, Republic
+                of India; Development and correcting of documentation;
+            </p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-12">
             <div class="job-item">
-              <h3 class="job-period">2019-н.вр.</h3>
+              <h3 class="job-period ru">2019-н.вр.</h3>
+              <h3 class="job-period en">2019-present</h3>
               <div class="job-info">
                 <i class="fas fa-suitcase job-icon"></i>
                 <p class="job-name"></p>
               </div>
               <div class="job-info">
                 <i class="fas fa-file-alt job-icon"></i>
-                <p class="job-name">
+                <p class="job-name ru">
                   HTML-верстальщик,<br>Frontend-разработчик,
                   <br>React-разработчик
                 </p>
+                <p class="job-name en">
+                  HTML/CSS-coder,<br>Frontend-developer,
+                  <br>React-developer
+                </p>
               </div>
-              <p class="job-duties">
-                  Профильного опыта не имею, поэтому в портфолио представлены
-                  самостоятельные или учебные работы.
+              <p class="job-duties ru">
+                Профильного опыта не имею, поэтому в портфолио представлены
+                самостоятельные или учебные работы.
+              </p>
+              <p class="job-duties en">
+                I don't have work experience, so there are only self-study works
+                in portfolio 
               </p>
             </div>
           </div>
@@ -262,7 +340,8 @@
       <!-- PORTFOLIO -->
       <section id="portfolio"
         class="section portfolio fade-in-up hidden row">
-        <h2 class="section-title col-sm-12">Портфолио</h2>
+        <h2 class="section-title col-sm-12 ru">Портфолио</h2>
+        <h2 class="section-title col-sm-12 en">Portfolio</h2>
         <!-- Portfolio Items -->
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item"
@@ -271,7 +350,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>A4 Infographic Resume</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, Grid, JS, BEM</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/A4%20Infografic%20Resume"
@@ -292,7 +372,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Arrow Design</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, Grid, jQuery</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/ArrowDesign%20(HTML%2C%20SCSS%2C%20grid%2C%20flex%2C%20jQuery)"
@@ -313,7 +394,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Bloglist</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, Grid, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/BlogList(HTML_SCSS%2C%20grid%2C%20flex%2C%20js)"
@@ -334,7 +416,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Creative Agency</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/CreativeAgency%20(HTML_SCSS_flex_js)"
@@ -355,7 +438,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Snake</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, CSS, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/snake%20(js%2C%20HTML%2C%20CSS)"
@@ -376,7 +460,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Weather App</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, JS, React</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/WeatherApp%20(HTML%2C%20SCSS%2C%20flex%2C%20js%2C%20React)"
@@ -397,7 +482,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>React Redux</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, CSS, Flexbox, JS, React, Redux</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/Redux"
@@ -418,7 +504,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Bouncy</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, Grid, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/Bouncy"
@@ -439,7 +526,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>React VK App</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>React, Redux, SCSS, Flexbox, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/react_vk_app/my-app"
@@ -460,7 +548,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>My Resume</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, jQuery, Bootstrap</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/MyResume%20(Bootstrap)"
@@ -481,7 +570,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>Webim</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/PavelKlenin.github.io"
@@ -502,7 +592,8 @@
             <div class="portfolio-overlay">
               <div class="portfolio-details">
                 <h5>UpTrader</h5>
-                <p>Стек технологий:</p>
+                <p class="ru">Стек технологий:</p>
+                <p class="en">Stack:</p>
                 <p>HTML5, SCSS, Flexbox, JS</p>
                 <a class="invisible portfolio-link"
                   href="https://github.com/PavelKlenin/myWorks/tree/master/UpTrader"
@@ -519,40 +610,50 @@
       </section>
       <!-- INTERESTS -->
       <section id="habbits" class="section habbits fade-in-up hidden">
-        <h2 class="section-title">Интересы</h2> 
-        <p class="habbits-text">
+        <h2 class="section-title ru">Интересы</h2> 
+        <h2 class="section-title en">Habbits</h2> 
+        <p class="habbits-text ru">
           В свободное время играю в футбол, занимаюсь спортом. Люблю пешие
           прогулки и хорошее кино.
+        </p>
+        <p class="habbits-text en">
+          In free time I play football, do sports. Also I like walking and good
+          movies.
         </p>
         <div class="row justify-content-around">
           <div class="col-auto">
             <div class="habbits-item">
               <i class="fas fa-futbol habbits-icon"></i>
-              <p class="habbits-name">Футбол</p>
+              <p class="habbits-name ru">Футбол</p>
+              <p class="habbits-name en">Football</p>
             </div>
           </div>
           <div class="col-auto">
             <div class="habbits-item">
               <i class="fas fa-film habbits-icon"></i>
-              <p class="habbits-name">Кино</p>
+              <p class="habbits-name ru">Кино</p>
+              <p class="habbits-name en">Movies</p>
             </div>
           </div>
           <div class="col-auto">
             <div class="habbits-item">
               <i class="fas fa-dumbbell habbits-icon"></i>
-              <p class="habbits-name">Фитнес</p>
+              <p class="habbits-name ru">Фитнес</p>
+              <p class="habbits-name en">Gym</p>
             </div>
           </div>
           <div class="col-auto">
             <div class="habbits-item">
               <i class="fas fa-plane habbits-icon"></i>
-              <p class="habbits-name">Путешествия</p>
+              <p class="habbits-name ru">Путешествия</p>
+              <p class="habbits-name en">Travelling</p>
             </div>
           </div>
           <div class="col-auto">
             <div class="habbits-item">
               <i class="fas fa-walking habbits-icon"></i>
-              <p class="habbits-name">Прогулки</p>
+              <p class="habbits-name ru">Прогулки</p>
+              <p class="habbits-name en">Walking</p>
             </div>
           </div>
         </div>
@@ -584,6 +685,7 @@
   <script src="./bootstrap/bootstrap.min.js"></script>
 
   <script src="./js/jquery.viewportchecker.js"></script>
+  <script src="./js/switchLang.js"></script>
   <script src="./js/fadeInUp.js"></script>
   <script src="./js/menu.js"></script>
   <script src="./js/portfolio.js"></script>
