@@ -63,6 +63,23 @@ body {
   padding-bottom: 50px;
 }
 
+.hide {
+  display: none !important;
+}
+
+.lang_switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background: #0487cc;
+  cursor: pointer;
+}
+
 .carousel-item .portfolio-img {
   -webkit-filter: brightness(60%);
   filter: brightness(60%);
@@ -222,7 +239,7 @@ body {
   width: 30px;
   height: 30px;
   border: 1px solid #757575;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 .profile .social-link:hover {
