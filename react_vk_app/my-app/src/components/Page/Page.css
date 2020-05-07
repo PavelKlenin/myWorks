@@ -1,0 +1,31 @@
+.Page {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Page_buttons {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Page_text {
+  color: #000;
+  text-transform: capitalize;
+}
+
+.Page_title {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #777;
+}
+
+.Page_photolist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=Page.css.map */

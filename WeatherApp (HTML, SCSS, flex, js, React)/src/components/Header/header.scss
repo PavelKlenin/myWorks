@@ -1,0 +1,13 @@
+@import '../../style/variables.scss';
+
+.header {
+  padding: 20px 0;
+
+  .header-title {
+    @extend %main-title;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: $main-color;
+  }
+}

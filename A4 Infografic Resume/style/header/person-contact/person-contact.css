@@ -1,0 +1,42 @@
+.person-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 40px;
+}
+
+.person-contact:not(:last-of-type) {
+  border-bottom: 1px solid #b9b9bb;
+}
+
+@media (max-width: 767px) {
+  .person-contact {
+    padding: 30px 0;
+  }
+}
+
+.person-contact__icon {
+  margin-right: 65px;
+  color: #000;
+}
+
+.person-contact__icon:hover {
+  color: #48443e;
+}
+
+@media (max-width: 767px) {
+  .person-contact__icon {
+    margin-right: 20px;
+  }
+}
+
+.person-contact__phone {
+  font-size: 46px;
+}
+
+@media (max-width: 1440px) {
+  .person-contact__phone {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=person-contact.css.map */

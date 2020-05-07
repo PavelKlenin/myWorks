@@ -1,0 +1,41 @@
+.person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 1439px) {
+  .person-info {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .person-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.person-info__photo {
+  margin-right: 50px;
+  height: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .person-info__photo {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.person-info__name {
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=person-info.css.map */

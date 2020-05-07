@@ -1,0 +1,7 @@
+@import '../../style/variables.scss';
+
+.LoginBtn {
+  @extend %button;
+  background-color: $color-dark;
+  color: $color-light;
+}

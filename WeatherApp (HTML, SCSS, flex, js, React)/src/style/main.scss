@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, #root, .container {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: url(../img/Weather-Few-Clouds-PPT-Backgrounds.jpg) no-repeat fixed $secondary-color;
+  background-size: cover;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 100px;
+
+  @media (max-width: 1023px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}

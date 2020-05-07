@@ -1,0 +1,84 @@
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.experience {
+  grid-area: experience;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 2559px) {
+  .experience {
+    margin-bottom: 0;
+  }
+}
+
+.experience__map {
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.experience__img {
+  width: 100%;
+}
+
+.experience__pin {
+  position: absolute;
+  width: 5.15%;
+}
+
+.experience__pin_location-1 {
+  top: 17.7%;
+  left: 5.1%;
+}
+
+.experience__pin_location-2 {
+  top: 10.7%;
+  left: 48%;
+}
+
+.experience__pin_location-3 {
+  top: 18%;
+  right: 5%;
+}
+
+.pulsate-bck {
+  -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+  animation: pulsate-bck 0.5s ease-in-out infinite both;
+}
+
+.experience__location {
+  padding: 25px 5px;
+  font-weight: 300;
+}
+
+.experience__location:not(:last-of-type) {
+  border-bottom: 1px solid #b1b1b4;
+}
+/*# sourceMappingURL=experience.css.map */

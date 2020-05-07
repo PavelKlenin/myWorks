@@ -1,0 +1,13 @@
+.about {
+  grid-area: about;
+  padding-bottom: 105px;
+
+  @media (max-width: 2559px) {
+    padding-bottom: 0;
+  }
+}
+
+.about__text {
+  font-weight: 300;
+  line-height: 1.37;
+}

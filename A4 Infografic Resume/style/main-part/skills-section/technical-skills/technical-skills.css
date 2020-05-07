@@ -1,0 +1,32 @@
+.technical-skills {
+  grid-area: technical;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 2559px) {
+  .technical-skills {
+    margin-bottom: 0;
+  }
+}
+
+.technical-skills__graph {
+  color: #62b7ab;
+  border: 1px solid rgba(98, 183, 171, 0.15);
+  margin: 20px 0;
+  width: 100%;
+  height: 14px;
+  background-color: #fff;
+}
+
+.technical-skills__graph::-webkit-progress-bar {
+  background-color: rgba(98, 183, 171, 0.15);
+}
+
+.technical-skills__graph::-moz-progress-bar {
+  background-color: #62b7ab;
+}
+
+.technical-skills__graph::-webkit-progress-value {
+  background-color: #62b7ab;
+}
+/*# sourceMappingURL=technical-skills.css.map */

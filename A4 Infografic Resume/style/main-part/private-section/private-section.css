@@ -1,0 +1,191 @@
+.private-section {
+  padding-right: 65px;
+  border-right: 5px dotted #7f7d7c;
+}
+
+@media (max-width: 2559px) {
+  .private-section {
+    padding-right: 0;
+    border-right: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'philosophy passions'
+ 'about passions';
+    grid-gap: 50px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .private-section {
+    grid-row-gap: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .private-section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'philosophy' 'about' 'passions';
+  }
+}
+
+.private-section_article-text {
+  font-size: 41.5px;
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+.philosophy {
+  grid-area: philosophy;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 2559px) {
+  .philosophy {
+    padding-bottom: 0;
+  }
+}
+
+.about {
+  grid-area: about;
+  padding-bottom: 105px;
+}
+
+@media (max-width: 2559px) {
+  .about {
+    padding-bottom: 0;
+  }
+}
+
+.about__text {
+  font-weight: 300;
+  line-height: 1.37;
+}
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+
+.passions {
+  grid-area: passions;
+}
+
+.passions__title {
+  padding-bottom: 45px;
+}
+
+.passions__list {
+  list-style-type: none;
+}
+
+.passions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 45px 17px 40px;
+  text-transform: capitalize;
+  line-height: 1.11;
+  letter-spacing: 2.1px;
+}
+
+.passions__item:not(:last-of-type) {
+  border-bottom: 1px solid #4f5052;
+}
+
+@media (max-width: 767px) {
+  .passions__item {
+    padding: 25px 17px 20px;
+  }
+}
+
+.passions__img {
+  margin-right: 45px;
+  min-width: 82px;
+}
+
+@media (max-width: 767px) {
+  .passions__img {
+    min-width: 50px;
+  }
+}
+
+.passions__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .passions__icon {
+    max-height: 40px;
+    max-width: 50px;
+  }
+}
+
+.passions__icon:hover {
+  -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+/*# sourceMappingURL=private-section.css.map */

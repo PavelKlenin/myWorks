@@ -1,0 +1,23 @@
+.practice-section {
+  padding-left: 60px;
+
+  @media (max-width: 2559px) {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      'numbers experience'
+      'social social';
+    grid-gap: 50px;
+  }
+
+  @media (max-width: 1439px) {
+    grid-row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'numbers' 'experience' 'social';
+  }
+}
+
+@import './numbers/numbers.scss';
+@import './experience/experience.scss';
+@import './social/social.scss';
