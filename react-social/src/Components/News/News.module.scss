@@ -1,0 +1,23 @@
+@import "../../Extentions.scss";
+
+.news {
+  padding: 10px;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  background: #edf1f5;
+}
+
+.posts {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.createPost {
+  @extend %sendForm;
+}

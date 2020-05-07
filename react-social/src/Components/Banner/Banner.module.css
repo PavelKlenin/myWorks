@@ -1,0 +1,9 @@
+.banner {
+  grid-area: banner;
+  height: 150px;
+  background-image: url("https://socialyte.codeplus.it/img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=Banner.module.css.map */

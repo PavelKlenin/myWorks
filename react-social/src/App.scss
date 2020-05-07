@@ -1,0 +1,20 @@
+.app {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: -webkit-min-content 150px 1fr;
+  grid-template-rows: min-content 150px 1fr;
+  grid-template-areas:
+    "header header header"
+    "banner banner banner"
+    "sidebar content content";
+  height: 100%;
+}
+
+.appContent {
+  grid-area: content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 90%;
+}

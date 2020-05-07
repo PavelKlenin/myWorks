@@ -1,0 +1,24 @@
+.profile {
+  padding: 10px;
+  background: #edf1f5;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.info img {
+  display: block;
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.info div {
+  margin-left: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Profile.module.css.map */
