@@ -1,0 +1,83 @@
+@import "../../Extentions.scss";
+
+.dialogs {
+  padding: 10px;
+  flex-grow: 1;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "users chat";
+}
+
+.users {
+  grid-area: users;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+
+  .user {
+    display: -webkit-box;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+  }
+}
+
+.chat {
+  grid-area: chat;
+  padding: 10px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message {
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: #edf1f5;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: #edf1f5;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.sendMessage {
+  @extend %sendForm;
+}

@@ -1,0 +1,28 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 10px;
+  background-color: #edf1f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbarItem a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.navbarItem a.active {
+  font-weight: bold;
+}
+
+.navbarItem a:hover {
+  color: white;
+}
+/*# sourceMappingURL=Navbar.module.css.map */

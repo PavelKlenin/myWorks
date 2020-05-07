@@ -1,0 +1,24 @@
+.sidebar {
+  grid-area: sidebar;
+  min-width: 120px;
+  height: 100%;
+}
+
+.avatar {
+  width: 80%;
+  margin: auto;
+
+  img {
+    display: block;
+    margin: -50% auto 0;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #edf1f5;
+  }
+}
+.username {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}

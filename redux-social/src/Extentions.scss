@@ -1,0 +1,43 @@
+%sendForm {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: flex;
+  align-content: center;
+
+  textarea {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    resize: none;
+
+    &:focus {
+      border: 1px solid darkslategray;
+    }
+  }
+
+  button {
+    margin-left: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #edf1f5;
+    outline: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+  
+    &:hover {
+      background: #ccc;
+    }
+  
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+}
+

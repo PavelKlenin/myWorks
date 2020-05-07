@@ -1,0 +1,25 @@
+.profile {
+  padding: 10px;
+  background: #edf1f5;
+}
+
+.info {
+  display: -webkit-box;
+  display: flex;
+  padding: 10px;
+  
+  img {
+    display: block;
+    max-width: 100px;
+    border-radius: 50%;
+  
+  }
+  
+  div {
+    margin-left: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+
