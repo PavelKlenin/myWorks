@@ -20,6 +20,11 @@ function Navbar() {
           News
         </NavLink>
       </div>
+      <div className={s.navbarItem}>
+        <NavLink activeClassName={s.active} to="/contacts">
+          Contacts
+        </NavLink>
+      </div>
     </nav>
   );
 }

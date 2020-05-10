@@ -10,6 +10,7 @@ import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import NewsContainer from "./Components/News/NewsContainer";
 
 import "./App.css";
+import ContactsContainer from "./Components/Contacts/ContactsContainer";
 
 function App(props) {
   const { profile } = props.state;
@@ -24,6 +25,7 @@ function App(props) {
           <Route path="/profile" render={() => <Profile {...profile} />} />
           <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/news" render={() => <NewsContainer />} />
+          <Route path="/contacts" render={() => <ContactsContainer />} />
         </div>
       </div>
     </BrowserRouter>

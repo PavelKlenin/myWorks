@@ -81,3 +81,7 @@
 .sendMessage {
   @extend %sendForm;
 }
+
+.sendBtn {
+  @extend %button;
+}

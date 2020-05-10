@@ -1,0 +1,83 @@
+@import "../../Extentions.scss";
+
+.contactList {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.loadContacts {
+  @extend %button;
+  display: block;
+  margin: 0 auto 10px;
+  background: #fff;
+}
+
+.userCard {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.5s;
+  // cursor: pointer;
+
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
+
+  // &:active {
+  //   transform: scale(0.95);
+  // }
+}
+
+.avatar {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.userName {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.userStatus {
+  margin-bottom: 10px;
+}
+
+.userActions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.followBtn {
+  @extend %button;
+  margin-left: 0;
+  padding: 5px;
+  flex-grow: 1;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+  background: #080;
+}
+
+.messageBtn {
+  @extend %button;
+  padding: 5px;
+  margin-left: 0;
+  color: #fff;
+  background: #f00;
+
+  img {
+    display: block;
+    width: 15px;
+  }
+}

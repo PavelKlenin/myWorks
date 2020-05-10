@@ -1,0 +1,112 @@
+.loadContacts, .followBtn, .messageBtn {
+  margin-left: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #edf1f5;
+  outline: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.loadContacts:hover, .followBtn:hover, .messageBtn:hover {
+  background: #ccc;
+}
+
+.loadContacts:active, .followBtn:active, .messageBtn:active {
+  border: 1px solid transparent;
+}
+
+.contactList {
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.loadContacts {
+  display: block;
+  margin: 0 auto 10px;
+  background: #fff;
+}
+
+.userCard {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 23%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.avatar {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.userName {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.userStatus {
+  margin-bottom: 10px;
+}
+
+.userActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.followBtn {
+  margin-left: 0;
+  padding: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+  background: #080;
+}
+
+.messageBtn {
+  padding: 5px;
+  margin-left: 0;
+  color: #fff;
+  background: #f00;
+}
+
+.messageBtn img {
+  display: block;
+  width: 15px;
+}
+/*# sourceMappingURL=Contacts.module.css.map */

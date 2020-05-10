@@ -24,7 +24,7 @@
   border: 1px solid darkslategray;
 }
 
-.sendMessage button {
+.sendBtn {
   margin-left: 10px;
   padding: 5px 15px;
   border-radius: 5px;
@@ -36,11 +36,11 @@
   cursor: pointer;
 }
 
-.sendMessage button:hover {
+.sendBtn:hover {
   background: #ccc;
 }
 
-.sendMessage button:active {
+.sendBtn:active {
   border: 1px solid transparent;
 }
 

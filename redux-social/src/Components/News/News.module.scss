@@ -21,3 +21,7 @@
 .createPost {
   @extend %sendForm;
 }
+
+.sendBtn {
+  @extend %button;
+}
