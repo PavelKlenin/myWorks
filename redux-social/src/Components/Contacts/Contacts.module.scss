@@ -8,12 +8,23 @@
   flex-wrap: wrap;
 }
 
-.loadContacts {
-  @extend %button;
-  display: block;
-  margin: 0 auto 10px;
-  background: #fff;
+.pages {
+  display: flex;
 }
+.pageNumber {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.currentPage {
+  font-weight: bold;
+}
+
+// .loadContacts {
+//   @extend %button;
+//   display: block;
+//   margin: 0 auto 10px;
+//   background: #fff;
+// }
 
 .userCard {
   margin-bottom: 10px;

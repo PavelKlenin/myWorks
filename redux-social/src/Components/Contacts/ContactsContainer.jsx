@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Contacts from "./Contacts";
-import { toggleFollowAC, getContactsAC } from "../../Redux/contactsReducer";
+import { toggleFollowAC, getContactsAC, getContactsCountAC, changePageAC } from "../../Redux/contactsReducer";
 
 const mapStateToProps = (state) => {
   return {...state.contacts};
@@ -14,6 +14,12 @@ const mapDispatchToProps = (dispatch) => {
     getContacts: (users) => {
       dispatch(getContactsAC(users))
     },
+    getContactsCount: (count) => {
+      dispatch(getContactsCountAC(count));
+    },
+    changePage: (number) => {
+      dispatch(changePageAC(number));
+    }
   };
 };
 const ContactsContainer = connect(

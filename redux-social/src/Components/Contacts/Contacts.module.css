@@ -1,4 +1,4 @@
-.loadContacts, .followBtn, .messageBtn {
+.followBtn, .messageBtn {
   margin-left: 10px;
   padding: 5px 15px;
   border-radius: 5px;
@@ -10,11 +10,11 @@
   cursor: pointer;
 }
 
-.loadContacts:hover, .followBtn:hover, .messageBtn:hover {
+.followBtn:hover, .messageBtn:hover {
   background: #ccc;
 }
 
-.loadContacts:active, .followBtn:active, .messageBtn:active {
+.followBtn:active, .messageBtn:active {
   border: 1px solid transparent;
 }
 
@@ -33,10 +33,19 @@
       flex-wrap: wrap;
 }
 
-.loadContacts {
-  display: block;
-  margin: 0 auto 10px;
-  background: #fff;
+.pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pageNumber {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.currentPage {
+  font-weight: bold;
 }
 
 .userCard {
