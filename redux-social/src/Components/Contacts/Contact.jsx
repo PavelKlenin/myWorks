@@ -4,10 +4,10 @@ import icon from '../../assets/img/svg/message.svg';
 import userImg from '../../assets/img/userImg.png';
 
 const Contact = (props) => {
-  const { id, photos, name, status, followed } = props;
+  const { id, photos, name, status, isFollowed } = props;
 
-  const toggleFollow = () => {
-    props.toggleFollow(id)
+  const toggleFollow = (userID) => {
+    props.toggleFollow(userID)
   }
 
   return (
@@ -16,7 +16,7 @@ const Contact = (props) => {
       <h3 className={s.userName}>{name}</h3>
       <p className={s.userStatus}>{status}</p>
       <div className={s.userActions}>
-        <button className={s.followBtn} type="button" onClick={toggleFollow}>{followed ? "Followed" : "Follow"}</button>
+        <button className={s.followBtn} type="button" onClick={() => {toggleFollow(id)}}>{isFollowed ? "Followed" : "Follow"}</button>
         <button className={s.messageBtn} type="button">
           <img src={icon} alt="icon"/>
         </button>
