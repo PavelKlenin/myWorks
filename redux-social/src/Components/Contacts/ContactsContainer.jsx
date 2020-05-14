@@ -7,33 +7,40 @@ import {
   getContactsAC,
   getContactsCountAC,
   changePageAC,
+  toggleFetchingAC,
 } from "../../Redux/contactsReducer";
 
 class ContactsContainer extends React.Component {
-
   componentDidMount() {
+    this.props.toggleFetching(true);
     axios
       .get(
         `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
       )
       .then((response) => {
+        this.props.toggleFetching(false);
         this.props.getContacts(response.data.items);
         this.props.getContactsCount(response.data.totalCount);
       });
   }
 
   loadContacts = (pageNumber) => {
+    this.props.toggleFetching(true);
     this.props.changePage(pageNumber);
     axios
       .get(
         `https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`
       )
-      .then((response) => this.props.getContacts(response.data.items));
+      .then((response) => {
+        this.props.toggleFetching(false);
+        this.props.getContacts(response.data.items);
+      });
   };
 
   render() {
     return (
       <Contacts
+        isFetching={this.props.isFetching}
         users={this.props.users}
         totalUsers={this.props.totalUsers}
         pageSize={this.props.pageSize}
@@ -62,6 +69,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     changePage: (number) => {
       dispatch(changePageAC(number));
+    },
+    toggleFetching: (isFetching) => {
+      dispatch(toggleFetchingAC(isFetching));
     },
   };
 };

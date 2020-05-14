@@ -1,9 +1,15 @@
 @import "../../Extentions.scss";
 
+.contacts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
 .contactList {
   padding: 10px;
   flex-grow: 1;
   display: flex;
+  align-content: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -31,6 +37,7 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 23%;
   background: #fff;
@@ -46,6 +53,14 @@
   // &:active {
   //   transform: scale(0.95);
   // }
+}
+
+.userInfo {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
 }
 
 .avatar {

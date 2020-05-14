@@ -12,9 +12,11 @@ const Contact = (props) => {
 
   return (
     <div className={s.userCard}>
+      <div className={s.userInfo}>
       <img className={s.avatar} src={photos.small ? photos.small : userImg} alt="avatar" />
       <h3 className={s.userName}>{name}</h3>
       <p className={s.userStatus}>{status}</p>
+      </div>
       <div className={s.userActions}>
         <button className={s.followBtn} type="button" onClick={() => {toggleFollow(id)}}>{isFollowed ? "Followed" : "Follow"}</button>
         <button className={s.messageBtn} type="button">

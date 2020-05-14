@@ -2,12 +2,14 @@ const TOGGLE_FOLLOW = "TOGGLE-FOLLOW";
 const GET_CONTACTS = "GET-CONTACTS";
 const GET_CONTACTS_COUNT = "GET_CONTACTS_COUNT";
 const CHANGE_PAGE = "CHANGE_PAGE";
+const TOGGLE_FETCHING = "TOGGLE_FETCHING";
 
 const initialState = {
   users: [],
   totalUsers: 0,
   pageSize: 8,
   currentPage: 1,
+  isFetching: false,
 };
 
 export const contactsReducer = (state = initialState, action) => {
@@ -27,6 +29,8 @@ export const contactsReducer = (state = initialState, action) => {
       return { ...state, totalUsers: action.count };
     case CHANGE_PAGE:
       return { ...state, currentPage: action.pageNumber };
+    case TOGGLE_FETCHING:
+      return { ...state, isFetching: action.isFetching };
     default:
       return state;
   }
@@ -42,3 +46,4 @@ export const getContactsCountAC = (count) => ({
 });
 
 export const changePageAC = (pageNumber) => ({ type: CHANGE_PAGE, pageNumber });
+export const toggleFetchingAC = (isFetching) => ({ type: TOGGLE_FETCHING, isFetching});
