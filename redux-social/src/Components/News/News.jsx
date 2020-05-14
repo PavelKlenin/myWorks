@@ -12,7 +12,7 @@ function News(props) {
 
   const updatePostText = () => {
     const updatedText = postText.current.value;
-    props.updatePostText(updatedText);
+    props.changePost(updatedText);
   };
 
   const sendPost = () => {

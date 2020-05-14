@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import Contacts from "./Contacts";
 import * as axios from "axios";
 import {
-  toggleFollowAC,
-  getContactsAC,
-  getContactsCountAC,
-  changePageAC,
-  toggleFetchingAC,
+  toggleFollow,
+  getContacts,
+  getContactsCount,
+  changePage,
+  toggleFetching,
 } from "../../Redux/contactsReducer";
 
 class ContactsContainer extends React.Component {
@@ -56,24 +56,12 @@ const mapStateToProps = (state) => {
   return { ...state.contacts };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    toggleFollow: (id) => {
-      dispatch(toggleFollowAC(id));
-    },
-    getContacts: (users) => {
-      dispatch(getContactsAC(users));
-    },
-    getContactsCount: (count) => {
-      dispatch(getContactsCountAC(count));
-    },
-    changePage: (number) => {
-      dispatch(changePageAC(number));
-    },
-    toggleFetching: (isFetching) => {
-      dispatch(toggleFetchingAC(isFetching));
-    },
-  };
+const mapDispatchToProps = {
+  toggleFollow,
+  getContacts,
+  getContactsCount,
+  changePage,
+  toggleFetching,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsContainer);

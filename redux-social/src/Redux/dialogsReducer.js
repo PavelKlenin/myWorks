@@ -54,8 +54,8 @@ export const dialogsReducer = (state = initialState, action) => {
   }
 };
 
-export const changeMessageCreator = (text) => ({
+export const changeMessage = (text) => ({
   type: CHANGE_MESSAGE,
   text: text,
 });
-export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
+export const sendMessage = () => ({ type: SEND_MESSAGE });

@@ -1,4 +1,4 @@
-import { changePostCreator, sendPostCreator } from "../../Redux/newsReducer";
+import { changePost, sendPost } from "../../Redux/newsReducer";
 import News from "./News";
 import { connect } from "react-redux";
 
@@ -9,15 +9,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    updatePostText: (text) => {
-      dispatch(changePostCreator(text));
-    },
-    sendPost: () => {
-      dispatch(sendPostCreator());
-    },
-  };
+const mapDispatchToProps = {
+  changePost,
+  sendPost,
 };
 
 const NewsContainer = connect(mapStateToProps, mapDispatchToProps)(News);

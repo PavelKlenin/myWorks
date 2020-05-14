@@ -34,8 +34,8 @@ export const newsReducer = (state = initialState, action) => {
   }
 };
 
-export const changePostCreator = (text) => ({
+export const changePost = (text) => ({
   type: CHANGE_POST,
   text: text,
 });
-export const sendPostCreator = () => ({ type: SEND_POST });
+export const sendPost = () => ({ type: SEND_POST });

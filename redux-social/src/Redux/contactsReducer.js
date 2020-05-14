@@ -36,14 +36,14 @@ export const contactsReducer = (state = initialState, action) => {
   }
 };
 
-export const toggleFollowAC = (id) => ({ type: TOGGLE_FOLLOW, userID: id });
+export const toggleFollow = (id) => ({ type: TOGGLE_FOLLOW, userID: id });
 
-export const getContactsAC = (users) => ({ type: GET_CONTACTS, users });
+export const getContacts = (users) => ({ type: GET_CONTACTS, users });
 
-export const getContactsCountAC = (count) => ({
+export const getContactsCount = (count) => ({
   type: GET_CONTACTS_COUNT,
   count,
 });
 
-export const changePageAC = (pageNumber) => ({ type: CHANGE_PAGE, pageNumber });
-export const toggleFetchingAC = (isFetching) => ({ type: TOGGLE_FETCHING, isFetching});
+export const changePage = (pageNumber) => ({ type: CHANGE_PAGE, pageNumber });
+export const toggleFetching = (isFetching) => ({ type: TOGGLE_FETCHING, isFetching});
