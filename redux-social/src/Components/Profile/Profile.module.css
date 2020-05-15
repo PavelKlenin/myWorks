@@ -1,5 +1,11 @@
 .profile {
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #edf1f5;
 }
 
@@ -16,9 +22,16 @@
   border-radius: 50%;
 }
 
-.info div {
+.username {
+  font-weight: bold;
+}
+
+.username, .about {
   margin-left: 50px;
   font-size: 1.2em;
-  font-weight: bold;
+}
+
+.contacts {
+  padding: 10px;
 }
 /*# sourceMappingURL=Profile.module.css.map */

@@ -33,7 +33,7 @@ const Contacts = (props) => {
     <div className={s.contacts}>
       <div className={s.pages}>{pages}</div>
       <div className={s.contactList}>
-        {props.isFetching ? <Preloader /> : contactList} {/* //todo Preloader стилизовать по центру экрана */}
+        {props.isFetching ? <Preloader /> : contactList} {/* //TODO Preloader стилизовать по центру экрана */}
       </div>
       {/* <button className={s.loadContacts} type="button" onClick={this.loadContacts}>
           Load more

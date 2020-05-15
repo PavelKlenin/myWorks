@@ -2,6 +2,8 @@ import React from "react";
 import s from "./Contacts.module.css";
 import icon from "../../assets/img/svg/message.svg";
 import userImg from "../../assets/img/userImg.png";
+import { NavLink } from "react-router-dom";
+
 
 const Contact = (props) => {
   const { id, photos, name, status, isFollowed } = props;
@@ -12,7 +14,7 @@ const Contact = (props) => {
 
   return (
     <div className={s.userCard}>
-      <div className={s.userInfo}>
+      <NavLink to="/profile" className={s.userInfo}>
         <img
           className={s.avatar}
           src={photos.small ? photos.small : userImg}
@@ -20,7 +22,7 @@ const Contact = (props) => {
         />
         <h3 className={s.userName}>{name}</h3>
         <p className={s.userStatus}>{status}</p>
-      </div>
+      </NavLink>
       <div className={s.userActions}>
         <button
           className={s.followBtn}

@@ -76,9 +76,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 23%;
   background: #fff;
   border: 1px solid #ccc;
@@ -96,11 +93,28 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: #000;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  cursor: pointer;
+}
+
+.userInfo:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.userInfo:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .avatar {

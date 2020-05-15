@@ -1,5 +1,7 @@
 .profile {
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
   background: #edf1f5;
 }
 
@@ -14,12 +16,19 @@
     border-radius: 50%;
   
   }
-  
-  div {
-    margin-left: 50px;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+}
+
+.username {
+  font-weight: bold;
+}
+
+.username, .about {
+  margin-left: 50px;
+  font-size: 1.2em;
+}
+
+.contacts {
+  padding: 10px;
 }
 
 

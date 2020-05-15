@@ -1,31 +1,33 @@
-@import "../../Extentions.scss";
+@import "../../style/Extentions.scss";
+@import "../../style/variables.scss";
+
 
 .dialogs {
-  padding: 10px;
+  padding: $indent;
   flex-grow: 1;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: $indent;
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "users chat";
 }
 
 .users {
   grid-area: users;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  padding: $indent;
+  border-radius: $indentSmall;
+  border: 1px solid $colorGrey;
+  background-color: $colorLight;
 
   .user {
     display: -webkit-box;
     display: flex;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: $indentSmall;
+    border-radius: $indentSmall;
+    border: 1px solid $colorGrey;
     cursor: pointer;
 
     &:not(:first-of-type) {
-      margin-top: 10px;
+      margin-top: $indent;
     }
 
     img {
@@ -41,7 +43,7 @@
 
 .chat {
   grid-area: chat;
-  padding: 10px;
+  padding: $indent;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -49,20 +51,20 @@
   flex-direction: column;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: $colorLight;
+  border: 1px solid $colorGrey;
+  border-radius: $indentSmall;
 }
 
 .message {
   position: relative;
   margin: 0 auto;
-  padding: 10px;
-  border-radius: 5px;
-  background: #edf1f5;
+  padding: $indent;
+  border-radius: $indentSmall;
+  background: $colorLGrey;
 
   &:not(:first-of-type) {
-    margin-top: 10px;
+    margin-top: $indent;
   }
 
   &::before {
@@ -72,7 +74,7 @@
     left: -5px;
     width: 10px;
     height: 10px;
-    background: #edf1f5;
+    background: $colorLGrey;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }

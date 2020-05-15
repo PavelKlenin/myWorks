@@ -3,26 +3,25 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
-import Profile from "./Components/Profile/Profile";
 import Banner from "./Components/Banner/Banner";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import NewsContainer from "./Components/News/NewsContainer";
+import ContactsContainer from "./Components/Contacts/ContactsContainer";
+import ProfileContainer from "./Components/Profile/ProfileContainer";
 
 import "./App.css";
-import ContactsContainer from "./Components/Contacts/ContactsContainer";
 
-function App(props) {
-  const { profile } = props.state;
+const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
         <Banner />
-        <Sidebar {...profile} />
+        <Sidebar />
         <div className="appContent">
           <Navbar />
-          <Route path="/profile" render={() => <Profile {...profile} />} />
+          <Route path="/profile" render={() => <ProfileContainer />} />
           <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/news" render={() => <NewsContainer />} />
           <Route path="/contacts" render={() => <ContactsContainer />} />

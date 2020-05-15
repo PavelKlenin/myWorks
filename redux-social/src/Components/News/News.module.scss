@@ -1,7 +1,8 @@
-@import "../../Extentions.scss";
+@import "../../style/Extentions.scss";
+@import "../../style/variables.scss";
 
 .news {
-  padding: 10px;
+  padding: $indent;
   flex-grow: 1;
   display: -webkit-box;
   display: flex;
@@ -14,7 +15,7 @@
 }
 
 .posts {
-  border-radius: 5px;
+  border-radius: $indentSmall;
   overflow: hidden;
 }
 
