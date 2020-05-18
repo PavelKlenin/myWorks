@@ -107,6 +107,13 @@
   cursor: pointer;
 }
 
+.userInfo img {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
 .userInfo:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -115,13 +122,6 @@
 .userInfo:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-}
-
-.avatar {
-  margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
 }
 
 .userName {
