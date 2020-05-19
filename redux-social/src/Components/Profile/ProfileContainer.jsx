@@ -11,17 +11,16 @@ class ProfileContainer extends React.Component {
     const userId = this.props.match.params.userId
       ? this.props.match.params.userId
       : 2;
-    this.props.toggleFetching(true);
     axios
       .get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
       .then((response) => {
         this.props.loadProfile(response.data);
-        this.props.toggleFetching(false);
+        this.props.toggleFetching(true);
       });
   }
 
   render() {
-    return !this.props.isFetching ? (
+    return this.props.isFetched ? (
       <Profile {...this.props.profile} />
     ) : (
       <Preloader />

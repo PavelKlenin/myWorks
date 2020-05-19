@@ -22,9 +22,7 @@ function Profile(props) {
   return (
     <div className={s.profile}>
       <div className={s.info}>
-        {props.photos && (
-          <Avatar className={s.avatar} avatar={props.photos.large} />
-        )}
+        <Avatar className={s.avatar} avatar={props.photos.large} />
         <div>
           <div className={s.username}>{props.fullName}</div>
           <div className={s.about}>{props.aboutMe}</div>

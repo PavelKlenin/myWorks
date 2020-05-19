@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import Avatar from "../Profile/Avatar/Avatar";
 
 const Contact = (props) => {
-  const { id, photos, name, status, isFollowed } = props;
+  const { id, photos, name, status, followed } = props;
 
   const toggleFollow = (userID) => {
     props.toggleFollow(userID);
@@ -26,7 +26,7 @@ const Contact = (props) => {
             toggleFollow(id);
           }}
         >
-          {isFollowed ? "Followed" : "Follow"}
+          {followed ? "Followed" : "Follow"}
         </button>
         <button className={s.messageBtn} type="button">
           <img src={icon} alt="icon" />

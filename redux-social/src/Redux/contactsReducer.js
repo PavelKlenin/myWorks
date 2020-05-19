@@ -19,7 +19,7 @@ export const contactsReducer = (state = initialState, action) => {
         ...state,
         users: state.users.map((user) => {
           return user.id === action.userID
-            ? { ...user, isFollowed: !user.isFollowed }
+            ? { ...user, followed: !user.followed }
             : { ...user };
         }),
       };

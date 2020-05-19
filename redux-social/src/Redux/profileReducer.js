@@ -4,7 +4,7 @@ const TOGGLE_FETCHING = 'TOGGLE_FETCHING';
 
 const initialState = {
   profile: null,
-  isFetching: false,
+  isFetched: false,
 };
 
 export const profileReducer = (state = initialState, action) => {
@@ -12,7 +12,7 @@ export const profileReducer = (state = initialState, action) => {
     case LOAD_PROFILE:
       return {...state, profile: action.profile};
       case TOGGLE_FETCHING:
-      return {...state, isFetching: action.isFetching};
+      return {...state, isFetched: action.isFetched};
     default:
       return state;
   }
@@ -23,9 +23,9 @@ export const loadProfile = (profile) => ({
   profile,
 });
 
-export const toggleFetching = (isFetching) => ({
+export const toggleFetching = (isFetched) => ({
   type: TOGGLE_FETCHING,
-  isFetching,
+  isFetched,
 })
 
 

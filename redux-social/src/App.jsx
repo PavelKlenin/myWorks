@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import Header from "./Components/Header/Header";
+import HeaderContainer from './Components/Header/HeaderContainer';
 import Navbar from "./Components/Navbar/Navbar";
 import Banner from "./Components/Banner/Banner";
 import Sidebar from "./Components/Sidebar/Sidebar";
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
+        <HeaderContainer />
         <Banner />
         <Sidebar />
         <div className="appContent">

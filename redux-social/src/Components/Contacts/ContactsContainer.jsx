@@ -9,13 +9,17 @@ import {
   changePage,
   toggleFetching,
 } from "../../Redux/contactsReducer";
+import { API_KEY } from "../../Redux/authReducer";
 
 class ContactsContainer extends React.Component {
   componentDidMount() {
     this.props.toggleFetching(true);
     axios
       .get(
-        `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
+        `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,
+        {
+          withCredentials: true,
+        }
       )
       .then((response) => {
         this.props.toggleFetching(false);
@@ -37,6 +41,47 @@ class ContactsContainer extends React.Component {
       });
   };
 
+  toggleFollow = (id) => {
+    axios
+      .get(`https://social-network.samuraijs.com/api/1.0/follow/${id}`, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        response.data
+          ? axios
+              .delete(
+                `https://social-network.samuraijs.com/api/1.0/follow/${id}`,
+                {
+                  withCredentials: true,
+                  headers: {
+                    "API-KEY": API_KEY,
+                  },
+                }
+              )
+              .then((response) => {
+                if (response.data.resultCode === 0) {
+                  this.props.toggleFollow(id);
+                }
+              })
+          : axios
+              .post(
+                `https://social-network.samuraijs.com/api/1.0/follow/${id}`,
+                {},
+                {
+                  withCredentials: true,
+                  headers: {
+                    "API-KEY": API_KEY,
+                  },
+                }
+              )
+              .then((response) => {
+                if (response.data.resultCode === 0) {
+                  this.props.toggleFollow(id);
+                }
+              });
+      });
+  };
+
   render() {
     return (
       <Contacts
@@ -45,7 +90,7 @@ class ContactsContainer extends React.Component {
         totalUsers={this.props.totalUsers}
         pageSize={this.props.pageSize}
         currentPage={this.props.currentPage}
-        toggleFollow={this.props.toggleFollow}
+        toggleFollow={this.toggleFollow}
         loadContacts={this.loadContacts}
       />
     );
