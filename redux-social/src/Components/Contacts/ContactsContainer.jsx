@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import Contacts from "./Contacts";
-import * as axios from "axios";
 import {
   toggleFollow,
   getContacts,
@@ -9,77 +8,41 @@ import {
   changePage,
   toggleFetching,
 } from "../../Redux/contactsReducer";
-import { API_KEY } from "../../Redux/authReducer";
+import { API } from "../../api/api";
 
 class ContactsContainer extends React.Component {
   componentDidMount() {
     this.props.toggleFetching(true);
-    axios
-      .get(
-        `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,
-        {
-          withCredentials: true,
-        }
-      )
-      .then((response) => {
-        this.props.toggleFetching(false);
-        this.props.getContacts(response.data.items);
-        this.props.getContactsCount(response.data.totalCount);
-      });
+    API.getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
+      this.props.toggleFetching(false);
+      this.props.getContacts(data.items);
+      this.props.getContactsCount(data.totalCount);
+    });
   }
 
   loadContacts = (pageNumber) => {
     this.props.toggleFetching(true);
     this.props.changePage(pageNumber);
-    axios
-      .get(
-        `https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`
-      )
-      .then((response) => {
-        this.props.toggleFetching(false);
-        this.props.getContacts(response.data.items);
-      });
+    API.getUsers(pageNumber, this.props.pageSize).then((data) => {
+      this.props.toggleFetching(false);
+      this.props.getContacts(data.items);
+    });
   };
 
-  toggleFollow = (id) => {
-    axios
-      .get(`https://social-network.samuraijs.com/api/1.0/follow/${id}`, {
-        withCredentials: true,
-      })
-      .then((response) => {
-        response.data
-          ? axios
-              .delete(
-                `https://social-network.samuraijs.com/api/1.0/follow/${id}`,
-                {
-                  withCredentials: true,
-                  headers: {
-                    "API-KEY": API_KEY,
-                  },
-                }
-              )
-              .then((response) => {
-                if (response.data.resultCode === 0) {
-                  this.props.toggleFollow(id);
-                }
-              })
-          : axios
-              .post(
-                `https://social-network.samuraijs.com/api/1.0/follow/${id}`,
-                {},
-                {
-                  withCredentials: true,
-                  headers: {
-                    "API-KEY": API_KEY,
-                  },
-                }
-              )
-              .then((response) => {
-                if (response.data.resultCode === 0) {
-                  this.props.toggleFollow(id);
-                }
-              });
-      });
+  toggleFollow = (userId) => {
+    API.checkFollow(userId).then((data) => {
+      data
+        ? API.unfollow(userId).then((data) => {
+            if (data.resultCode === 0) {
+              this.props.toggleFollow(userId);
+            }
+          })
+        : API.follow(userId).then((data) => {
+            if (data.resultCode === 0) {
+              this.props.toggleFollow(userId);
+            }
+          });
+    });
   };
 
   render() {

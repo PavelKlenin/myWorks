@@ -1,19 +1,15 @@
 import React from "react";
 import Header from "./Header";
-import * as axios from "axios";
 import { connect } from "react-redux";
-import { getUserData, toggleLogging } from "../../Redux/authReducer";
-import { loadProfile, toggleFetching } from "../../Redux/profileReducer";
+import { getUserData, toggleLogging, getAuthProfile } from "../../Redux/authReducer";
+import { API } from "../../api/api";
 
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    axios
-      .get("https://social-network.samuraijs.com/api/1.0/auth/me", {
-        withCredentials: true,
-      })
-      .then((response) => {
-        if (response.data.resultCode === 0) {
-          const { id, email, login } = response.data.data;
+    API.authCheck()
+      .then((data) => {
+        if (data.resultCode === 0) {
+          const { id, email, login } = data.data;
           this.props.getUserData(id, email, login);
           this.props.toggleLogging();
           return id;
@@ -21,31 +17,28 @@ class HeaderContainer extends React.Component {
       })
       .then((id) => {
         if (this.props.isLogged) {
-          axios
-            .get(`https://social-network.samuraijs.com/api/1.0/profile/${id}`)
-            .then((response) => {
-              this.props.loadProfile(response.data);
+          API.getProfile(id)
+            .then((data) => {
+              this.props.getAuthProfile(data);
             });
         }
       })
-      .catch((error) => console.log(error));
   }
 
   render() {
-    return <Header {...this.props.profile} />;
+    return <Header  profile ={this.props.profile} />;
   }
 }
 
 const mapStateToProps = (state) => ({
-  profile: state.profile,
+  profile: state.auth.authProfile,
   isLogged: state.auth.isLogged,
 });
 
 const mapDispatchToProps = {
   getUserData,
   toggleLogging,
-  loadProfile,
-  toggleFetching,
+  getAuthProfile,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);
