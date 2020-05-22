@@ -5,8 +5,7 @@ import { NavLink } from "react-router-dom";
 import Avatar from "../Profile/Avatar/Avatar";
 
 const Contact = (props) => {
-  const { id, photos, name, status, followed } = props;
-
+  const { id, photos, name, status, followed, followingInProgress} = props;
   const toggleFollow = (userID) => {
     props.toggleFollow(userID);
   };
@@ -22,6 +21,7 @@ const Contact = (props) => {
         <button
           className={s.followBtn}
           type="button"
+          disabled={followingInProgress.some(userId => userId === id)}
           onClick={() => {
             toggleFollow(id);
           }}

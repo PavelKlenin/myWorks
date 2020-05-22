@@ -7,6 +7,7 @@ import {
   getContactsCount,
   changePage,
   toggleFetching,
+  toggleFollowBtn,
 } from "../../Redux/contactsReducer";
 import { API } from "../../api/api";
 
@@ -31,17 +32,23 @@ class ContactsContainer extends React.Component {
 
   toggleFollow = (userId) => {
     API.checkFollow(userId).then((data) => {
-      data
-        ? API.unfollow(userId).then((data) => {
-            if (data.resultCode === 0) {
-              this.props.toggleFollow(userId);
-            }
-          })
-        : API.follow(userId).then((data) => {
-            if (data.resultCode === 0) {
-              this.props.toggleFollow(userId);
-            }
-          });
+      if (data) {
+        this.props.toggleFollowBtn(true, userId);
+        API.unfollow(userId).then((data) => {
+          if (data.resultCode === 0) {
+            this.props.toggleFollow(userId);
+          }
+        });
+        this.props.toggleFollowBtn(false, userId);
+      } else {
+        this.props.toggleFollowBtn(true, userId);
+        API.follow(userId).then((data) => {
+          if (data.resultCode === 0) {
+            this.props.toggleFollow(userId);
+          }
+        });
+        this.props.toggleFollowBtn(false, userId);
+      }
     });
   };
 
@@ -52,6 +59,7 @@ class ContactsContainer extends React.Component {
         users={this.props.users}
         totalUsers={this.props.totalUsers}
         pageSize={this.props.pageSize}
+        followingInProgress={this.props.followingInProgress}
         currentPage={this.props.currentPage}
         toggleFollow={this.toggleFollow}
         loadContacts={this.loadContacts}
@@ -70,6 +78,7 @@ const mapDispatchToProps = {
   getContactsCount,
   changePage,
   toggleFetching,
+  toggleFollowBtn,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsContainer);

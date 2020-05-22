@@ -155,6 +155,11 @@
   background: #080;
 }
 
+.followBtn:disabled {
+  background: #ccc;
+  cursor: progress;
+}
+
 .messageBtn {
   padding: 5px;
   margin-left: 0;

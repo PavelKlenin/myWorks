@@ -7,7 +7,12 @@ import Preloader from "../common/Preloader/Preloader";
 const Contacts = (props) => {
   const contactList = props.users.map((user) => {
     return (
-      <Contact toggleFollow={props.toggleFollow} {...user} key={user.id} />
+      <Contact
+        toggleFollow={props.toggleFollow}
+        followingInProgress={props.followingInProgress}
+        {...user}
+        key={user.id}
+      />
     );
   });
 
@@ -33,7 +38,8 @@ const Contacts = (props) => {
     <div className={s.contacts}>
       <div className={s.pages}>{pages}</div>
       <div className={s.contactList}>
-        {props.isFetching ? <Preloader /> : contactList} {/* //TODO Preloader стилизовать по центру экрана */}
+        {props.isFetching ? <Preloader /> : contactList}{" "}
+        {/* //TODO Preloader стилизовать по центру экрана */}
       </div>
       {/* <button className={s.loadContacts} type="button" onClick={this.loadContacts}>
           Load more

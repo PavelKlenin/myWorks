@@ -3,6 +3,7 @@ const GET_CONTACTS = "GET-CONTACTS";
 const GET_CONTACTS_COUNT = "GET_CONTACTS_COUNT";
 const CHANGE_PAGE = "CHANGE_PAGE";
 const TOGGLE_FETCHING = "TOGGLE_FETCHING";
+const FOLLOWING_PROGRESS = "FOLLOWING_PROGRESS";
 
 const initialState = {
   users: [],
@@ -10,6 +11,7 @@ const initialState = {
   pageSize: 8,
   currentPage: 1,
   isFetching: false,
+  followingInProgress: [],
 };
 
 export const contactsReducer = (state = initialState, action) => {
@@ -22,6 +24,13 @@ export const contactsReducer = (state = initialState, action) => {
             ? { ...user, followed: !user.followed }
             : { ...user };
         }),
+      };
+    case FOLLOWING_PROGRESS:
+      return {
+        ...state,
+        followingInProgress: action.followingInProgress
+          ? [...state.followingInProgress, action.userId]
+          : state.followingInProgress.filter((id) => id !== action.userId),
       };
     case GET_CONTACTS:
       return { ...state, users: [...action.users] };
@@ -38,6 +47,12 @@ export const contactsReducer = (state = initialState, action) => {
 
 export const toggleFollow = (id) => ({ type: TOGGLE_FOLLOW, userID: id });
 
+export const toggleFollowBtn = (followingInProgress, userId) => ({
+  type: FOLLOWING_PROGRESS,
+  followingInProgress,
+  userId,
+});
+
 export const getContacts = (users) => ({ type: GET_CONTACTS, users });
 
 export const getContactsCount = (count) => ({
@@ -46,4 +61,7 @@ export const getContactsCount = (count) => ({
 });
 
 export const changePage = (pageNumber) => ({ type: CHANGE_PAGE, pageNumber });
-export const toggleFetching = (isFetching) => ({ type: TOGGLE_FETCHING, isFetching});
+export const toggleFetching = (isFetching) => ({
+  type: TOGGLE_FETCHING,
+  isFetching,
+});
