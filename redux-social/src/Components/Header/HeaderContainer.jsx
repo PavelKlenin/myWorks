@@ -1,28 +1,11 @@
 import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
-import { getUserData, toggleLogging, getAuthProfile } from "../../Redux/authReducer";
-import { API } from "../../api/api";
+import { getAuthProfile } from "../../Redux/authReducer";
 
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    API.authCheck()
-      .then((data) => {
-        if (data.resultCode === 0) {
-          const { id, email, login } = data.data;
-          this.props.getUserData(id, email, login);
-          this.props.toggleLogging();
-          return id;
-        }
-      })
-      .then((id) => {
-        if (this.props.isLogged) {
-          API.getProfile(id)
-            .then((data) => {
-              this.props.getAuthProfile(data);
-            });
-        }
-      })
+    this.props.getAuthProfile();
   }
 
   render() {
@@ -36,8 +19,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  getUserData,
-  toggleLogging,
   getAuthProfile,
 };
 

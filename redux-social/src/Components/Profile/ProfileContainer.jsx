@@ -1,20 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { loadProfile, toggleFetching } from "../../Redux/profileReducer";
+import { getProfile } from "../../Redux/profileReducer";
 import Profile from "./Profile";
 import Preloader from "../common/Preloader/Preloader";
 import { withRouter } from "react-router-dom";
-import { API } from "../../api/api";
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
     const userId = this.props.match.params.userId
       ? this.props.match.params.userId
       : this.props.authId;
-    API.getProfile(userId).then((data) => {
-      this.props.loadProfile(data);
-      this.props.toggleFetching(true);
-    });
+    this.props.getProfile(userId);
   }
 
   render() {
@@ -34,8 +30,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  loadProfile,
-  toggleFetching,
+  getProfile,
 };
 
 export default connect(

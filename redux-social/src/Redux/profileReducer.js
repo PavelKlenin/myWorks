@@ -1,12 +1,16 @@
+import { API } from "../api/api";
+
+// Const
 const LOAD_PROFILE = 'LOAD_PROFILE';
 const TOGGLE_FETCHING = 'TOGGLE_FETCHING';
 
-
+// State
 const initialState = {
   profile: null,
   isFetched: false,
 };
 
+// Reducer
 export const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_PROFILE:
@@ -18,6 +22,7 @@ export const profileReducer = (state = initialState, action) => {
   }
 }
 
+// ActionCreators
 export const loadProfile = (profile) => ({
   type: LOAD_PROFILE,
   profile,
@@ -28,4 +33,11 @@ export const toggleFetching = (isFetched) => ({
   isFetched,
 })
 
+// ThunkCreators
 
+export const getProfile = (userId) => (dispatch) => {
+  API.getProfile(userId).then((data) => {
+    dispatch(loadProfile(data));
+    dispatch(toggleFetching(true));
+  });
+}

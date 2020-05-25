@@ -2,54 +2,22 @@ import React from "react";
 import { connect } from "react-redux";
 import Contacts from "./Contacts";
 import {
-  toggleFollow,
-  getContacts,
-  getContactsCount,
-  changePage,
-  toggleFetching,
-  toggleFollowBtn,
+  getUsers,
+  loadPage,
+  toggleFollowUser,
 } from "../../Redux/contactsReducer";
-import { API } from "../../api/api";
 
 class ContactsContainer extends React.Component {
   componentDidMount() {
-    this.props.toggleFetching(true);
-    API.getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
-      this.props.toggleFetching(false);
-      this.props.getContacts(data.items);
-      this.props.getContactsCount(data.totalCount);
-    });
+    this.props.getUsers(this.props.currentPage, this.props.pageSize);
   }
 
   loadContacts = (pageNumber) => {
-    this.props.toggleFetching(true);
-    this.props.changePage(pageNumber);
-    API.getUsers(pageNumber, this.props.pageSize).then((data) => {
-      this.props.toggleFetching(false);
-      this.props.getContacts(data.items);
-    });
+    this.props.loadPage(pageNumber, this.props.pageSize);
   };
 
   toggleFollow = (userId) => {
-    API.checkFollow(userId).then((data) => {
-      if (data) {
-        this.props.toggleFollowBtn(true, userId);
-        API.unfollow(userId).then((data) => {
-          if (data.resultCode === 0) {
-            this.props.toggleFollow(userId);
-          }
-        });
-        this.props.toggleFollowBtn(false, userId);
-      } else {
-        this.props.toggleFollowBtn(true, userId);
-        API.follow(userId).then((data) => {
-          if (data.resultCode === 0) {
-            this.props.toggleFollow(userId);
-          }
-        });
-        this.props.toggleFollowBtn(false, userId);
-      }
-    });
+    this.props.toggleFollowUser(userId);
   };
 
   render() {
@@ -73,12 +41,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  toggleFollow,
-  getContacts,
-  getContactsCount,
-  changePage,
-  toggleFetching,
-  toggleFollowBtn,
+  getUsers,
+  loadPage,
+  toggleFollowUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsContainer);
