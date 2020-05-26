@@ -1,4 +1,4 @@
-import { API } from "../api/api";
+import { userAPI } from "../api/api";
 
 // Const
 const LOAD_PROFILE = 'LOAD_PROFILE';
@@ -36,7 +36,7 @@ export const toggleFetching = (isFetched) => ({
 // ThunkCreators
 
 export const getProfile = (userId) => (dispatch) => {
-  API.getProfile(userId).then((data) => {
+  userAPI.getProfile(userId).then((data) => {
     dispatch(loadProfile(data));
     dispatch(toggleFetching(true));
   });

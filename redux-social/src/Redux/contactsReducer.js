@@ -1,4 +1,4 @@
-import { API } from "../api/api";
+import { userAPI } from "../api/api";
 
 // Const
 const TOGGLE_FOLLOW = "TOGGLE-FOLLOW";
@@ -76,7 +76,7 @@ export const toggleFetching = (isFetching) => ({
 // ThunkCreators
 export const getUsers = (currentPage, pageSize) => (dispatch) => {
   dispatch(toggleFetching(true));
-  API.getUsers(currentPage, pageSize).then((data) => {
+  userAPI.getUsers(currentPage, pageSize).then((data) => {
     dispatch(toggleFetching(false));
     dispatch(getContacts(data.items));
     dispatch(getContactsCount(data.totalCount));
@@ -86,25 +86,26 @@ export const getUsers = (currentPage, pageSize) => (dispatch) => {
 export const loadPage = (pageNumber, pageSize) => (dispatch) => {
   dispatch(toggleFetching(true));
   dispatch(changePage(pageNumber));
-  API.getUsers(pageNumber, pageSize).then((data) => {
+  userAPI.getUsers(pageNumber, pageSize).then((data) => {
     dispatch(toggleFetching(false));
     dispatch(getContacts(data.items));
   });
 };
 
+
+// TODO: дублирование
 export const toggleFollowUser = (userId) => (dispatch) => {
-  API.checkFollow(userId).then((data) => {
+  dispatch(toggleFollowBtn(true, userId));
+  userAPI.checkFollow(userId).then((data) => {
     if (data) {
-      dispatch(toggleFollowBtn(true, userId));
-      API.unfollow(userId).then((data) => {
+      userAPI.unfollow(userId).then((data) => {
         if (data.resultCode === 0) {
           dispatch(toggleFollow(userId));
           dispatch(toggleFollowBtn(false, userId));
         }
       });
     } else {
-      dispatch(toggleFollowBtn(true, userId));
-      API.follow(userId).then((data) => {
+      userAPI.follow(userId).then((data) => {
         if (data.resultCode === 0) {
           dispatch(toggleFollow(userId));
           dispatch(toggleFollowBtn(false, userId));

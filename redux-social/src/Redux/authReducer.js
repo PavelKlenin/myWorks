@@ -1,4 +1,4 @@
-import { API } from "../api/api";
+import { authAPI } from "../api/api";
 
 // Const
 const SET_USER_DATA = "GET_USER_DATA";
@@ -33,7 +33,7 @@ export const setUserData = (id, email, login) => ({
 
 // ThunkCreactors
 export const checkAuthProfile = () => (dispatch) => {
-  return API.authCheck().then((data) => {
+  return authAPI.authCheck().then((data) => {
     if (data.resultCode === 0) {
       const { id, email, login } = data.data;
       dispatch(setUserData(id, email, login));
