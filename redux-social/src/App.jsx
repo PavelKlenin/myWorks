@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import HeaderContainer from './Components/Header/HeaderContainer';
+import Login from './Components/Login/Login';
 import Navbar from "./Components/Navbar/Navbar";
 import Banner from "./Components/Banner/Banner";
 import Sidebar from "./Components/Sidebar/Sidebar";
@@ -21,6 +22,7 @@ const App = () => {
         <Sidebar />
         <div className="appContent">
           <Navbar />
+          <Route path="/login" render={() => <Login />} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
           <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/news" render={() => <NewsContainer />} />
