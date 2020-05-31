@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Profile.module.css";
 import Avatar from "./Avatar/Avatar";
+import ProfileStatus from "./ProfileStatus";
 
 function Profile(props) {
   let contacts = [];
@@ -25,6 +26,7 @@ function Profile(props) {
         <Avatar className={s.avatar} avatar={props.photos.large} />
         <div>
           <div className={s.username}>{props.fullName}</div>
+          <ProfileStatus status={props.status} updateProfilestatus={props.updateProfilestatus} />
           <div className={s.about}>{props.aboutMe}</div>
         </div>
       </div>
