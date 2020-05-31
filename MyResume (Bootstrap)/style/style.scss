@@ -471,6 +471,39 @@ $point-size: 15px;
 
 
 .portfolio {
+  .section-title {
+    margin-bottom: $indent-default;
+  }
+
+  //TODO полностью перейти на bootstrap классы
+  .portfolio-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: $indent-default;
+  }
+  //todo
+
+  .portfolio-btn {
+    @extend %link-style;
+    margin: 15px;
+    padding: 5px 10px;
+    border: 1px solid #757575;
+    border-radius: 6px;
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: $shadow-item;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+  .portfolio-wrap {
+    transition-duration: 0.5s;
+  }
 
   .portfolio-item {
     margin-bottom: 30px;
