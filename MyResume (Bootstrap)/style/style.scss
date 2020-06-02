@@ -475,15 +475,10 @@ $point-size: 15px;
     margin-bottom: $indent-default;
   }
 
-  //TODO полностью перейти на bootstrap классы
   .portfolio-menu {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     justify-content: center;
     margin-bottom: $indent-default;
   }
-  //todo
 
   .portfolio-btn {
     @extend %link-style;
