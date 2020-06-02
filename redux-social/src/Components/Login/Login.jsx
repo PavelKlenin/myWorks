@@ -1,7 +1,15 @@
-import React from 'react';
+import React from "react";
+import LoginForm from "./LoginForm";
+import s from "./LoginForm.module.css";
 
 const Login = () => {
-  return <h1>LOGIN</h1>
-}
+  const onSubmit = (dataForm) => console.log("Login -> dataForm", dataForm);
+  return (
+    <div className={s.loginPage}>
+      <h1>Login</h1>
+      <LoginForm onSubmit={onSubmit} />
+    </div>
+  );
+};
 
 export default Login;
