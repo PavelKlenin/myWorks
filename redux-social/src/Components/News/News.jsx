@@ -1,38 +1,22 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./News.module.css";
+import NewPostForm from "./NewPostForm";
 
-function News(props) {
-  const { posts, avatar, newPostText } = props;
+const News = (props) => {
+  const { posts, avatar } = props;
   const postList = posts.map((post) => (
     <Post post={post.text} avatar={avatar} key={post.id} />
   ));
 
-  const postText = React.createRef();
-
-  const updatePostText = () => {
-    const updatedText = postText.current.value;
-    props.changePost(updatedText);
-  };
-
-  const sendPost = () => {
-    props.sendPost();
+  const sendPost = (values) => {
+    props.sendPost(values.newPostText);
   };
 
   return (
     <div className={s.news}>
       <div className={s.posts}>{postList}</div>
-      <div className={s.createPost}>
-        <textarea
-          value={newPostText}
-          className={s.textarea}
-          ref={postText}
-          onChange={updatePostText}
-        ></textarea>
-        <button type="button" className={s.sendBtn} onClick={sendPost}>
-          Send
-        </button>
-      </div>
+      <NewPostForm onSubmit={sendPost} />
     </div>
   );
 }

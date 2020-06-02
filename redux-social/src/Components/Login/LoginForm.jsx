@@ -4,7 +4,6 @@ import s from './LoginForm.module.css';
 
 
 const LoginForm = (props) => {
-  console.log('render')
   return (
     <form onSubmit={props.handleSubmit}>
       <div>

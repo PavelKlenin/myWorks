@@ -1,4 +1,3 @@
-const CHANGE_MESSAGE = "CHANGE-MESSAGE";
 const SEND_MESSAGE = "SEND-MESSAGE";
 
 const initialState = {
@@ -34,28 +33,19 @@ const initialState = {
         "https://lastfm.freetls.fastly.net/i/u/ar0/9dc640d94f324994c9ce31b1407a1830.png",
     },
   ],
-  newMessage: "",
   messages: ["Hi", "Hello", "Bye"],
 }
 
 export const dialogsReducer = (state = initialState, action) => {
-  const newState = {...state}
-  
   switch (action.type) {
-    case CHANGE_MESSAGE:
-      newState.newMessage = action.text;
-      return newState;
     case SEND_MESSAGE:
-      newState.messages = [...state.messages, state.newMessage];
-      newState.newMessage = '';
-      return newState;
+      return {
+        ...state,
+        messages: [...state.messages, action.newMessage]
+      }
     default:
       return state;
   }
 };
 
-export const changeMessage = (text) => ({
-  type: CHANGE_MESSAGE,
-  text: text,
-});
-export const sendMessage = () => ({ type: SEND_MESSAGE });
+export const sendMessage = (newMessage) => ({ type: SEND_MESSAGE, newMessage });

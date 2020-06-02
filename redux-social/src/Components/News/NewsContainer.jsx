@@ -1,4 +1,4 @@
-import { changePost, sendPost } from "../../Redux/newsReducer";
+import { sendPost } from "../../Redux/newsReducer";
 import News from "./News";
 import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
@@ -12,7 +12,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  changePost,
   sendPost,
 };
 
