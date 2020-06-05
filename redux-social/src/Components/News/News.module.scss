@@ -17,6 +17,14 @@
 
 .createPost {
   @extend %sendForm;
+  
+  .textError {
+    color: $colorDarkRed;
+  }
+  
+  .textareaError {
+    border: 1px solid $colorDarkRed;
+  }
 }
 
 .sendBtn {

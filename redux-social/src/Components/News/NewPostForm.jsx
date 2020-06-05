@@ -2,12 +2,13 @@ import React from "react";
 import s from "./News.module.css";
 
 const NewPostForm = (props) => {
-  // const maxValue50 = props.checkForm(50);
+  const maxValue = props.validate.maxValue(props.maxLength);
 
   const updatePost = (e) => {
     const text = e.currentTarget.value;
     props.updatePost(text);
-    props.checkForm(text);
+    props.checkPostBtn(props.validate.disableSendBtn(text));
+    props.checkPostLength(maxValue(text));
   };
 
   const sendPost = (e) => {
@@ -17,8 +18,9 @@ const NewPostForm = (props) => {
 
   return (
     <form onSubmit={sendPost} className={s.createPost}>
+      {props.maxLengthError && <span className={s.textError}>`Must be ${props.maxLength} characters or less`</span> }
       <textarea
-        className={s.textarea}
+        className={props.maxLengthError && s.textareaError}
         value={props.postText}
         onChange={updatePost}
       />

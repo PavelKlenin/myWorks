@@ -3,19 +3,20 @@ import News from "./News";
 import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
-import { checkForm } from "../../Redux/myFormReducer";
+import { checkPostBtn, checkPostLength } from "../../Redux/formValidateReducer";
 
 const mapStateToProps = (state) => {
   return {
     ...state.news,
     ...state.profile,
-    ...state.myForm,
+    newPostForm: state.myForm.newPostForm,
   };
 };
 const mapDispatchToProps = {
   sendPost,
   updatePostText,
-  checkForm,
+  checkPostBtn,
+  checkPostLength,
 };
 
 const NewsContainer = compose(

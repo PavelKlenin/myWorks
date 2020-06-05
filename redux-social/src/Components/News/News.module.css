@@ -70,6 +70,14 @@
   overflow: hidden;
 }
 
+.textError {
+  color: #700;
+}
+
+.textareaError {
+  border: 1px solid #700;
+}
+
 .sendBtn:disabled {
   cursor: auto;
 }
