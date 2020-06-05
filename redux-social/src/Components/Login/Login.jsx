@@ -6,7 +6,7 @@ const Login = () => {
   const onSubmit = (dataForm) => console.log("Login -> dataForm", dataForm);
   return (
     <div className={s.loginPage}>
-      <h1>Login</h1>
+      <h1 className={s.loginTitle} >Login</h1>
       <LoginForm onSubmit={onSubmit} />
     </div>
   );

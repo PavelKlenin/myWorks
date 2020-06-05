@@ -1,3 +1,16 @@
+.createPost textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.createPost textarea:focus {
+  border: 1px solid darkslategray;
+}
+
 .createPost {
   margin-top: 10px;
   display: -webkit-box;
@@ -11,17 +24,7 @@
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
       flex-grow: 1;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  outline: none;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   resize: none;
-}
-
-.createPost textarea:focus {
-  border: 1px solid darkslategray;
 }
 
 .sendBtn {
@@ -65,5 +68,9 @@
 .posts {
   border-radius: 5px;
   overflow: hidden;
+}
+
+.sendBtn:disabled {
+  cursor: auto;
 }
 /*# sourceMappingURL=News.module.css.map */

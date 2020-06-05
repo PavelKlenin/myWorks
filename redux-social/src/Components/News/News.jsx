@@ -9,16 +9,18 @@ const News = (props) => {
     <Post post={post.text} avatar={avatar} key={post.id} />
   ));
 
-  const sendPost = (values) => {
-    props.sendPost(values.newPostText);
-  };
-
   return (
     <div className={s.news}>
       <div className={s.posts}>{postList}</div>
-      <NewPostForm onSubmit={sendPost} />
+      <NewPostForm
+        btnDisabled={props.btnDisabled}
+        checkForm={props.checkForm}
+        sendPost={props.sendPost}
+        updatePost={props.updatePostText}
+        postText={props.newPostText}
+      />
     </div>
   );
-}
+};
 
 export default News;

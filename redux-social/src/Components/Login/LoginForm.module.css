@@ -1,4 +1,62 @@
+.inputLogin {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.inputLogin:focus {
+  border: 1px solid darkslategray;
+}
+
 .loginBtn {
-  color: red;
+  margin-left: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #edf1f5;
+  outline: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background: #ccc;
+}
+
+.loginBtn:active {
+  border: 1px solid transparent;
+}
+
+.loginTitle {
+  padding: 5px;
+}
+
+.loginBtn {
+  margin: 0;
+  border: 1px solid #4F5467;
+}
+
+.inputBlock {
+  padding: 5px;
+}
+
+.errorLogin {
+  border: 1px solid #700;
+}
+
+.errorInput {
+  margin-left: 10px;
+  color: #700;
+}
+
+.checkbox {
+  vertical-align: middle;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=LoginForm.module.css.map */

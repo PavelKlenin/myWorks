@@ -1,3 +1,36 @@
+@import './../../style/variables.scss';
+@import './../../style/Extentions.scss';
+
+.loginTitle {
+  padding: $indentSmall;
+}
+
 .loginBtn {
-  color: red;
+  @extend %button;
+  margin: 0;
+  border: 1px solid $colorDarkGrey;
+}
+
+.inputBlock {
+  padding: $indentSmall;
+}
+
+.inputLogin {
+  @extend %inputField;
+}
+
+.errorLogin {
+  border: 1px solid $colorDarkRed;
+}
+
+.errorInput {
+  margin-left: $indent;
+  color: $colorDarkRed;
+}
+
+.checkbox {
+  vertical-align: middle;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
 }

@@ -1,14 +1,30 @@
 import React from "react";
-import { Field, reduxForm } from "redux-form";
 import s from "./News.module.css";
 
 const NewPostForm = (props) => {
+  // const maxValue50 = props.checkForm(50);
+
+  const updatePost = (e) => {
+    const text = e.currentTarget.value;
+    props.updatePost(text);
+    props.checkForm(text);
+  };
+
+  const sendPost = (e) => {
+    e.preventDefault();
+    props.sendPost();
+  };
+
   return (
-    <form onSubmit={props.handleSubmit} className={s.createPost}>
-      <Field component="textarea" name="newPostText" className={s.textarea} />
-      <button className={s.sendBtn}>Send</button>
+    <form onSubmit={sendPost} className={s.createPost}>
+      <textarea
+        className={s.textarea}
+        value={props.postText}
+        onChange={updatePost}
+      />
+      <button disabled={props.btnDisabled} className={s.sendBtn}>Send</button>
     </form>
   );
 };
 
-export default reduxForm({ form: "postText" })(NewPostForm);
+export default NewPostForm;

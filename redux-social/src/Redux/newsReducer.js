@@ -1,3 +1,4 @@
+const UPDATE_POST = "UPDATE-POST";
 const SEND_POST = "SEND-POST";
 
 const initialState = {
@@ -13,22 +14,30 @@ const initialState = {
         "Distinctio ea quae iusto minus adipisci eius! Doloribus dolor minus sit culpa cupiditate adipisci commodi.",
     },
   ],
+  newPostText: '',
 };
 
 export const newsReducer = (state = initialState, action) => {
-  const newState = { ...state };
-
   switch (action.type) {
     case SEND_POST:
       const newPost = {
         id: state.posts.length + 1,
-        text: action.newPostText,
+        text: state.newPostText,
       };
-      newState.posts = [...state.posts, newPost];
-      return newState;
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: '',
+      }
+    case UPDATE_POST:
+      return {
+        ...state,
+        newPostText: action.newPostText
+      }
     default:
       return state;
   }
 };
 
-export const sendPost = (newPostText) => ({ type: SEND_POST, newPostText });
+export const sendPost = () => ({ type: SEND_POST });
+export const updatePostText = (newPostText) => ({ type: UPDATE_POST, newPostText });
