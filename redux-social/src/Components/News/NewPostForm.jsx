@@ -2,29 +2,38 @@ import React from "react";
 import s from "./News.module.css";
 
 const NewPostForm = (props) => {
-  const maxValue = props.validate.maxValue(props.maxLength);
-
   const updatePost = (e) => {
     const text = e.currentTarget.value;
     props.updatePost(text);
-    props.checkPostBtn(props.validate.disableSendBtn(text));
-    props.checkPostLength(maxValue(text));
+    props.checkPost(props.maxLength, text);
   };
 
   const sendPost = (e) => {
     e.preventDefault();
     props.sendPost();
+    props.checkPost();
   };
+
+  const stopInput = (e) => {
+    e.preventDefault()
+  }
 
   return (
     <form onSubmit={sendPost} className={s.createPost}>
-      {props.maxLengthError && <span className={s.textError}>`Must be ${props.maxLength} characters or less`</span> }
+      {props.maxLengthError && (
+        <span className={s.textError}>
+          Post should be {props.maxLength} characters or less
+        </span>
+      )}
       <textarea
         className={props.maxLengthError && s.textareaError}
         value={props.postText}
         onChange={updatePost}
+        onKeyPress={props.maxLengthError && stopInput}
       />
-      <button disabled={props.btnDisabled} className={s.sendBtn}>Send</button>
+      <button disabled={props.btnDisabled} className={s.sendBtn}>
+        Send
+      </button>
     </form>
   );
 };

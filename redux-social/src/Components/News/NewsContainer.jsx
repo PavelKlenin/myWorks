@@ -3,7 +3,7 @@ import News from "./News";
 import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
-import { checkPostBtn, checkPostLength } from "../../Redux/formValidateReducer";
+import { checkPost } from "../../Redux/formValidateReducer";
 
 const mapStateToProps = (state) => {
   return {
@@ -15,8 +15,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   sendPost,
   updatePostText,
-  checkPostBtn,
-  checkPostLength,
+  checkPost,
 };
 
 const NewsContainer = compose(

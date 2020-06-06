@@ -70,15 +70,33 @@
   overflow: hidden;
 }
 
-.textError {
+.createPost {
+  position: relative;
+  margin-top: 20px;
+}
+
+.createPost .textError {
+  position: absolute;
+  top: -18px;
+  left: 5px;
+  font-size: 13px;
+  line-height: 1;
   color: #700;
 }
 
-.textareaError {
+.createPost .textareaError {
+  border: 1px solid #700;
+}
+
+.createPost .textareaError:focus {
   border: 1px solid #700;
 }
 
 .sendBtn:disabled {
   cursor: auto;
+}
+
+.sendBtn:disabled:hover {
+  background: none;
 }
 /*# sourceMappingURL=News.module.css.map */

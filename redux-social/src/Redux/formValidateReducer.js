@@ -1,3 +1,5 @@
+import { postValidate } from "../utils/formValidations/postFormValidation";
+import { compose } from "redux";
 
 // Const
 const TOGGLE_POST_BTN = "TOGGLE_POST_BTN";
@@ -6,7 +8,7 @@ const CHECK_MAX_POST_LENGTH = "CHECK_MAX_POST_LENGTH";
 // State
 const initialState = {
   newPostForm: {
-    maxLength: 50,
+    maxLength: 5,
     btnDisabled: true,
     maxLengthError: false,
   }
@@ -29,7 +31,6 @@ export const formValidateReducer = (state = initialState, action) => {
         newPostForm: {
           ...state.newPostForm,
           maxLengthError: action.isExceeded,
-          btnDisabled: action.isExceeded,
         }
       };
     default:
@@ -38,14 +39,25 @@ export const formValidateReducer = (state = initialState, action) => {
 };
 
 // ActionCreactors
-export const checkPostBtn = (isDisabled) => ({
+export const togglePostBtn = (isDisabled) => ({
   type: TOGGLE_POST_BTN,
   isDisabled,
 });
 
-export const checkPostLength = (isExceeded) => ({
+export const exceedPostLength = (isExceeded) => ({
   type: CHECK_MAX_POST_LENGTH,
   isExceeded,
 });
 
-
+export const checkPost = (maxLength = 0, postText = '') => (dispatch) => {
+  compose(
+    dispatch,
+    togglePostBtn,
+    postValidate.disableSendBtn(maxLength)
+  )(postText);
+  compose(
+    dispatch,
+    exceedPostLength,
+    postValidate.maxValue(maxLength)
+  )(postText);
+}

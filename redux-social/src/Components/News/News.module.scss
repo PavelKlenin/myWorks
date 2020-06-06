@@ -17,13 +17,24 @@
 
 .createPost {
   @extend %sendForm;
-  
+  position: relative;
+  margin-top: $indentBig;
+
   .textError {
+    position: absolute;
+    top: -18px;
+    left: 5px;
+    font-size: 13px;
+    line-height: 1;
     color: $colorDarkRed;
   }
-  
+
   .textareaError {
     border: 1px solid $colorDarkRed;
+
+    &:focus {
+      border: 1px solid $colorDarkRed;
+    }
   }
 }
 
@@ -32,5 +43,9 @@
 
   &:disabled {
     cursor: auto;
+
+    &:hover {
+      background: none;
+    }
   }
 }
