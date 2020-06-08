@@ -1,20 +1,24 @@
 import React from "react";
 import Header from "./Header";
 import { connect } from "react-redux";
-import { checkAuthProfile } from "../../Redux/authReducer";
+import { logoutProfile } from "../../Redux/authReducer";
 import { getProfile } from "../../Redux/profileReducer";
 
 class HeaderContainer extends React.Component {
-  componentDidMount() {
-    this.props.checkAuthProfile().then(() => {
-      if (this.props.isLogged) {
-        this.props.getProfile(this.props.userId);
-      }
-    });
+  componentDidUpdate(prevProps) {
+    if (this.props.isLogged && this.props.isLogged !== prevProps.isLogged) {
+      this.props.getProfile(this.props.userId);
+    }
   }
 
   render() {
-    return <Header profile={this.props.profile} />;
+    return (
+      <Header
+        profile={this.props.profile}
+        isLogged={this.props.isLogged}
+        logoutProfile={this.props.logoutProfile}
+      />
+    );
   }
 }
 
@@ -25,7 +29,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  checkAuthProfile,
+  logoutProfile,
   getProfile,
 };
 

@@ -49,9 +49,6 @@ export const getProfile = (userId) => (dispatch) => {
     dispatch(loadProfile(data));
     dispatch(toggleFetching(true));
   });
-};
-
-export const getProfileStatus = (userId) => (dispatch) => {
   profileAPI.getStatus(userId).then((data) => {
     dispatch(setStatus(data.data));
   });

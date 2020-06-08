@@ -6,22 +6,15 @@ import { NavLink } from "react-router-dom";
 function Header(props) {
   return (
     <header className={s.header}>
-      <div className={s.iconInfo}>
-        Icons made by{" "}
-        <a
-          href="https://www.flaticon.com/authors/those-icons"
-          title="Those Icons"
-        >
-          Those Icons
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          {" "}
-          www.flaticon.com
-        </a>
-      </div>
       <div className={s.loginBlock}>
-        {props.profile ? <Avatar avatar={props.profile.photos.small}/> : <NavLink to="/login">Log in</NavLink>}
+        {props.profile && props.isLogged ? (
+          <div>
+            <button onClick={props.logoutProfile}>Logout</button>
+            <Avatar avatar={props.profile.photos.small} />
+          </div>
+        ) : (
+          <NavLink to="/login">Login</NavLink>
+        )}
       </div>
     </header>
   );

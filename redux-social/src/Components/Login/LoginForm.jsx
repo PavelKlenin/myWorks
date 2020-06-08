@@ -9,19 +9,26 @@ const LoginForm = (props) => {
     <form className={s.loginForm} onSubmit={props.handleSubmit}>
       <Field
         component={LoginInput}
-        name="login"
-        label="Login"
+        name="email"
+        label="email"
         validate={[required]}
       />
       <Field
         component={LoginInput}
         name="password"
         label="Password"
+        type="password"
         validate={[required]}
       />
+      <div className={`${s.inputBlock} ${s.totalLoginError}`}>Error</div>
       <div className={s.inputBlock}>
-        <label htmlFor="checkbox">Remember me: </label>
-        <Field className={s.checkbox} component="input" type="checkbox" name="checkbox" />
+        <label htmlFor="rememberMe">Remember me: </label>
+        <Field
+          className={s.checkbox}
+          component="input"
+          type="checkbox"
+          name="rememberMe"
+        />
       </div>
       <div className={s.inputBlock}>
         <button className={s.loginBtn} disabled={props.submitting}>

@@ -6,7 +6,6 @@ import {
   loadPage,
   toggleFollowUser,
 } from "../../Redux/contactsReducer";
-import withAuthRedirect from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 
 class ContactsContainer extends React.Component {
@@ -50,5 +49,4 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  withAuthRedirect
 )(ContactsContainer);

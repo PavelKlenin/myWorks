@@ -53,6 +53,10 @@
   color: #700;
 }
 
+.totalLoginError {
+  color: #700;
+}
+
 .checkbox {
   vertical-align: middle;
   height: 15px;

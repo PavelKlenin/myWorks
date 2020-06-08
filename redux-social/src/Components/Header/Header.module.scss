@@ -4,16 +4,8 @@
   grid-area: header;
   padding: $indent 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-color:$colorDarkGrey;
-}
-
-.iconInfo {
-  font-size: 8px;
-
-  * {
-    font-size: 8px;
-  }
 }
 
 .loginBlock {
