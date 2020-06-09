@@ -20,7 +20,11 @@ const LoginForm = (props) => {
         type="password"
         validate={[required]}
       />
-      <div className={`${s.inputBlock} ${s.totalLoginError}`}>Error</div>
+      {props.error && (
+        <div className={`${s.inputBlock} ${s.totalLoginError}`}>
+          {props.error}
+        </div>
+      )}
       <div className={s.inputBlock}>
         <label htmlFor="rememberMe">Remember me: </label>
         <Field

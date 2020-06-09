@@ -7,6 +7,7 @@ import { authReducer } from "./authReducer";
 import { reducer as formReducer } from 'redux-form';
 import thunk from "redux-thunk";
 import { formValidateReducer } from "./formValidateReducer";
+import { appReducer } from "./appReducer";
 
 export const reducers = combineReducers({
   profile: profileReducer,
@@ -16,6 +17,7 @@ export const reducers = combineReducers({
   auth: authReducer,
   form: formReducer,
   myForm: formValidateReducer,
+  app: appReducer,
 });
 
 const reduxStore = createStore(reducers, applyMiddleware(thunk));

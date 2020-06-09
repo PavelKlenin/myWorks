@@ -1,9 +1,9 @@
 import { authAPI } from "../api/api";
 import { getProfile } from './profileReducer';
+import { SubmissionError } from "redux-form";
 
 // Const
 const SET_USER_DATA = "GET_USER_DATA";
-const IS_INITIALIZED = "IS_INITIALIZED";
 
 // State
 const initialState = {
@@ -11,7 +11,6 @@ const initialState = {
   email: null,
   login: null,
   isLogged: false,
-  isInitialized: false,
 };
 
 // Reducer
@@ -21,11 +20,6 @@ export const authReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.data,
-      };
-    case IS_INITIALIZED:
-      return {
-        ...state,
-        isInitialized: true,
       };
     default:
       return state;
@@ -37,10 +31,6 @@ export const setUserData = (id, email, login, isLogged) => ({
   type: SET_USER_DATA,
   data: { id, email, login, isLogged },
 });
-
-const setInitialization = () => ({
-  type: IS_INITIALIZED,
-})
 
 // ThunkCreactors
 export const checkAuthProfile = () => (dispatch) => {
@@ -61,7 +51,9 @@ export const loginProfile = (email, password, rememberMe) => (dispatch) => {
       dispatch(checkAuthProfile());
     } else {
       //TODO stopSubmit() redux-form
-      console.log('Login error')
+      throw new SubmissionError({
+        _error: 'Wrong login or password'
+      })
     }
   });
 };
@@ -73,10 +65,3 @@ export const logoutProfile = () => (dispatch) => {
     }
   });
 };
-
-
-export const initializeApp = () => (dispatch) => {
-  Promise.all([checkAuthProfile()]).then(() => {
-    dispatch(setInitialization());
-  })
-}

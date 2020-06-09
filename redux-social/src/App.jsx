@@ -13,13 +13,13 @@ import ProfileContainer from "./Components/Profile/ProfileContainer";
 
 import "./App.css";
 import { connect } from "react-redux";
-import { initializeApp } from "./Redux/authReducer";
+import { appInit } from "./Redux/appReducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 import { compose } from "redux";
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.initializeApp();
+    this.props.appInit();
   }
 
   render() {
@@ -44,12 +44,12 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  initialized: state.auth.isInitialized,
+  initialized: state.app.isInitialized,
   userId: state.auth.id,
 });
 
 const mapDispatchToProps = {
-  initializeApp,
+  appInit,
 };
 
 export default compose(
