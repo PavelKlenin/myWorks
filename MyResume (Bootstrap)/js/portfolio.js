@@ -33,12 +33,18 @@ $(document).ready(() => {
     });
   });
 
-
   const toggleView = (className = "portfolio-wrap") => {
     $(works).each((i, work) => {
       $(work).addClass("hidden");
+      $(work).one("transitionend", () => {
+        $(work).addClass("hide");
+      });
+      if ($(work).hasClass(className)) {
+        $(work).removeClass("hide");
+        $(work).removeClass("hidden");
+      }
       //TODO Promise
-      setTimeout(() => {
+      /*       setTimeout(() => {
         $(work).addClass("hide");
       }, 500);
       setTimeout(()=> {
@@ -48,7 +54,7 @@ $(document).ready(() => {
             $(work).removeClass("hidden");
           }, 500);
         }
-      },500)
+      },500) */
       //todo Promise
     });
   };
