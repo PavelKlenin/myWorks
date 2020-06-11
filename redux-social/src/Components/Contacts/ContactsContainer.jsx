@@ -7,6 +7,14 @@ import {
   toggleFollowUser,
 } from "../../Redux/contactsReducer";
 import { compose } from "redux";
+import {
+  selectAllUsers,
+  selectUsersCount,
+  selectIsFetching,
+  selectPageSize,
+  selectFollowingInProgress,
+  selectCurrentPage,
+} from "./../../Redux/selectors/userSelector";
 
 class ContactsContainer extends React.Component {
   componentDidMount() {
@@ -37,9 +45,14 @@ class ContactsContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return { ...state.contacts };
-};
+const mapStateToProps = (state) => ({
+  users: selectAllUsers(state),
+  totalUsers: selectUsersCount(state),
+  isFetching: selectIsFetching(state),
+  pageSize: selectPageSize(state),
+  followingInProgress: selectFollowingInProgress(state),
+  currentPage: selectCurrentPage(state),
+});
 
 const mapDispatchToProps = {
   getUsers,
@@ -47,6 +60,6 @@ const mapDispatchToProps = {
   toggleFollowUser,
 };
 
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-)(ContactsContainer);
+export default compose(connect(mapStateToProps, mapDispatchToProps))(
+  ContactsContainer
+);

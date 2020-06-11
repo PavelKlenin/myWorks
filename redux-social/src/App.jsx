@@ -16,6 +16,8 @@ import { connect } from "react-redux";
 import { appInit } from "./Redux/appReducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 import { compose } from "redux";
+import { selectAuthedId } from "./Redux/selectors/authSelector";
+import { selectAppInit } from './Redux/selectors/appSelector';
 
 class App extends React.Component {
   componentDidMount() {
@@ -44,8 +46,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  initialized: state.app.isInitialized,
-  userId: state.auth.id,
+  initialized: selectAppInit(state),
+  userId: selectAuthedId(state),
 });
 
 const mapDispatchToProps = {

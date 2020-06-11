@@ -4,9 +4,8 @@ import s from "./News.module.css";
 import NewPostForm from "./NewPostForm";
 
 const News = (props) => {
-  const { posts, avatar } = props;
-  const postList = posts.map((post) => (
-    <Post post={post.text} avatar={avatar} key={post.id} />
+  const postList = props.posts.map((post) => (
+    <Post post={post.text} avatar={props.avatar} key={post.id} />
   ));
 
   return (

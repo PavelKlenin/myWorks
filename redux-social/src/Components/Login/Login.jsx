@@ -4,6 +4,7 @@ import s from "./LoginForm.module.css";
 import { connect } from "react-redux";
 import { loginProfile } from "../../Redux/authReducer";
 import { Redirect } from "react-router-dom";
+import { selectAuthedId } from "../../Redux/selectors/authSelector";
 
 const Login = (props) => {
   const onSubmit = (dataForm) => {
@@ -21,7 +22,7 @@ const Login = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  userID: state.auth.id,
+  userID: selectAuthedId(state),
 })
 
 const mapDispatchToProps = {

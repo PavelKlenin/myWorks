@@ -5,9 +5,8 @@ import Message from "./Message";
 import SendMessageForm from "./SendMessageForm";
 
 function Dialogs(props) {
-  const { users, messages } = props.dialogs;
-  const userList = users.map((user) => <DialogContact {...user} key={user.id} />);
-  const messageList = messages.map((message, index) => (
+  const userList = props.users.map((user) => <DialogContact {...user} key={user.id} />);
+  const messageList = props.messages.map((message, index) => (
     <Message message={message} key={index} />
   ));
 

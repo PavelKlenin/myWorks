@@ -3,6 +3,8 @@ import Header from "./Header";
 import { connect } from "react-redux";
 import { logoutProfile } from "../../Redux/authReducer";
 import { getProfile } from "../../Redux/profileReducer";
+import { selectAuthedId, selectAuthIsLogged } from "../../Redux/selectors/authSelector";
+import { selectUserProfile } from "../../Redux/selectors/profileSelector";
 
 class HeaderContainer extends React.Component {
   componentDidUpdate(prevProps) {
@@ -23,9 +25,9 @@ class HeaderContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  userId: state.auth.id,
-  profile: state.profile.profile,
-  isLogged: state.auth.isLogged,
+  userId: selectAuthedId(state),
+  profile: selectUserProfile(state),
+  isLogged: selectAuthIsLogged(state),
 });
 
 const mapDispatchToProps = {

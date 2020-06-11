@@ -3,10 +3,12 @@ import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect.jsx";
 import { compose } from "redux";
+import { selectDialogContacts, selectMessages } from "../../Redux/selectors/dialogsSelector.js";
 
 const mapStateToProps = (state) => {
   return {
-    dialogs: state.dialogs,
+    contacts: selectDialogContacts(state),
+    messages: selectMessages(state),
   };
 };
 

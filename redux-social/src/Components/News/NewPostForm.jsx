@@ -26,10 +26,10 @@ const NewPostForm = (props) => {
         </span>
       )}
       <textarea
-        className={props.maxLengthError && s.textareaError}
+        className={props.maxLengthError ? s.textareaError : undefined}
         value={props.postText}
         onChange={updatePost}
-        onKeyPress={props.maxLengthError && stopInput}
+        onKeyPress={props.maxLengthError ? stopInput : undefined}
       />
       <button disabled={props.btnDisabled} className={s.sendBtn}>
         Send

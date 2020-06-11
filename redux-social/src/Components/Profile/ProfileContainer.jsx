@@ -8,6 +8,9 @@ import Profile from "./Profile";
 import Preloader from "../common/Preloader/Preloader";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
+import { selectUserProfile,selectUserStatus } from "../../Redux/selectors/profileSelector";
+import { selectIsProfileFetched } from './../../Redux/selectors/profileSelector';
+import { selectAuthedId } from "../../Redux/selectors/authSelector";
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
@@ -37,12 +40,12 @@ class ProfileContainer extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    ...state.profile,
-    authId: state.auth.id,
-  };
-};
+const mapStateToProps = (state) => ({
+  profile: selectUserProfile(state),
+  status: selectUserStatus(state),
+  isFetched: selectIsProfileFetched(state),
+  authId: selectAuthedId(state),
+});
 
 const mapDispatchToProps = {
   getProfile,
