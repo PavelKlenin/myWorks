@@ -36,26 +36,15 @@ $(document).ready(() => {
   const toggleView = (className = "portfolio-wrap") => {
     $(works).each((i, work) => {
       $(work).addClass("hidden");
-      $(work).one("transitionend", () => {
+      setTimeout(() => {
         $(work).addClass("hide");
-      });
-      if ($(work).hasClass(className)) {
-        $(work).removeClass("hide");
-        $(work).removeClass("hidden");
-      }
-      //TODO Promise
-      /*       setTimeout(() => {
-        $(work).addClass("hide");
-      }, 500);
-      setTimeout(()=> {
         if ($(work).hasClass(className)) {
           $(work).removeClass("hide");
           setTimeout(() => {
             $(work).removeClass("hidden");
-          }, 500);
+          }, 100);
         }
-      },500) */
-      //todo Promise
+      }, 500);
     });
   };
 
