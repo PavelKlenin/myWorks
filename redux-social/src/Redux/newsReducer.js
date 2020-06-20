@@ -1,5 +1,6 @@
 const UPDATE_POST = "UPDATE-POST";
 const SEND_POST = "SEND-POST";
+const DELETE_POST = "DELETE_POST";
 
 const initialState = {
   posts: [
@@ -14,7 +15,7 @@ const initialState = {
         "Distinctio ea quae iusto minus adipisci eius! Doloribus dolor minus sit culpa cupiditate adipisci commodi.",
     },
   ],
-  newPostText: '',
+  newPostText: "",
 };
 
 export const newsReducer = (state = initialState, action) => {
@@ -27,17 +28,30 @@ export const newsReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: [...state.posts, newPost],
-        newPostText: '',
-      }
+        newPostText: "",
+      };
     case UPDATE_POST:
       return {
         ...state,
-        newPostText: action.newPostText
-      }
+        newPostText: action.newPostText,
+      };
+    case DELETE_POST:
+      return {
+        ...state,
+        posts: state.posts.filter((post) => post.id !== action.postId),
+        newPostText: "",
+      };
     default:
       return state;
   }
 };
 
 export const sendPost = () => ({ type: SEND_POST });
-export const updatePostText = (newPostText) => ({ type: UPDATE_POST, newPostText });
+export const updatePostText = (newPostText) => ({
+  type: UPDATE_POST,
+  newPostText,
+});
+export const deletePost = (postId) => ({
+  type: DELETE_POST,
+  postId,
+});
