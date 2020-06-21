@@ -1,9 +1,9 @@
 import { userAPI, profileAPI } from "../api/api";
 
 // Const
-const LOAD_PROFILE = "LOAD_PROFILE";
-const TOGGLE_FETCHING = "TOGGLE_FETCHING";
-const SET_STATUS = "SET_STATUS";
+export const LOAD_PROFILE = "LOAD_PROFILE";
+export const SET_STATUS = "SET_STATUS";
+export const TOGGLE_FETCHING = "TOGGLE_FETCHING";
 
 // State
 const initialState = {
@@ -45,13 +45,14 @@ const setStatus = (status) => ({
 // ThunkCreators
 
 export const getProfile = (userId) => (dispatch) => {
-  userAPI.getProfile(userId).then((data) => {
+  const getProfile = userAPI.getProfile(userId).then((data) => {
     dispatch(loadProfile(data));
     dispatch(toggleFetching(true));
   });
-  profileAPI.getStatus(userId).then((data) => {
+  const getStatus = profileAPI.getStatus(userId).then((data) => {
     dispatch(setStatus(data.data));
   });
+  return Promise.all([getProfile, getStatus])
 };
 
 export const updateProfilestatus = (status) => (dispatch) => {

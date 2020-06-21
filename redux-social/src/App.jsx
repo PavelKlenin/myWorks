@@ -17,7 +17,7 @@ import { appInit } from "./Redux/appReducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 import { compose } from "redux";
 import { selectAuthedId } from "./Redux/selectors/authSelector";
-import { selectAppInit } from './Redux/selectors/appSelector';
+import { selectAppInit } from "./Redux/selectors/appSelector";
 
 class App extends React.Component {
   componentDidMount() {
