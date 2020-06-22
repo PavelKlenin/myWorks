@@ -1,9 +1,9 @@
 import { authAPI } from "../api/api";
-import { getProfile } from './profileReducer';
+import { getProfile } from "./profileReducer";
 import { SubmissionError } from "redux-form";
 
 // Const
-const SET_USER_DATA = "GET_USER_DATA";
+const SET_USER_DATA = "authReducer/GET_USER_DATA";
 
 // State
 const initialState = {
@@ -33,35 +33,33 @@ export const setUserData = (id, email, login, isLogged) => ({
 });
 
 // ThunkCreactors
-export const checkAuthProfile = () => (dispatch) => {
-  return authAPI.authCheck().then((data) => {
-    if (data.resultCode === 0) {
-      const { id, email, login } = data.data;
-      dispatch(setUserData(id, email, login, true));
-      dispatch(getProfile(id))
-    } else {
-      dispatch(setUserData(null, null, null, false));
-    }
-  });
+export const checkAuthProfile = () => async (dispatch) => {
+  const data = await authAPI.authCheck();
+  if (data.resultCode === 0) {
+    const { id, email, login } = data.data;
+    dispatch(setUserData(id, email, login, true));
+    dispatch(getProfile(id));
+  } else {
+    dispatch(setUserData(null, null, null, false));
+  }
 };
 
-export const loginProfile = (email, password, rememberMe) => (dispatch) => {
-  return authAPI.login(email, password, rememberMe).then((data) => {
-    if (data.resultCode === 0) {
-      dispatch(checkAuthProfile());
-    } else {
-      //TODO stopSubmit() redux-form
-      throw new SubmissionError({
-        _error: 'Wrong login or password'
-      })
-    }
-  });
+export const loginProfile = (email, password, rememberMe) => async (
+  dispatch
+) => {
+  const data = await authAPI.login(email, password, rememberMe);
+  if (data.resultCode === 0) {
+    dispatch(checkAuthProfile());
+  } else {
+    throw new SubmissionError({
+      _error: "Wrong login or password",
+    });
+  }
 };
 
-export const logoutProfile = () => (dispatch) => {
-  return authAPI.logout().then((data) => {
-    if (data.resultCode === 0) {
-      dispatch(checkAuthProfile());
-    }
-  });
+export const logoutProfile = () => async (dispatch) => {
+  const data = await authAPI.logout();
+  if (data.resultCode === 0) {
+    dispatch(checkAuthProfile());
+  }
 };

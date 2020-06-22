@@ -16,6 +16,7 @@ const Contacts = (props) => {
     );
   });
 
+  //TODO убрать деление на 100 после рефакторинга пагинатора
   const pagesCount = Math.ceil(props.totalUsers / props.pageSize / 100);
 
   let pageNumbers = [];
@@ -28,7 +29,7 @@ const Contacts = (props) => {
       <PageNumber
         currentPage={props.currentPage}
         changePage={props.loadContacts}
-        number={page}
+        pageNumber={page}
         key={page}
       />
     );
@@ -38,12 +39,8 @@ const Contacts = (props) => {
     <div className={s.contacts}>
       <div className={s.pages}>{pages}</div>
       <div className={s.contactList}>
-        {props.isFetching ? <Preloader /> : contactList}{" "}
-        {/* //TODO Preloader стилизовать по центру экрана */}
+        {props.isFetching ? <Preloader /> : contactList}
       </div>
-      {/* <button className={s.loadContacts} type="button" onClick={this.loadContacts}>
-          Load more
-        </button> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 export const selectPosts =(state) => {
-  return state.news.posts;
+  return state.posts.posts;
 }
 
 export const selectNewPostText = (state) => {
-  return state.news.newPostText;
+  return state.posts.newPostText;
 }

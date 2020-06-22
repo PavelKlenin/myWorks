@@ -2,8 +2,8 @@ import { postValidate } from "../utils/formValidations/postFormValidation";
 import { compose } from "redux";
 
 // Const
-const TOGGLE_POST_BTN = "TOGGLE_POST_BTN";
-const CHECK_MAX_POST_LENGTH = "CHECK_MAX_POST_LENGTH";
+const TOGGLE_POST_BTN = "formValidateReducer/TOGGLE_POST_BTN";
+const CHECK_MAX_POST_LENGTH = "formValidateReducer/CHECK_MAX_POST_LENGTH";
 
 // State
 const initialState = {

@@ -2,18 +2,19 @@ import React from "react";
 import s from './Contacts.module.css';
 
 const PageNumber = (props) => {
+  const {pageNumber, currentPage} = props;
   const changePage = (number) => {
     props.changePage(number);
   };
 
   return (
     <div
-      className={`${s.pageNumber} ${props.number === props.currentPage && s.currentPage}`}
+      className={`${s.pageNumber} ${pageNumber === currentPage && s.currentPage}`}
       onClick={() => {
-        changePage(props.number);
+        changePage(pageNumber);
       }}
     >
-      {props.number}
+      {pageNumber}
     </div>
   );
 };

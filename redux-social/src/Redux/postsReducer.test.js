@@ -1,9 +1,9 @@
 const {
-  newsReducer,
+  postsReducer,
   sendPost,
   updatePostText,
   deletePost,
-} = require("./newsReducer");
+} = require("./postsReducer");
 
 const state = {
   posts: [
@@ -23,30 +23,30 @@ const state = {
 
 test("SEND_POST action type should increase the length of the array", () => {
   const testState = { ...state, newPostText: "test" };
-  const resultState = newsReducer(testState, sendPost());
+  const resultState = postsReducer(testState, sendPost());
   expect(resultState.posts.length).toBe(state.posts.length + 1);
 });
 
 test("New post should have id = 3", () => {
   const testState = { ...state, newPostText: "test" };
-  const resultState = newsReducer(testState, sendPost());
+  const resultState = postsReducer(testState, sendPost());
   expect(resultState.posts[2].id).toBe(3);
 });
 
 test("SEND_POST action type should clean newPostText", () => {
   const testState = { ...state, newPostText: "test" };
-  const resultState = newsReducer(testState, sendPost());
+  const resultState = postsReducer(testState, sendPost());
   expect(resultState.newPostText).toBe("");
 });
 
 test("UPDATE_POST action type should rewrite newPostText", () => {
   const testState = { ...state };
-  const resultState = newsReducer(testState, updatePostText("test"));
+  const resultState = postsReducer(testState, updatePostText("test"));
   expect(resultState.newPostText).toBe("test");
 });
 
 test("DELETE_POST action type should decreasethe length of the array", () => {
   const testState = { ...state };
-  const resultState = newsReducer(testState, deletePost(2));
+  const resultState = postsReducer(testState, deletePost(2));
   expect(resultState.posts.length).toBe(state.posts.length - 1);
 });

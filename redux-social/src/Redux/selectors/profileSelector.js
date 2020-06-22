@@ -11,5 +11,5 @@ export const selectUserStatus = (state) => {
 };
 
 export const selectIsProfileFetched = (state) => {
-  return state.profile.isFetched;
+  return state.profile.isFetching;
 };

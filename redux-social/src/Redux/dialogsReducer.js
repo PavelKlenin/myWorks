@@ -1,4 +1,4 @@
-const SEND_MESSAGE = "SEND-MESSAGE";
+const SEND_MESSAGE = "dialogsReducer/SEND-MESSAGE";
 
 const initialState = {
   users: [
@@ -11,24 +11,6 @@ const initialState = {
     {
       id: 3,
       name: "Maria",
-      avatar:
-        "https://lastfm.freetls.fastly.net/i/u/ar0/9dc640d94f324994c9ce31b1407a1830.png",
-    },
-    {
-      id: 4,
-      name: "Anna",
-      avatar:
-        "https://lastfm.freetls.fastly.net/i/u/ar0/9dc640d94f324994c9ce31b1407a1830.png",
-    },
-    {
-      id: 5,
-      name: "Pavel",
-      avatar:
-        "https://lastfm.freetls.fastly.net/i/u/ar0/9dc640d94f324994c9ce31b1407a1830.png",
-    },
-    {
-      id: 6,
-      name: "Leonid",
       avatar:
         "https://lastfm.freetls.fastly.net/i/u/ar0/9dc640d94f324994c9ce31b1407a1830.png",
     },

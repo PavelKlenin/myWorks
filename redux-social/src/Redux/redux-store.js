@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { newsReducer } from "./newsReducer";
+import { postsReducer } from "./postsReducer";
 import { dialogsReducer } from "./dialogsReducer";
 import { profileReducer } from "./profileReducer";
 import { contactsReducer } from './contactsReducer';
@@ -11,7 +11,7 @@ import { appReducer } from "./appReducer";
 
 export const reducers = combineReducers({
   profile: profileReducer,
-  news: newsReducer,
+  posts: postsReducer,
   dialogs: dialogsReducer,
   contacts: contactsReducer,
   auth: authReducer,

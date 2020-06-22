@@ -10,7 +10,9 @@ function Header(props) {
         {props.profile && props.isLogged ? (
           <div>
             <button onClick={props.logoutProfile}>Logout</button>
-            <Avatar avatar={props.profile.photos.small} />
+            <NavLink to={`/profile/${props.profile.userId}`} >
+              <Avatar avatar={props.profile.photos.small} />
+            </NavLink>
           </div>
         ) : (
           <NavLink to="/login">Login</NavLink>

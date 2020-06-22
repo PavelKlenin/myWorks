@@ -1,15 +1,15 @@
 import { userAPI, profileAPI } from "../api/api";
 
 // Const
-export const LOAD_PROFILE = "LOAD_PROFILE";
-export const SET_STATUS = "SET_STATUS";
-export const TOGGLE_FETCHING = "TOGGLE_FETCHING";
+export const LOAD_PROFILE = "profileReducer/LOAD_PROFILE";
+export const SET_STATUS = "profileReducer/SET_STATUS";
+export const TOGGLE_FETCHING = "profileReducer/TOGGLE_FETCHING";
 
 // State
 const initialState = {
   profile: null,
   status: "",
-  isFetched: false,
+  isFetching: false,
 };
 
 // Reducer
@@ -18,7 +18,7 @@ export const profileReducer = (state = initialState, action) => {
     case LOAD_PROFILE:
       return { ...state, profile: action.profile };
     case TOGGLE_FETCHING:
-      return { ...state, isFetched: action.isFetched };
+      return { ...state, isFetching: action.isFetching };
     case SET_STATUS:
       return { ...state, status: action.status };
     default:
@@ -32,9 +32,9 @@ export const loadProfile = (profile) => ({
   profile,
 });
 
-export const toggleFetching = (isFetched) => ({
+export const toggleFetching = (isFetching) => ({
   type: TOGGLE_FETCHING,
-  isFetched,
+  isFetching,
 });
 
 const setStatus = (status) => ({
@@ -44,21 +44,18 @@ const setStatus = (status) => ({
 
 // ThunkCreators
 
-export const getProfile = (userId) => (dispatch) => {
-  const getProfile = userAPI.getProfile(userId).then((data) => {
-    dispatch(loadProfile(data));
-    dispatch(toggleFetching(true));
-  });
-  const getStatus = profileAPI.getStatus(userId).then((data) => {
-    dispatch(setStatus(data.data));
-  });
-  return Promise.all([getProfile, getStatus])
+export const getProfile = (userId) => async (dispatch) => {
+  dispatch(toggleFetching(true));
+  const getProfileData = await userAPI.getProfile(userId);
+  const getStatusData = await profileAPI.getStatus(userId);
+  dispatch(loadProfile(getProfileData));
+  dispatch(setStatus(getStatusData.data));
+  dispatch(toggleFetching(false));
 };
 
-export const updateProfilestatus = (status) => (dispatch) => {
-  profileAPI.updateStatus(status).then((data) => {
-    if (data.resultCode === 0) {
-      dispatch(setStatus(status));
-    }
-  })
-}
+export const updateProfilestatus = (status) => async (dispatch) => {
+  const data = await profileAPI.updateStatus(status);
+  if (data.resultCode === 0) {
+    dispatch(setStatus(status));
+  }
+};

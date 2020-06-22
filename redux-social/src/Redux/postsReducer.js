@@ -1,6 +1,6 @@
-const UPDATE_POST = "UPDATE-POST";
-const SEND_POST = "SEND-POST";
-const DELETE_POST = "DELETE_POST";
+const UPDATE_POST = "postsReducer/UPDATE-POST";
+const SEND_POST = "postsReducer/SEND-POST";
+const DELETE_POST = "postsReducer/DELETE_POST";
 
 const initialState = {
   posts: [
@@ -9,16 +9,11 @@ const initialState = {
       text:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odio aliquam, enim ipsa ipsum maxime.",
     },
-    {
-      id: 2,
-      text:
-        "Distinctio ea quae iusto minus adipisci eius! Doloribus dolor minus sit culpa cupiditate adipisci commodi.",
-    },
   ],
   newPostText: "",
 };
 
-export const newsReducer = (state = initialState, action) => {
+export const postsReducer = (state = initialState, action) => {
   switch (action.type) {
     case SEND_POST:
       const newPost = {

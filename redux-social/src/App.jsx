@@ -6,7 +6,7 @@ import Login from "./Components/Login/Login";
 import Navbar from "./Components/Navbar/Navbar";
 import Banner from "./Components/Banner/Banner";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import DialogsContainer from "./Components/Dialogs/DialogsContainer";
+import Dialogs from "./Components/Dialogs/DialogsContainer";
 import NewsContainer from "./Components/News/NewsContainer";
 import ContactsContainer from "./Components/Contacts/ContactsContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
@@ -34,7 +34,7 @@ class App extends React.Component {
           <Navbar userId={this.props.userId} />
           <Route path="/login" render={() => <Login />} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
-          <Route path="/dialogs" render={() => <DialogsContainer />} />
+          <Route path="/dialogs" render={() => <Dialogs />} />
           <Route path="/news" render={() => <NewsContainer />} />
           <Route path="/contacts" render={() => <ContactsContainer />} />
         </div>

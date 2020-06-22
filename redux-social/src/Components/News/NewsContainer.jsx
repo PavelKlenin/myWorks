@@ -1,4 +1,4 @@
-import { sendPost, updatePostText } from "../../Redux/newsReducer";
+import { sendPost, updatePostText } from "../../Redux/postsReducer";
 import News from "./News";
 import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";

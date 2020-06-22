@@ -1,7 +1,7 @@
 import { checkAuthProfile } from "./authReducer";
 
 // Const
-const IS_INITIALIZED = "IS_INITIALIZED";
+const IS_INITIALIZED = "appReducer/IS_INITIALIZED";
 
 // State
 const initialState = {
