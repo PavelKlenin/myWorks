@@ -29,26 +29,23 @@ test("Status shouldn`t be null", () => {
 });
 test("isFetched should be TRUE", () => {
   const testState = { ...state };
-  const action = { type: TOGGLE_FETCHING, isFetched: true };
+  const action = { type: TOGGLE_FETCHING, isFetching: true };
   const resultState = profileReducer(testState, action);
-  expect(resultState.isFetched).toBe(true);
+  expect(resultState.isFetching).toBe(true);
 });
 
-
-/* 
 const mockStore = configureMockStore([thunk]);
 
-test("ThunkCreator getProfile returns 3 actions", () => {
+describe("ThunkCreator getProfile", () => {
   const testState = { ...state };
   const store = mockStore(testState);
-  store.dispatch(getProfile(1)).then(() => {
+  it("returns 3 actions", async () => {
+    await store.dispatch(getProfile(1));
     expect(store.getActions()[0]).not.toBeNull();
     expect(store.getActions()[1]).toEqual({
       type: TOGGLE_FETCHING,
-      isFetched: true,
+      isFetching: false,
     });
     expect(store.getActions()[2]).not.toBeNull();
-    return store.getActions()
-  })
+  });
 });
- */
