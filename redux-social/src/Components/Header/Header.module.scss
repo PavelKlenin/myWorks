@@ -4,12 +4,12 @@
   grid-area: header;
   padding: $indent 0;
   display: flex;
-  justify-content: flex-end;
-  background-color:$colorDarkGrey;
+  justify-content: space-between;
+  background-color: $colorBlock;
 }
 
 .loginBlock {
-  margin-right: $indentBig;
+  display: flex;
   
   img {
     display: block;

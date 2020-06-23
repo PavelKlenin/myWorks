@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Profile.module.css";
-import Avatar from "./Avatar/Avatar";
+import Avatar from './../common/Avatar/Avatar';
 import ProfileStatus from "./ProfileStatus";
 
 function Profile(props) {

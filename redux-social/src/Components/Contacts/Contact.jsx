@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Contacts.module.css";
 import icon from "../../assets/img/svg/message.svg";
 import { NavLink } from "react-router-dom";
-import Avatar from "../Profile/Avatar/Avatar";
+import Avatar from './../common/Avatar/Avatar';
 
 const Contact = (props) => {
   const { id, photos, name, status, followed, followingInProgress} = props;

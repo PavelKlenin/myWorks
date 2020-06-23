@@ -3,7 +3,6 @@ import { Route, withRouter } from "react-router-dom";
 
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
-import Navbar from "./Components/Navbar/Navbar";
 import Banner from "./Components/Banner/Banner";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Dialogs from "./Components/Dialogs/DialogsContainer";
@@ -31,7 +30,6 @@ class App extends React.Component {
         <Banner />
         <Sidebar />
         <div className="appContent">
-          <Navbar userId={this.props.userId} />
           <Route path="/login" render={() => <Login />} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
           <Route path="/dialogs" render={() => <Dialogs />} />

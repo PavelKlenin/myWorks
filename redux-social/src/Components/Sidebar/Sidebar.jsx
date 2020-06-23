@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "./../Profile/Avatar/Avatar";
+import Avatar from './../common/Avatar/Avatar';
 import s from "./Sidebar.module.css";
 
 const Sidebar = (props) => {

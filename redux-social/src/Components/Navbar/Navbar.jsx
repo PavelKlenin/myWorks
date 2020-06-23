@@ -6,11 +6,6 @@ const Navbar = (props) => {
   return (
     <nav className={s.navbar}>
       <div className={s.navbarItem}>
-        <NavLink activeClassName={s.active} to={props.userId ? `/profile/${props.userId}` : '/login'}>
-          Profile
-        </NavLink>
-      </div>
-      <div className={s.navbarItem}>
         <NavLink activeClassName={s.active} to="/dialogs">
           Dialogs
         </NavLink>

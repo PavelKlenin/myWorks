@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,mDAAmD;EACrE,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS;CAC7B",
+    "mappings": "AAEA,AAAA,OAAO,CAAC;EACN,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,KAAK;CACd",
     "sources": [
-        "Banner.module.scss"
+        "Banner.module.scss",
+        "../../style/variables.scss"
     ],
     "names": [],
     "file": "Banner.module.css"

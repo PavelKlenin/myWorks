@@ -34,9 +34,9 @@ test("isFetched should be TRUE", () => {
   expect(resultState.isFetching).toBe(true);
 });
 
-const mockStore = configureMockStore([thunk]);
 
-describe("ThunkCreator getProfile", () => {
+/* describe("ThunkCreator getProfile", () => {
+  const mockStore = configureMockStore([thunk]);
   const testState = { ...state };
   const store = mockStore(testState);
   it("returns 3 actions", async () => {
@@ -48,4 +48,4 @@ describe("ThunkCreator getProfile", () => {
     });
     expect(store.getActions()[2]).not.toBeNull();
   });
-});
+}); */
