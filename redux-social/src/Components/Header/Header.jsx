@@ -3,21 +3,45 @@ import s from "./Header.module.css";
 import Avatar from "./../common/Avatar/Avatar";
 import { NavLink } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import logo from "../../assets/img/logo192.png";
 
 function Header(props) {
   return (
     <header className={s.header}>
-      <Navbar />
-        {props.profile && props.isLogged ? (
-         <div className={s.loginBlock}>
-            <button onClick={props.logoutProfile}>Logout</button>
-            <NavLink to={`/profile/${props.profile.userId}`}>
-              <Avatar avatar={props.profile.photos.small} />
-            </NavLink>
+      <img className={s.logo} src={logo} alt="logo" />
+      {props.profile && props.isLogged ? (
+        <>
+          <Navbar />
+          <div className={s.loginBlock}>
+            <Avatar
+              nameOfClass={s.avatar}
+              avatar={props.profile.photos.small}
+            />
+            <div className={s.topProfileMenu}>
+              <NavLink
+                className={s.loginLink}
+                to={`/profile/${props.profile.userId}`}
+              >
+                <Avatar
+                  nameOfClass={s.menuAvatar}
+                  avatar={props.profile.photos.small}
+                />
+                <p>
+                  {props.profile.fullName}
+                  <br />
+                  <span className={s.profileExplain}>My&nbsp;profile </span>
+                </p>
+              </NavLink>
+              <hr className={s.divideLine} />
+              <button className={s.logoutBtn} onClick={props.logoutProfile}>
+                Log Out
+              </button>
+            </div>
           </div>
-        ) : (
-          <NavLink to="/login">Login</NavLink>
-        )}
+        </>
+      ) : (
+        <NavLink to="/login">Sign In</NavLink>
+      )}
     </header>
   );
 }

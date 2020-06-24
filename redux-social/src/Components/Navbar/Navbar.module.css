@@ -4,25 +4,45 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 10px;
-  background-color: #edf1f5;
-  border-bottom: 1px solid #ccc;
+}
+
+.navbarItem {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.navbarItem {
+  margin: 0 10px;
+}
+
+.navbarItem:first-of-type {
+  margin-right: 10px;
+}
+
+.navbarItem:last-of-type {
+  margin-left: 10px;
 }
 
 .navbarItem a {
   display: block;
   padding: 10px;
   color: black;
+  font-weight: bold;
+  line-height: 1;
   text-decoration: none;
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .navbarItem a.active {
-  font-weight: bold;
+  color: #000080;
 }
 
 .navbarItem a:hover {
-  color: white;
+  background: #edf1f5;
+}
+
+.navbarItem a:active {
+  background: #ccc;
 }
 /*# sourceMappingURL=Navbar.module.css.map */

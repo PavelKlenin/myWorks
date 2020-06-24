@@ -1,19 +1,18 @@
 .app {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
-  grid-template-rows: -webkit-min-content 150px 1fr;
-  -ms-grid-rows: min-content 150px 1fr;
-      grid-template-rows: min-content 150px 1fr;
-      grid-template-areas: "header header header" "banner banner banner" "sidebar content content";
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: -webkit-min-content 1fr;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: min-content 1fr;
+      grid-template-areas: "header header header" ". content .";
   height: 100%;
 }
 
 .appContent {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: content;
   margin: 0 auto;
   display: -webkit-box;

@@ -1,21 +1,89 @@
-@import '../../style/variables.scss';
+@import "../../style/variables.scss";
+@import "../../style/Extentions.scss";
+
+$avatarSize: 30px;
 
 .header {
   grid-area: header;
-  padding: $indent 0;
+  padding: $indent;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $colorBlock;
 }
 
+.avatar,
+.logo {
+  width: $avatarSize;
+  height: $avatarSize;
+}
+
+.avatar {
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .loginBlock {
-  display: flex;
-  
-  img {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  position: relative;
+}
+
+.topProfileMenu {
+  padding: $indent;
+  position: absolute;
+  top: $avatarSize + 10px;
+  right: 0px;
+  // visibility: hidden;
+  // opacity: 0;
+  background: $colorBlock;
+  border-radius: $indentSmall;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.7);
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    right: $indent;
+    background: $colorBlock;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.7);
   }
 }
 
+.loginLink {
+  display: flex;
+  align-items: center;
+  padding: $indentSmall;
+  margin-bottom: $indentSmall;
+  border-radius: $indentSmall;
+  text-decoration: none;
+  color: $colorBlack;
+
+  &:hover {
+    background: $colorLGrey;
+  }
+}
+
+.menuAvatar {
+  margin-right: $indent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profileExplain {
+  font-size: 12px;
+}
+
+.divideLine {
+  margin-bottom: $indentSmall;
+}
+
+.logoutBtn {
+  @extend %button;
+  margin-left: 0;
+  width: 100%;
+}

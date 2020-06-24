@@ -3,8 +3,6 @@ import { Route, withRouter } from "react-router-dom";
 
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import Login from "./Components/Login/Login";
-import Banner from "./Components/Banner/Banner";
-import Sidebar from "./Components/Sidebar/Sidebar";
 import Dialogs from "./Components/Dialogs/DialogsContainer";
 import NewsContainer from "./Components/News/NewsContainer";
 import ContactsContainer from "./Components/Contacts/ContactsContainer";
@@ -27,8 +25,6 @@ class App extends React.Component {
     return this.props.initialized ? (
       <div className="app">
         <HeaderContainer />
-        <Banner />
-        <Sidebar />
         <div className="appContent">
           <Route path="/login" render={() => <Login />} />
           <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
