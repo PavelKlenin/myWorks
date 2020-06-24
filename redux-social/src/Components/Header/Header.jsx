@@ -40,7 +40,9 @@ function Header(props) {
           </div>
         </>
       ) : (
-        <NavLink to="/login">Sign In</NavLink>
+        <NavLink className={s.signinBtn} to="/login">
+          Sign In
+        </NavLink>
       )}
     </header>
   );

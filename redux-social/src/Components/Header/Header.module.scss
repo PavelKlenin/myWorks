@@ -82,8 +82,17 @@ $avatarSize: 30px;
   margin-bottom: $indentSmall;
 }
 
-.logoutBtn {
+.logoutBtn,
+.signinBtn {
   @extend %button;
   margin-left: 0;
+}
+
+.logoutBtn {
   width: 100%;
+}
+
+.signinBtn {
+  text-decoration: none;
+  color: $colorBlack;
 }

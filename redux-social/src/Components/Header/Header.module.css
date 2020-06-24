@@ -1,4 +1,5 @@
-.logoutBtn {
+.logoutBtn,
+.signinBtn {
   margin-left: 10px;
   padding: 5px 15px;
   border-radius: 5px;
@@ -10,19 +11,23 @@
   cursor: pointer;
 }
 
-.logoutBtn:hover {
+.logoutBtn:hover,
+.signinBtn:hover {
   background: #ccc;
 }
 
-.logoutBtn:active {
+.logoutBtn:active,
+.signinBtn:active {
   border: 1px solid transparent;
 }
 
-.logoutBtn:disabled {
+.logoutBtn:disabled,
+.signinBtn:disabled {
   cursor: auto;
 }
 
-.logoutBtn:disabled:hover {
+.logoutBtn:disabled:hover,
+.signinBtn:disabled:hover {
   background: #edf1f5;
 }
 
@@ -116,8 +121,17 @@
   margin-bottom: 5px;
 }
 
-.logoutBtn {
+.logoutBtn,
+.signinBtn {
   margin-left: 0;
+}
+
+.logoutBtn {
   width: 100%;
+}
+
+.signinBtn {
+  text-decoration: none;
+  color: #000;
 }
 /*# sourceMappingURL=Header.module.css.map */
