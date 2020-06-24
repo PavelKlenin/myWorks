@@ -47,6 +47,14 @@
   border: 1px solid transparent;
 }
 
+.sendBtn:disabled {
+  cursor: auto;
+}
+
+.sendBtn:disabled:hover {
+  background: #edf1f5;
+}
+
 .dialogs {
   padding: 10px;
   -webkit-box-flex: 1;

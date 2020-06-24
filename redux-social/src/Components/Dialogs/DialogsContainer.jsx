@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect.jsx";
 import { compose } from "redux";
 import { selectDialogContacts, selectMessages } from "../../Redux/selectors/dialogsSelector.js";
+import { reset } from "redux-form";
 
 const mapStateToProps = (state) => {
   return {
@@ -14,6 +15,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   sendMessage,
+  reset,
 };
 
 export default compose(

@@ -31,6 +31,14 @@
   border: 1px solid transparent;
 }
 
+.loginBtn:disabled {
+  cursor: auto;
+}
+
+.loginBtn:disabled:hover {
+  background: #edf1f5;
+}
+
 .loginTitle {
   padding: 5px;
 }

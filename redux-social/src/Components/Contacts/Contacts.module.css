@@ -18,6 +18,14 @@
   border: 1px solid transparent;
 }
 
+.followBtn:disabled, .messageBtn:disabled {
+  cursor: auto;
+}
+
+.followBtn:disabled:hover, .messageBtn:disabled:hover {
+  background: #edf1f5;
+}
+
 .contacts {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

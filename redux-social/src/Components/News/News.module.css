@@ -47,6 +47,14 @@
   border: 1px solid transparent;
 }
 
+.sendBtn:disabled {
+  cursor: auto;
+}
+
+.sendBtn:disabled:hover {
+  background: #edf1f5;
+}
+
 .news {
   padding: 10px;
   -webkit-box-flex: 1;
@@ -90,13 +98,5 @@
 
 .createPost .textareaError:focus {
   border: 1px solid #700;
-}
-
-.sendBtn:disabled {
-  cursor: auto;
-}
-
-.sendBtn:disabled:hover {
-  background: none;
 }
 /*# sourceMappingURL=News.module.css.map */

@@ -18,6 +18,14 @@
   border: 1px solid transparent;
 }
 
+.logoutBtn:disabled {
+  cursor: auto;
+}
+
+.logoutBtn:disabled:hover {
+  background: #edf1f5;
+}
+
 .header {
   grid-area: header;
   padding: 10px;

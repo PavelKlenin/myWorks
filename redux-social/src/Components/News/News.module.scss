@@ -40,12 +40,4 @@
 
 .sendBtn {
   @extend %button;
-
-  &:disabled {
-    cursor: auto;
-
-    &:hover {
-      background: none;
-    }
-  }
 }
