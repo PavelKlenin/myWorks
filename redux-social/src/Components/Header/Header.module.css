@@ -68,6 +68,8 @@
   position: absolute;
   top: 40px;
   right: 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.7);
@@ -77,15 +79,22 @@
 .topProfileMenu:before {
   position: absolute;
   content: "";
-  top: -5px;
+  top: -4px;
   right: 10px;
   background: #fff;
   width: 10px;
   height: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.7);
-          box-shadow: -1px -1px 0px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.7);
+  -webkit-clip-path: polygon(-10% -10%, -12% 100%, 100% -12%);
+          clip-path: polygon(-10% -10%, -12% 100%, 100% -12%);
+}
+
+.hiddenProfileMenu {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .loginLink {

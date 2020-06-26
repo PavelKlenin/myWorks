@@ -97,6 +97,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -135,6 +138,8 @@
 .userName {
   margin-bottom: 5px;
   text-transform: capitalize;
+  word-break: break-word;
+  text-align: center;
 }
 
 .userStatus {
