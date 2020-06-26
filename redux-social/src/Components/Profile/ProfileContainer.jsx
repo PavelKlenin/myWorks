@@ -32,7 +32,7 @@ class ProfileContainer extends React.Component {
       <Preloader />
     ) : (
       <Profile
-        {...this.props.profile}
+        profile={this.props.profile}
         status={this.props.status}
         updateProfilestatus={this.props.updateProfilestatus}
       />
