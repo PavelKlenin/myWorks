@@ -3,7 +3,8 @@ import { getProfile } from "./profileReducer";
 import { SubmissionError } from "redux-form";
 
 // Const
-const SET_USER_DATA = "authReducer/GET_USER_DATA";
+const SET_USER_DATA = "authReducer/SET_USER_DATA";
+const SET_MY_PROFILE = "authReducer/SET_MY_PROFILE";
 
 // State
 const initialState = {
@@ -11,6 +12,7 @@ const initialState = {
   email: null,
   login: null,
   isLogged: false,
+  myProfile: null, 
 };
 
 // Reducer
