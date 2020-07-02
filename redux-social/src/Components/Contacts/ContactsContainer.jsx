@@ -14,6 +14,7 @@ import {
   selectPageSize,
   selectFollowingInProgress,
   selectCurrentPage,
+  selectPaginatorSize,
 } from "./../../Redux/selectors/userSelector";
 
 class ContactsContainer extends React.Component {
@@ -35,6 +36,7 @@ class ContactsContainer extends React.Component {
         isFetching={this.props.isFetching}
         users={this.props.users}
         totalUsers={this.props.totalUsers}
+        paginatorSize={this.props.paginatorSize}
         pageSize={this.props.pageSize}
         followingInProgress={this.props.followingInProgress}
         currentPage={this.props.currentPage}
@@ -50,6 +52,7 @@ const mapStateToProps = (state) => ({
   totalUsers: selectUsersCount(state),
   isFetching: selectIsFetching(state),
   pageSize: selectPageSize(state),
+  paginatorSize: selectPaginatorSize(state),
   followingInProgress: selectFollowingInProgress(state),
   currentPage: selectCurrentPage(state),
 });

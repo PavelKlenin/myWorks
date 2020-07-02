@@ -11,7 +11,7 @@ function Header(props) {
   const toggleShowProfileMenu = () => {
     setHiddenTopMenu(!hiddenTopMenu);
   }
-
+  // TODO отображается текущий пользователь, а не зарегистрированный
   return (
     <header className={s.header}>
       <img className={s.logo} src={logo} alt="logo" />

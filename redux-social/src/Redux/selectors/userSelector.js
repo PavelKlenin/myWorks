@@ -21,3 +21,7 @@ export const selectFollowingInProgress = (state) => {
 export const selectCurrentPage = (state) => {
   return state.contacts.currentPage;
 }
+
+export const selectPaginatorSize = (state) => {
+  return state.contacts.paginatorSize;
+}

@@ -3,7 +3,6 @@ import s from "./Dialogs.module.css";
 import { Field, reduxForm } from "redux-form";
 import { required } from './../../utils/formValidations/messageFormValidation';
 
-//TODO валидация отправки сообщения (не отправлять пустое)
 const SendMessageForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit} className={s.sendMessage}>

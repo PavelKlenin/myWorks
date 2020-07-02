@@ -3,6 +3,7 @@ import s from './Contacts.module.css';
 
 const PageNumber = (props) => {
   const {pageNumber, currentPage} = props;
+  
   const changePage = (number) => {
     props.changePage(number);
   };
