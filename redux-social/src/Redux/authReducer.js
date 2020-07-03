@@ -1,5 +1,4 @@
-import { authAPI } from "../api/api";
-import { getProfile } from "./profileReducer";
+import { authAPI, userAPI } from "../api/api";
 import { SubmissionError } from "redux-form";
 
 // Const
@@ -23,6 +22,11 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         ...action.data,
       };
+    case SET_MY_PROFILE:
+      return {
+        ...state,
+        myProfile: action.profile,
+      };
     default:
       return state;
   }
@@ -34,15 +38,22 @@ export const setUserData = (id, email, login, isLogged) => ({
   data: { id, email, login, isLogged },
 });
 
+export const setMyProfile = (profile) => ({
+  type: SET_MY_PROFILE,
+  profile,
+});
+
 // ThunkCreactors
 export const checkAuthProfile = () => async (dispatch) => {
   const data = await authAPI.authCheck();
   if (data.resultCode === 0) {
     const { id, email, login } = data.data;
     dispatch(setUserData(id, email, login, true));
-    dispatch(getProfile(id));
+    const myProfile = await userAPI.getProfile(id);
+    dispatch(setMyProfile(myProfile));
   } else {
     dispatch(setUserData(null, null, null, false));
+    dispatch(setMyProfile(null));
   }
 };
 

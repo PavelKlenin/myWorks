@@ -3,16 +3,9 @@ import Header from "./Header";
 import { connect } from "react-redux";
 import { logoutProfile } from "../../Redux/authReducer";
 import { getProfile } from "../../Redux/profileReducer";
-import { selectAuthedId, selectAuthIsLogged } from "../../Redux/selectors/authSelector";
-import { selectUserProfile } from "../../Redux/selectors/profileSelector";
+import { selectAuthedId, selectAuthIsLogged, selectAuthedProfile } from "../../Redux/selectors/authSelector";
 
 class HeaderContainer extends React.Component {
-  componentDidUpdate(prevProps) {
-    if (this.props.isLogged && this.props.isLogged !== prevProps.isLogged) {
-      this.props.getProfile(this.props.userId);
-    }
-  }
-
   render() {
     return (
       <Header
@@ -26,13 +19,12 @@ class HeaderContainer extends React.Component {
 
 const mapStateToProps = (state) => ({
   userId: selectAuthedId(state),
-  profile: selectUserProfile(state),
+  profile: selectAuthedProfile(state),
   isLogged: selectAuthIsLogged(state),
 });
 
 const mapDispatchToProps = {
   logoutProfile,
-  getProfile,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);
