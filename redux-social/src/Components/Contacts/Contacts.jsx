@@ -5,6 +5,34 @@ import PageNumber from "./PageNumber";
 import Preloader from "../common/Preloader/Preloader";
 
 const Contacts = (props) => {
+  const pagesCount = Math.ceil(props.totalUsers / props.pageSize);
+  let pageNumbers = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pageNumbers = [...pageNumbers, i];
+  }
+  
+  const [sectionNumber, setSectionNumber] = useState(1);
+  const pagesSectionsCount = Math.ceil(
+    pageNumbers.length / props.paginatorSize
+  );
+  const pagesSectionLeftSide = (sectionNumber - 1) * props.paginatorSize + 1;
+  const pagesSectionRightSide = props.paginatorSize * sectionNumber;
+
+  useEffect(() => {
+    props.loadContacts(pagesSectionLeftSide);
+    // eslint-disable-next-line
+  }, [pagesSectionLeftSide]);
+
+  const setNextSection = () => {
+    const currentSection = sectionNumber;
+    setSectionNumber(currentSection + 1);
+  }
+
+  const setPrevSection = () => {
+    const currentSection = sectionNumber;
+    setSectionNumber(currentSection - 1);
+  }
+
   const contactList = props.users.map((user) => {
     return (
       <Contact
@@ -15,25 +43,6 @@ const Contacts = (props) => {
       />
     );
   });
-
-  const pagesCount = Math.ceil(props.totalUsers / props.pageSize);
-
-  let pageNumbers = [];
-  for (let i = 1; i <= pagesCount; i++) {
-    pageNumbers = [...pageNumbers, i];
-  }
-
-  const pagesSectionsCount = Math.ceil(
-    pageNumbers.length / props.paginatorSize
-  );
-  const [sectionNumber, setSectionNumber] = useState(1);
-
-  const pagesSectionLeftSide = (sectionNumber - 1) * props.paginatorSize + 1;
-  const pagesSectionRightSide = props.paginatorSize * sectionNumber;
-
-  useEffect(() => {
-    props.loadContacts(pagesSectionLeftSide);
-  }, [pagesSectionLeftSide]);
 
   const pages = pageNumbers.map((page) => {
     if (page>=pagesSectionLeftSide && page<=pagesSectionRightSide) {
@@ -48,19 +57,6 @@ const Contacts = (props) => {
     }
     return null
   });
-
-
-  const setNextSection = () => {
-    const currentSection = sectionNumber;
-    setSectionNumber(currentSection + 1);
-  }
-
-  const setPrevSection = () => {
-    const currentSection = sectionNumber;
-    setSectionNumber(currentSection - 1);
-  }
-
-
 
   return (
     <div className={s.contacts}>
